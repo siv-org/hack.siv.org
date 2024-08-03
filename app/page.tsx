@@ -3,7 +3,7 @@ import { Box } from './Box'
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
+      <div className="text-center">
         <p>This year debuting at</p>
         <p>DEFCON</p>
         <p>Voting Village</p>
