@@ -10,8 +10,9 @@ export default function Home() {
       </div>
 
       <Box title="SIV" color="#060067">
-        Secure Internet Voting’s (SIV.org) mission is to offer citizens the
-        power of easily accessible, personally verifiable, private voting.
+        Secure Internet Voting&apos;s <a href="https://siv.org">(SIV.org)</a>{' '}
+        mission is to offer citizens the power of easily accessible, personally
+        verifiable, private voting.
       </Box>
 
       <Box title="HACK SIV" color="#0600cc">
