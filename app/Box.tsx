@@ -8,10 +8,7 @@ export const Box = ({
   children: string | JSX.Element | (string | JSX.Element)[]
 }) => {
   return (
-    <div
-      style={{ borderColor: color }}
-      className="border rounded shadow-md hover:shadow-xl"
-    >
+    <div style={{ borderColor: color }} className="border rounded min-w-64">
       <h2
         style={{ backgroundColor: color }}
         className="px-4 text-center text-[#FFF8F6] py-1.5 font-bold"
