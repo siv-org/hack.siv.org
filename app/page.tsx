@@ -51,7 +51,7 @@ export default function Home() {
       </div>
 
       <div className="!mt-4 text-center">
-        <i className="opacity-50">Bonus</i>: Convince us of major score updates
+        <i className="opacity-50">Bonus: </i>Convince us of major score updates
         to{' '}
         <a
           className="underline text-blue-400 font-semibold"
