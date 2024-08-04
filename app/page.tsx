@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { Countdown } from './Countdown'
 import { FaGithub } from 'react-icons/fa'
 import { FiExternalLink } from 'react-icons/fi'
+import { FaSignalMessenger } from 'react-icons/fa6'
 
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
@@ -253,7 +254,9 @@ export default function Home() {
               target="_blank"
               href="https://signal.group/#CjQKICsvJxvIn78MHOVlLHyyDZZzRZ6jG62baU0PSvNytGixEhB_0dk6RSLBFcK9o63Qlpx0"
             >
-              Join the Signal group
+              Join the{' '}
+              <FaSignalMessenger className="inline relative bottom-0.5 ml-0.5" />{' '}
+              Signal group
             </a>
           </li>
           <li>
