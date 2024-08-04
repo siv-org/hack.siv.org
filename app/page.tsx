@@ -162,7 +162,7 @@ export default function Home() {
             </h3>
             <h4>Favorite Submissions</h4>
 
-            <div className="mt-6 space-y-6 text-left">
+            <div className="mt-12 min-[381px]:mt-8 space-y-6 text-left">
               <div>
                 <span className="opacity-60 font-light">
                   We{"'"}ll share our current favorites, in{' '}
