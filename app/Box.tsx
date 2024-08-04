@@ -7,7 +7,7 @@ export const Box = ({
 }: {
   color: string
   title: string
-  children: string | JSX.Element | JSX.Element[]
+  children: string | JSX.Element | (string | JSX.Element)[]
 }) => {
   return (
     <div
@@ -20,7 +20,7 @@ export const Box = ({
       >
         {title}
       </h2>
-      <p className="text-center p-3">{children}</p>
+      <div className="text-center p-3">{children}</div>
     </div>
   )
 }
