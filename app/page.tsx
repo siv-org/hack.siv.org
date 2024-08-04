@@ -247,7 +247,7 @@ export default function Home() {
           <li>
             <span className="opacity-50">2. </span>Signup for updates for:
             <div className="pl-5 opacity-80">
-              invitations to test elections, other important announcements, &
+              invitations to mock elections, other important announcements, &
               reminders
             </div>
           </li>
