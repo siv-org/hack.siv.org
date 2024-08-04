@@ -317,7 +317,7 @@ export default function Home() {
           Voting Village
         </a>{' '}
         is the world{"'"}s premier venue for uncovering weaknesses in the
-        technology that runs our elections.
+        technology that run our elections.
         <div className="mt-3 text-sm italic opacity-70">
           The Voting Village supports SIV{"'"}s commitment to transparency &
           security, but takes no responsibility for any poor decisions they make
