@@ -1,6 +1,7 @@
 import { Box } from './Box'
 import sivVoteUI from '../public/images-for-decon-2024/screenshot-of-siv-voter-interface.png'
 import goodLuck from './images/good-luck.png'
+import defCON from './images/defcon.jpg'
 import Image from 'next/image'
 
 const deepTeal = '#114852'
@@ -13,7 +14,12 @@ export default function Home() {
     <main className="flex min-h-screen max-w-3xl mx-auto flex-col items-center p-6 pt-10 sm:p-24 space-y-12 sm:text-lg">
       <div className="text-center">
         <p className="italic mb-3 opacity-60">NOW OPEN &nbsp;@</p>
-        <h4 className="text-3xl font-bold">DEFCON</h4>
+        <Image
+          src={defCON}
+          alt="DEF CON logo"
+          width={200}
+          className="opacity-70"
+        />
         <h4 className="text-3xl font-semibold text-blue-400">Voting Village</h4>
         <h5 className="italic mt-3">and online ;)</h5>
       </div>
@@ -284,7 +290,7 @@ export default function Home() {
 
       <Image
         src={goodLuck}
-        alt="Screenshot of SIV Vote UI"
+        alt="Good Luck sign"
         width={200}
         className="opacity-70"
       />
