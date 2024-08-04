@@ -5,6 +5,7 @@ import defCON from './images/defcon.jpg'
 import VV from './images/votingvillage.png'
 import Image from 'next/image'
 import { Countdown } from './Countdown'
+import { FaGithub } from 'react-icons/fa'
 
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
@@ -96,6 +97,7 @@ export default function Home() {
           the SIV Protocol
         </a>
         , not just{' '}
+        <FaGithub className="inline mr-1.5 relative bottom-0.5 ml-1 text-[22px]" />
         <a
           className={linkStyle}
           href="https://github.com/siv-org/siv"
