@@ -17,11 +17,11 @@ export default function Home() {
 
       <Box title="HACK SIV" color="#0600cc">
         <div className="space-y-2">
-          <div className="bg-blue-400 rounded p-1">
+          <div className="bg-teal-100/50 rounded p-1">
             Participate in SIV demo-elections, thoroughly inspect the system, &
             identify any weaknesses or vulnerabilities.
           </div>
-          <div className="bg-blue-400 rounded p-1">
+          <div className="bg-blue-400/50 rounded p-1">
             Our goal is to make the SIV Protocol (docs.siv.org) as secure as
             possible even for the highest-stakes presidential elections or
             referendums in war-zones.
