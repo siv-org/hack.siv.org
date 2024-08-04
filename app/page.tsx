@@ -1,6 +1,7 @@
 import { Box } from './Box'
 
 const deepTeal = '#114852'
+const deepRed = 'rgb(92, 1, 1)'
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
             <div className="opacity-90">FIND VULNERABILITIES</div>
           </div>
         }
-        color="darkred"
+        color={deepRed}
       >
         <span className="font-semibold">$10,000 in prizes</span>
       </Box>
@@ -81,7 +82,7 @@ export default function Home() {
         .
       </div>
 
-      <Box color="darkred" title={'Found a vulnerability?'}>
+      <Box color={deepRed} title={'Found a vulnerability?'}>
         Submit it to the public repo:{' '}
         <a
           className="underline text-blue-400 font-semibold"
