@@ -125,7 +125,7 @@ export default function Home() {
       <Box color={deepRed} title={'Found a vulnerability?'}>
         Submit it to the public repo:{' '}
         <a
-          className={`${linkStyle} !text-white/80`}
+          className={`${linkStyle} !text-white/80 hover:!text-white/100`}
           target="_blank"
           href="https://github.com/siv-org/siv/issues"
         >
