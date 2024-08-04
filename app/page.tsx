@@ -112,39 +112,63 @@ export default function Home() {
         </h3>
       </div>
 
-      <Box title="HACK SIV Awards Process" color="#060067">
-        <div>
-          <div>
+      <Box title="HACK SIV Awards Process" color="#114852">
+        <div className="flex relative text-sm">
+          {/* Left side */}
+          <div className="px-p w-1/2">
             <h4>1/2</h4>
-            <h3>The SIV Team{"'"}s</h3>
+            <h3 className="inline-block px-1 bg-green-200 text-black/80 py-0.5 my-2">
+              The SIV Team{"'"}s
+            </h3>
             <h4>Favorite Submissions</h4>
 
-            <div>We{"'"}ll share our current favorites, in real time</div>
-            <div>See our Judgement Criteria</div>
-            <div>
-              First-to-discover eligible only
-              <i>so chop chop</i>
+            <div className="mt-6 space-y-6 text-left">
+              <div>We{"'"}ll share our current favorites, in real time</div>
+              <div className="font-bold">
+                See our{' '}
+                <a href="" className="underline text-blue-400 font-semibold">
+                  Judgement Criteria
+                </a>
+              </div>
+              <div className="font-bold">
+                First-to-discover eligible only
+                <i className="block italic text-sm font-light opacity-60">
+                  so chop chop
+                </i>
+              </div>
             </div>
           </div>
-          <div>
+
+          {/* Right side */}
+          <div className="border-l border-dashed border-green-200/40 px-1 w-1/2">
             <h4>1/2</h4>
-            <h3>Public Vote</h3>
+            <h3 className="inline-block px-2 bg-green-200 text-black/80 py-0.5 my-2">
+              Public Vote
+            </h3>
 
-            <h4>Open to Anyone In-person @ DEF CON</h4>
+            <h4 className="text-[13px] leading-4 mt-0.5">
+              Open to Anyone In-person @ DEF&nbsp;CON&nbsp;{"'"}24
+            </h4>
 
-            <div>
-              Sunday Aug 11
-              <div>end of DEF CON</div>
-            </div>
+            <div className="font-bold mt-4 space-y-6 text-right">
+              <div className="pb-5">
+                Sunday Aug 11
+                <div className="text-sm font-light opacity-60">
+                  end of DEF CON
+                </div>
+              </div>
 
-            <div>
-              <div>rm -rf any_criteria</div>
-              The People Decide
-            </div>
+              <div>
+                <div className="italic font-light text-sm opacity-60">
+                  rm -rf any_criteria
+                </div>
+                The People Decide
+              </div>
 
-            <div>
-              Run using SIV itself
-              <span>hackable??!</span>
+              <div>
+                Run using SIV itself
+                <div className="opacity-60 text-sm font-light">hackable??!</div>
+              </div>
             </div>
           </div>
         </div>
