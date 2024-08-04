@@ -174,7 +174,11 @@ export default function Home() {
         </div>
       </Box>
 
-      <a className="bg-orange-200 text-black/90 px-4 py-2 rounded">
+      <a
+        href="https://gist.github.com/dsernst/26b1966dd61183ad256b881d2e51185e"
+        target="_blank"
+        className="bg-orange-200 text-black/90 px-4 py-2 rounded"
+      >
         See <b>Detailed Contest Rules</b>
       </a>
 
