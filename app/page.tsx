@@ -104,7 +104,7 @@ export default function Home() {
           SIV is committed to awarding the full $10k in prizes
         </h3>
         <h4 className="italic text-center !mt-0.5 text-sm opacity-50">
-          even if you jabroni{"'"}s can{"'"}t come up with anything good.
+          even if you rascals can{"'"}t come up with anything good.
         </h4>
 
         <h3 className="mt-4 text-lg">
