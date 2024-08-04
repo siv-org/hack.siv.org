@@ -98,21 +98,23 @@ export default function Home() {
       <div className="border p-4 rounded border-white/30 text-center">
         We are especially interested in attacks against{' '}
         <a
-          className={linkStyle}
+          className={`${linkStyle} inline-block`}
           href="https://docs.siv.org/technical-specifications"
           target="_blank"
         >
           the SIV Protocol
         </a>
         , not just{' '}
-        <FaGithub className="inline mr-1.5 relative bottom-0.5 ml-1 text-[22px]" />
-        <a
-          className={linkStyle}
-          href="https://github.com/siv-org/siv"
-          target="_blank"
-        >
-          the current implementation
-        </a>
+        <span className="inline-block">
+          <FaGithub className="inline mr-1.5 relative bottom-0.5 ml-1 text-[22px]" />
+          <a
+            className={linkStyle}
+            href="https://github.com/siv-org/siv"
+            target="_blank"
+          >
+            the current implementation
+          </a>
+        </span>
         .
       </div>
 
