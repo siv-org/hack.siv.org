@@ -4,10 +4,10 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center  p-24 space-y-8">
       <div className="text-center">
-        <p>NOW OPEN @</p>
-        <p>DEFCON</p>
-        <p>Voting Village</p>
-        <p>and online ;)</p>
+        <p className="italic mb-3">NOW OPEN &nbsp;@</p>
+        <h4 className="text-3xl font-bold">DEFCON</h4>
+        <h4 className="text-3xl font-semibold text-blue-400">Voting Village</h4>
+        <h5 className="italic mt-3">and online ;)</h5>
       </div>
 
       <Box title="HACK SIV" color="#060067">
