@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
-const linkStyle = 'underline text-blue-400 font-semibold'
+const linkStyle = 'underline text-green-200/80 font-semibold'
 
 export default function Home() {
   return (
@@ -91,7 +91,7 @@ export default function Home() {
       <Box color={deepRed} title={'Found a vulnerability?'}>
         Submit it to the public repo:{' '}
         <a
-          className={linkStyle}
+          className={`${linkStyle} !text-white/80`}
           target="_blank"
           href="https://github.com/siv-org/siv/issues"
         >
