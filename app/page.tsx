@@ -42,13 +42,14 @@ export default function Home() {
           'Learn other personal info about voters',
         ].map((text, i) => (
           <div key={i}>
-            <b>{i + 1})</b> {text}
+            <b className="opacity-50">{i + 1})</b> {text}
           </div>
         ))}
       </div>
 
       <div className="!mt-4 text-center">
-        <i>Bonus</i>: Convince us of major score updates to{' '}
+        <i className="opacity-50">Bonus</i>: Convince us of major score updates
+        to{' '}
         <a
           className="underline text-blue-400 font-semibold"
           href="docs.siv.org/compare"
@@ -185,9 +186,9 @@ export default function Home() {
       <div>
         <h4 className="text-center font-bold">Next Steps</h4>
 
-        <ol className="mt-5">
+        <ol className="mt-5 space-y-0.5">
           <li>
-            1.{' '}
+            <span className="opacity-50">1. </span>
             <a
               className="underline text-blue-400 font-semibold"
               target="_blank"
@@ -197,7 +198,7 @@ export default function Home() {
             </a>
           </li>
           <li>
-            2. Signup for updates for:
+            <span className="opacity-50">2. </span>Signup for updates for:
             <div className="pl-5 opacity-80">
               invitations to test elections, other important announcements, &
               reminders
@@ -207,7 +208,7 @@ export default function Home() {
       </div>
 
       <div>
-        <h4>Resources</h4>
+        <h4 className="text-center font-bold mb-5">Resources</h4>
 
         {[
           'The SIV codebase',
@@ -218,8 +219,8 @@ export default function Home() {
           'Detailed Contest Rules',
           'Q&A Discussions',
         ].map((text, i) => (
-          <div key={i}>
-            <b>{i + 1})</b> {text}
+          <div className="mb-0.5" key={i}>
+            <span className="opacity-50">{i + 1}.</span> {text}
           </div>
         ))}
       </div>
