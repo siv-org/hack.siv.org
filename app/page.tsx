@@ -176,7 +176,7 @@ export default function Home() {
       </Box>
 
       <a
-        href="https://gist.github.com/dsernst/26b1966dd61183ad256b881d2e51185e"
+        href="https://gist.github.com/dsernst/26b1966dd61183ad256b881d2e51185e#file-defcon-prize-awards-md"
         target="_blank"
         className="bg-orange-200 text-black/90 px-4 py-2 rounded"
       >
@@ -211,16 +211,29 @@ export default function Home() {
         <h4 className="text-center font-bold mb-5">Resources</h4>
 
         {[
-          'The SIV codebase',
-          'The SIV Docs',
-          'Illustrated Guide to The SIV Protocol',
-          'Known Security Issues',
-          'HACK SIV Schedule',
-          'Detailed Contest Rules',
-          'Q&A Discussions',
-        ].map((text, i) => (
+          ['The SIV codebase', 'https://github.com/siv-org/siv'],
+          ['The SIV Docs', 'https://docs.siv.org'],
+          ['Illustrated Guide to The SIV Protocol', 'https://siv.org/protocol'],
+          [
+            'Known Security Issues',
+            'https://github.com/siv-org/siv/issues?q=is%3Aissue+is%3Aopen+label%3Asecurity+',
+          ],
+          // ['HACK SIV Schedule', '/schedule'],
+          [
+            'Detailed Contest Rules',
+            'https://gist.github.com/dsernst/26b1966dd61183ad256b881d2e51185e#file-defcon-prize-awards-md',
+          ],
+          ['Online Q&A Forum', 'https://github.com/siv-org/siv/discussions'],
+        ].map(([text, link], i) => (
           <div className="mb-0.5" key={i}>
-            <span className="opacity-50">{i + 1}.</span> {text}
+            <span className="opacity-50">{i + 1}.</span>{' '}
+            <a
+              href={link}
+              target="_blank"
+              className="underline text-blue-400 font-semibold"
+            >
+              {text}
+            </a>
           </div>
         ))}
       </div>
