@@ -120,7 +120,7 @@ export default function Home() {
           {/* Left side */}
           <div className="px-p w-1/2">
             <h4>1/2</h4>
-            <h3 className="inline-block px-1 bg-green-200 text-black/80 py-0.5 my-2">
+            <h3 className="inline-block px-1 bg-green-200/70 text-black/80 py-0.5 my-2">
               The SIV Team{"'"}s
             </h3>
             <h4>Favorite Submissions</h4>
@@ -145,7 +145,7 @@ export default function Home() {
           {/* Right side */}
           <div className="border-l border-dashed border-green-200/40 px-1 w-1/2">
             <h4>1/2</h4>
-            <h3 className="inline-block px-2 bg-green-200 text-black/80 py-0.5 my-2">
+            <h3 className="inline-block px-2 bg-green-200/70 text-black/80 py-0.5 my-2">
               Public Vote
             </h3>
 
