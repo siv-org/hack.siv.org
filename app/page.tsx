@@ -18,14 +18,14 @@ export default function Home() {
 
       <Box
         title={
-          <>
-            <div>YOUR CHALLENGE:</div>
-            <div>FIND VULNERABILITIES</div>
-          </>
+          <div className="text-sm tracking-widest py-1">
+            <div className="opacity-50 mb-0.5">YOUR CHALLENGE:</div>
+            <div className="opacity-90">FIND VULNERABILITIES</div>
+          </div>
         }
         color="darkred"
       >
-        $10,000 in prizes
+        <span className="font-semibold">$10,000 in prizes</span>
       </Box>
 
       <div>FIXME Get Notified Component FIXME</div>
