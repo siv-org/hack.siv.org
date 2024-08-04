@@ -1,5 +1,7 @@
 import { Box } from './Box'
 
+const deepTeal = '#114852'
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-6 pt-10 sm:p-24 space-y-8">
@@ -10,7 +12,7 @@ export default function Home() {
         <h5 className="italic mt-3">and online ;)</h5>
       </div>
 
-      <Box title="HACK SIV" color="#114852">
+      <Box title="HACK SIV" color={deepTeal}>
         Internet voting system designed for{' '}
         <b>government-grade election security</b>, with mathematically provable
         privacy & vote verifiability.
@@ -238,15 +240,15 @@ export default function Home() {
         ))}
       </div>
 
-      <Box color="blue" title="About SIV">
+      <Box color={deepTeal} title="About SIV">
         SIV’s mission is to enable accessible & verifiable digital
         infrastructure for civil society.
       </Box>
-      <Box color="blue" title="About the Voting Village">
+      <Box color={deepTeal} title="About the Voting Village">
         The Voting Village is world’s premier venue for uncovering weaknesses in
         the technology that runs our elections.
       </Box>
-      <Box color="blue" title="About DEF CON">
+      <Box color={deepTeal} title="About DEF CON">
         DEF CON is the world’s largest hacking conference, hosting 30,000
         Information Security specialists in Las Vegas every year.
       </Box>
