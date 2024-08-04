@@ -99,10 +99,18 @@ export default function Home() {
         </a>
       </p>
 
-      <h3>SIV is committed to awarding the full $10k in prizes</h3>
-      <h4>
-        even if you jabroni{"'"}s can{"'"}t come up with anything good.
-      </h4>
+      <div className="text-xl text-center">
+        <h3 className="text-center font-bold">
+          SIV is committed to awarding the full $10k in prizes
+        </h3>
+        <h4 className="italic text-center !mt-0.5 text-sm opacity-50">
+          even if you jabroni{"'"}s can{"'"}t come up with anything good.
+        </h4>
+
+        <h3 className="mt-4 text-lg">
+          The only question is <i className="font-bold">to whom</i>?
+        </h3>
+      </div>
 
       <Box title="HACK SIV Awards Process" color="#060067">
         <div>
