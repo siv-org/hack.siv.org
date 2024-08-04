@@ -16,7 +16,7 @@ export const Box = ({
     >
       <h2
         style={{ backgroundColor: color }}
-        className=" text-center text-[#FFF8F6] py-1.5 font-bold"
+        className="px-4 text-center text-[#FFF8F6] py-1.5 font-bold"
       >
         {title}
       </h2>

@@ -23,7 +23,7 @@ export default function Home() {
             <div>FIND VULNERABILITIES</div>
           </>
         }
-        color="#0600cc"
+        color="darkred"
       >
         $10,000 in prizes
       </Box>
