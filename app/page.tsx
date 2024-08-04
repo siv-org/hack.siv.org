@@ -1,6 +1,6 @@
 import { Box } from './Box'
 import goodLuck from './images/good-luck.png'
-import defCON from './images/defcon.jpg'
+import defCON from './images/dc32-logo-2color-halftonegradient.webp'
 import VV from './images/votingvillage.png'
 import Image from 'next/image'
 import { Countdown } from './Countdown'
@@ -21,18 +21,20 @@ export default function Home() {
       {/* Now Open! header */}
       <div className="text-center">
         <p className="italic mb-3 opacity-60">NOW OPEN &nbsp;@</p>
-        <Image
-          src={defCON}
-          alt="DEF CON logo"
-          width={200}
-          className="opacity-70"
-        />
-        <Image
-          src={VV}
-          alt="Voting Village logo"
-          width={200}
-          className="opacity-80 mt-3"
-        />
+        <div className="flex sm:flex-row flex-col items-center space-x-5">
+          <Image
+            src={defCON}
+            alt="DEF CON logo"
+            width={200}
+            className="opacity-70"
+          />
+          <Image
+            src={VV}
+            alt="Voting Village logo"
+            width={200}
+            className="opacity-80 mt-3"
+          />
+        </div>
 
         <h5 className="italic mt-3">and online ;)</h5>
       </div>
