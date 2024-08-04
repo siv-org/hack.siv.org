@@ -1,5 +1,4 @@
 import { Box } from './Box'
-import sivVoteUI from '../public/images-for-decon-2024/screenshot-of-siv-voter-interface.png'
 import goodLuck from './images/good-luck.png'
 import defCON from './images/defcon.jpg'
 import VV from './images/votingvillage.png'
@@ -8,7 +7,8 @@ import { Countdown } from './Countdown'
 import { FaGithub } from 'react-icons/fa'
 import { FiExternalLink } from 'react-icons/fi'
 import { FaSignalMessenger } from 'react-icons/fa6'
-import { scaleWithAmbientLight } from './scaleWithAmbientLight'
+
+import { SIVVoteUIScreenshot } from './SIVVoteUIScreenshot'
 
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
@@ -44,13 +44,7 @@ export default function Home() {
         privacy & vote verifiability.
       </Box>
 
-      {/* SIV Vote UI screenshot */}
-      <Image
-        src={sivVoteUI}
-        alt="Screenshot of SIV Vote UI"
-        width={300}
-        style={{ opacity: scaleWithAmbientLight(0.5, 0.85) }}
-      />
+      <SIVVoteUIScreenshot />
 
       {/* YOUR CHALLENGE */}
       <Box
