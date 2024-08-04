@@ -89,7 +89,11 @@ export default function Home() {
       <div className="!mt-4 text-center">
         <i className="opacity-50">Bonus: </i>Convince us of major score updates
         to{' '}
-        <a className={linkStyle} href="docs.siv.org/compare" target="_blank">
+        <a
+          className={linkStyle}
+          href="https://docs.siv.org/compare"
+          target="_blank"
+        >
           docs.siv.org/compare
         </a>
       </div>
