@@ -2,6 +2,7 @@ import { Box } from './Box'
 import sivVoteUI from '../public/images-for-decon-2024/screenshot-of-siv-voter-interface.png'
 import goodLuck from './images/good-luck.png'
 import defCON from './images/defcon.jpg'
+import VV from './images/votingvillage.png'
 import Image from 'next/image'
 
 const deepTeal = '#114852'
@@ -20,7 +21,13 @@ export default function Home() {
           width={200}
           className="opacity-70"
         />
-        <h4 className="text-3xl font-semibold text-blue-400">Voting Village</h4>
+        <Image
+          src={VV}
+          alt="Voting Village logo"
+          width={200}
+          className="opacity-80 mt-3"
+        />
+
         <h5 className="italic mt-3">and online ;)</h5>
       </div>
 
