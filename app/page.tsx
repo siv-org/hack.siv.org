@@ -183,18 +183,18 @@ export default function Home() {
       </a>
 
       <div>
-        <h4>Next Steps</h4>
+        <h4 className="text-center font-bold">Next Steps</h4>
 
-        <div>
+        <ol className="mt-5">
           <li>1. Join the Signal group</li>
           <li>
             2. Signup for updates for:
-            <div>
-              invitations to test elections & other important announcements &
+            <div className="pl-5 opacity-80">
+              invitations to test elections, other important announcements, &
               reminders
             </div>
           </li>
-        </div>
+        </ol>
       </div>
 
       <div>
