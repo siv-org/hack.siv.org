@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
+const linkStyle = 'underline text-blue-400 font-semibold'
 
 export default function Home() {
   return (
@@ -62,11 +63,7 @@ export default function Home() {
       <div className="!mt-4 text-center">
         <i className="opacity-50">Bonus: </i>Convince us of major score updates
         to{' '}
-        <a
-          className="underline text-blue-400 font-semibold"
-          href="docs.siv.org/compare"
-          target="_blank"
-        >
+        <a className={linkStyle} href="docs.siv.org/compare" target="_blank">
           docs.siv.org/compare
         </a>
       </div>
@@ -74,7 +71,7 @@ export default function Home() {
       <div className="border p-4 rounded border-white/30 text-center">
         We are especially interested in attacks against{' '}
         <a
-          className="underline text-blue-400 font-semibold"
+          className={linkStyle}
           href="https://docs.siv.org/technical-specifications"
           target="_blank"
         >
@@ -82,7 +79,7 @@ export default function Home() {
         </a>
         , not just{' '}
         <a
-          className="underline text-blue-400 font-semibold"
+          className={linkStyle}
           href="https://github.com/siv-org/siv"
           target="_blank"
         >
@@ -94,7 +91,7 @@ export default function Home() {
       <Box color={deepRed} title={'Found a vulnerability?'}>
         Submit it to the public repo:{' '}
         <a
-          className="underline text-blue-400 font-semibold"
+          className={linkStyle}
           target="_blank"
           href="https://github.com/siv-org/siv/issues"
         >
@@ -103,11 +100,7 @@ export default function Home() {
       </Box>
       <p className="!mt-3 text-sm">
         Or email:{' '}
-        <a
-          className="underline text-blue-400 font-semibold"
-          target="_blank"
-          href="mailto:defcon@siv.org"
-        >
+        <a className={linkStyle} target="_blank" href="mailto:defcon@siv.org">
           defcon@siv.org
         </a>
       </p>
@@ -142,7 +135,7 @@ export default function Home() {
                 <a
                   href="https://gist.github.com/dsernst/26b1966dd61183ad256b881d2e51185e#awarding-prizes"
                   target="_blank"
-                  className="underline text-blue-400 font-semibold"
+                  className={linkStyle}
                 >
                   Judgement Criteria
                 </a>
@@ -206,7 +199,7 @@ export default function Home() {
           <li>
             <span className="opacity-50">1. </span>
             <a
-              className="underline text-blue-400 font-semibold"
+              className={linkStyle}
               target="_blank"
               href="https://signal.group/#CjQKICsvJxvIn78MHOVlLHyyDZZzRZ6jG62baU0PSvNytGixEhB_0dk6RSLBFcK9o63Qlpx0"
             >
@@ -243,11 +236,7 @@ export default function Home() {
         ].map(([text, link], i) => (
           <div className="mb-0.5" key={i}>
             <span className="opacity-50">{i + 1}.</span>{' '}
-            <a
-              href={link}
-              target="_blank"
-              className="underline text-blue-400 font-semibold"
-            >
+            <a href={link} target="_blank" className={linkStyle}>
               {text}
             </a>
           </div>
@@ -255,11 +244,7 @@ export default function Home() {
       </div>
 
       <Box color={deepTeal} title="About SIV">
-        <a
-          href="https://siv.org"
-          target="_blank"
-          className="underline text-blue-400 font-semibold"
-        >
+        <a href="https://siv.org" target="_blank" className={linkStyle}>
           SIV{"'"}s
         </a>{' '}
         mission is to enable accessible & verifiable digital infrastructure for
@@ -270,7 +255,7 @@ export default function Home() {
         <a
           href="https://www.votingvillage.org"
           target="_blank"
-          className="underline text-blue-400 font-semibold"
+          className={linkStyle}
         >
           Voting Village
         </a>{' '}
@@ -283,11 +268,7 @@ export default function Home() {
         </div>
       </Box>
       <Box color={deepTeal} title="About DEF CON">
-        <a
-          href="https://defcon.org"
-          target="_blank"
-          className="underline text-blue-400 font-semibold"
-        >
+        <a href="https://defcon.org" target="_blank" className={linkStyle}>
           DEF CON
         </a>{' '}
         is the world{"'"}s largest hacking conference, hosting 30,000
