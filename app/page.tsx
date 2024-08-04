@@ -174,7 +174,9 @@ export default function Home() {
         </div>
       </Box>
 
-      <a>See Detailed Contest Rules</a>
+      <a className="bg-orange-200 text-black/90 px-4 py-2 rounded">
+        See <b>Detailed Contest Rules</b>
+      </a>
 
       <div>
         <h4>Next Steps</h4>
