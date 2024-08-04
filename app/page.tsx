@@ -296,8 +296,8 @@ export default function Home() {
         <a href="https://defcon.org" target="_blank" className={linkStyle}>
           DEF CON
         </a>{' '}
-        is the world{"'"}s largest hacking conference, hosting 30,000
-        Information Security specialists in Las Vegas every year.
+        is the world{"'"}s largest hacking convention, attracting 30,000
+        Information Security specialists to Las Vegas every year.
       </Box>
 
       <Countdown />
