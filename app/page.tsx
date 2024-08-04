@@ -119,7 +119,7 @@ export default function Home() {
       <Box title="HACK SIV Awards Process" color="#114852">
         <div className="flex relative text-sm">
           {/* Left side */}
-          <div className="px-p w-1/2">
+          <div className="sm:px-2 px-1 w-1/2">
             <h4>1/2</h4>
             <h3 className="inline-block px-1 bg-green-200/70 text-black/80 py-0.5 my-2">
               The SIV Team{"'"}s
@@ -148,18 +148,18 @@ export default function Home() {
           </div>
 
           {/* Right side */}
-          <div className="border-l border-dashed border-green-200/40 px-1 w-1/2">
+          <div className="border-l border-dashed border-green-200/40 sm:px-2 px-1 w-1/2">
             <h4>1/2</h4>
             <h3 className="inline-block px-2 bg-green-200/70 text-black/80 py-0.5 my-2">
               Public Vote
             </h3>
 
             <h4 className="text-[13px] leading-4 mt-0.5">
-              Open to Anyone In-person @ DEF&nbsp;CON&nbsp;{"'"}24
+              Open to Anyone In-person @&nbsp;DEF&nbsp;CON&nbsp;{"'"}24
             </h4>
 
             <div className="font-bold mt-4 space-y-6 text-right">
-              <div className="pb-5">
+              <div className="pb-5 min-[388px]:pb-0">
                 Sunday Aug 11
                 <div className="text-sm font-light opacity-60">
                   end of DEF CON
