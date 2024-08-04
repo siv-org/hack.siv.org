@@ -4,7 +4,8 @@ import Image from 'next/image'
 
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
-const linkStyle = 'underline text-green-200/80 font-semibold'
+const linkStyle =
+  'underline text-green-200 text-opacity-80 font-semibold hover:text-opacity-100'
 
 export default function Home() {
   return (
