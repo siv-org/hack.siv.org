@@ -78,11 +78,26 @@ export default function Home() {
         .
       </div>
 
-      <Box color="red" title={'Found a vulnerability?'}>
+      <Box color="darkred" title={'Found a vulnerability?'}>
         Submit it to the public repo:{' '}
-        <a>https://github.com/siv-org/siv/issues</a>
+        <a
+          className="underline text-blue-400 font-semibold"
+          target="_blank"
+          href="https://github.com/siv-org/siv/issues"
+        >
+          github.com/siv-org/siv/issues
+        </a>
       </Box>
-      <p>Or email: defcon@siv.org</p>
+      <p className="!mt-3 text-sm">
+        Or email:{' '}
+        <a
+          className="underline text-blue-400 font-semibold"
+          target="_blank"
+          href="mailto:defcon@siv.org"
+        >
+          defcon@siv.org
+        </a>
+      </p>
 
       <h3>SIV is committed to awarding the full $10k in prizes</h3>
       <h4>
