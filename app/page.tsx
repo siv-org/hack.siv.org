@@ -1,5 +1,6 @@
 import { Box } from './Box'
 import sivVoteUI from '../public/images-for-decon-2024/screenshot-of-siv-voter-interface.png'
+import goodLuck from './images/good-luck.png'
 import Image from 'next/image'
 
 const deepTeal = '#114852'
@@ -281,7 +282,12 @@ export default function Home() {
         <div className="text-center text-red-600 mt-1">7 days</div>
       </div>
 
-      <h3>Good luck! 🍀</h3>
+      <Image
+        src={goodLuck}
+        alt="Screenshot of SIV Vote UI"
+        width={200}
+        className="opacity-70"
+      />
     </main>
   )
 }
