@@ -28,10 +28,10 @@ export default function Home() {
         <span className="font-semibold">$10,000 in prizes</span>
       </Box>
 
-      <div>FIXME Get Notified Component FIXME</div>
+      <div>FIXME Get Notified Component</div>
 
       <div className="space-y-1.5 mb-0">
-        <h3 className="text-xl font-bold mb-5">
+        <h3 className="text-[18px] sm:text-xl font-bold mb-5">
           Can you find novel ways to ....?
         </h3>
         {[
