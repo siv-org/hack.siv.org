@@ -1,6 +1,7 @@
 import { Box } from './Box'
 import sivVoteUI from '../public/images-for-decon-2024/screenshot-of-siv-voter-interface.png'
 import Image from 'next/image'
+import { Countdown } from './Countdown'
 
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
@@ -41,6 +42,8 @@ export default function Home() {
       >
         <span className="font-semibold">$10,000 in prizes</span>
       </Box>
+
+      <Countdown />
 
       {/* <div>FIXME Get Notified Component</div> */}
 
@@ -276,10 +279,7 @@ export default function Home() {
         Information Security specialists in Las Vegas every year.
       </Box>
 
-      <div className="uppercase font-semibold">
-        Submissions close in
-        <div className="text-center text-red-600 mt-1">7 days</div>
-      </div>
+      <Countdown />
 
       <h3>Good luck! 🍀</h3>
     </main>
