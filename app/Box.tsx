@@ -6,7 +6,7 @@ export const Box = ({
   color,
 }: {
   color: string
-  title: string
+  title: string | JSX.Element
   children: string | JSX.Element | (string | JSX.Element)[]
 }) => {
   return (
