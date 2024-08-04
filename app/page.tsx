@@ -8,6 +8,7 @@ import { Countdown } from './Countdown'
 import { FaGithub } from 'react-icons/fa'
 import { FiExternalLink } from 'react-icons/fi'
 import { FaSignalMessenger } from 'react-icons/fa6'
+import { scaleWithAmbientLight } from './scaleWithAmbientLight'
 
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
@@ -48,7 +49,7 @@ export default function Home() {
         src={sivVoteUI}
         alt="Screenshot of SIV Vote UI"
         width={300}
-        className="opacity-50"
+        style={{ opacity: scaleWithAmbientLight(0.5, 0.85) }}
       />
 
       {/* YOUR CHALLENGE */}
