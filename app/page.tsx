@@ -16,6 +16,7 @@ const linkStyle =
 export default function Home() {
   return (
     <main className="flex min-h-screen max-w-3xl mx-auto flex-col items-center p-6 pt-10 sm:p-24 space-y-12 sm:text-lg">
+      {/* Now Open! header */}
       <div className="text-center">
         <p className="italic mb-3 opacity-60">NOW OPEN &nbsp;@</p>
         <Image
@@ -34,12 +35,14 @@ export default function Home() {
         <h5 className="italic mt-3">and online ;)</h5>
       </div>
 
+      {/* Intro to SIV */}
       <Box title="HACK SIV" color={deepTeal}>
         Internet voting system designed for{' '}
         <b>government-grade election security</b>, with mathematically provable
         privacy & vote verifiability.
       </Box>
 
+      {/* SIV Vote UI screenshot */}
       <Image
         src={sivVoteUI}
         alt="Screenshot of SIV Vote UI"
@@ -47,6 +50,7 @@ export default function Home() {
         className="opacity-50"
       />
 
+      {/* YOUR CHALLENGE */}
       <Box
         title={
           <div className="text-sm tracking-widest py-1">
@@ -63,6 +67,7 @@ export default function Home() {
 
       {/* <div>FIXME Get Notified Component</div> */}
 
+      {/* Attack Goals */}
       <div className="space-y-1.5 mb-0">
         <h3 className="text-[18px] sm:text-xl font-bold mb-5">
           Can you find novel ways to ....?
@@ -80,6 +85,7 @@ export default function Home() {
         ))}
       </div>
 
+      {/* Bonus Goal */}
       <div className="!mt-4 text-center">
         <i className="opacity-50">Bonus: </i>Convince us of major score updates
         to{' '}
@@ -88,6 +94,7 @@ export default function Home() {
         </a>
       </div>
 
+      {/* Especially interested in Protocol vulnerabilities */}
       <div className="border p-4 rounded border-white/30 text-center">
         We are especially interested in attacks against{' '}
         <a
@@ -109,6 +116,7 @@ export default function Home() {
         .
       </div>
 
+      {/* Found a vuln? */}
       <Box color={deepRed} title={'Found a vulnerability?'}>
         Submit it to the public repo:{' '}
         <a
@@ -119,6 +127,7 @@ export default function Home() {
           github.com/siv-org/siv/issues
         </a>
       </Box>
+      {/* Or email */}
       <p className="!mt-3 text-sm">
         Or email:{' '}
         <a className={linkStyle} target="_blank" href="mailto:defcon@siv.org">
@@ -126,6 +135,7 @@ export default function Home() {
         </a>
       </p>
 
+      {/* Committed to $10k */}
       <div className="text-xl text-center">
         <h3 className="text-center font-bold">
           SIV is committed to awarding the full $10k in prizes
@@ -139,6 +149,7 @@ export default function Home() {
         </h3>
       </div>
 
+      {/* 2-col Awards Process */}
       <Box title="HACK SIV Awards Process" color="#114852">
         <div className="flex relative text-sm">
           {/* Left side */}
@@ -205,6 +216,7 @@ export default function Home() {
         </div>
       </Box>
 
+      {/* Detailed Contest Rules btn */}
       <a
         href="https://gist.github.com/dsernst/26b1966dd61183ad256b881d2e51185e#file-defcon-prize-awards-md"
         target="_blank"
@@ -217,6 +229,7 @@ export default function Home() {
         </b>
       </a>
 
+      {/* Next Steps */}
       <div>
         <h4 className="text-center font-bold">Next Steps</h4>
 
@@ -241,6 +254,7 @@ export default function Home() {
         </ol>
       </div>
 
+      {/* Resources */}
       <div>
         <h4 className="text-center font-bold mb-5">Resources</h4>
 
@@ -268,6 +282,7 @@ export default function Home() {
         ))}
       </div>
 
+      {/* About SIV */}
       <Box color={deepTeal} title="About SIV">
         <a href="https://siv.org" target="_blank" className={linkStyle}>
           SIV{"'"}s
@@ -275,6 +290,8 @@ export default function Home() {
         mission is to enable accessible & verifiable digital infrastructure for
         civil society.
       </Box>
+
+      {/* About Voting Village */}
       <Box color={deepTeal} title="About the Voting Village">
         The{' '}
         <a
@@ -292,6 +309,8 @@ export default function Home() {
           with this contest.
         </div>
       </Box>
+
+      {/* About DEF CON */}
       <Box color={deepTeal} title="About DEF CON">
         <a href="https://defcon.org" target="_blank" className={linkStyle}>
           DEF CON
@@ -302,6 +321,7 @@ export default function Home() {
 
       <Countdown />
 
+      {/* Good luck! */}
       <Image
         src={goodLuck}
         alt="Good Luck sign"
