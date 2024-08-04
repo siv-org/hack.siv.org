@@ -161,22 +161,25 @@ export default function Home() {
             <h4>Favorite Submissions</h4>
 
             <div className="mt-6 space-y-6 text-left">
-              <div>We{"'"}ll share our current favorites, in real time</div>
+              <div>
+                <span className="opacity-60 font-light">
+                  We{"'"}ll share our current favorites, in{' '}
+                </span>
+                real time
+              </div>
               <div className="font-bold">
-                See our{' '}
+                <span className="opacity-60 font-light">See </span>
                 <a
                   href="https://gist.github.com/dsernst/26b1966dd61183ad256b881d2e51185e#awarding-prizes"
                   target="_blank"
                   className={linkStyle}
                 >
-                  Judgement Criteria
+                  Our Judgement Criteria
                 </a>
               </div>
               <div className="font-bold">
-                First-to-discover eligible only
-                <i className="block italic text-sm font-light opacity-60">
-                  so chop chop
-                </i>
+                First-to-Post{' '}
+                <span className="opacity-60 font-light">Qualifies</span>
               </div>
             </div>
           </div>
