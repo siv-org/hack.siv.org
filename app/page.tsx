@@ -10,7 +10,7 @@ export default function Home() {
         <h5 className="italic mt-3">and online ;)</h5>
       </div>
 
-      <Box title="HACK SIV" color="#060067">
+      <Box title="HACK SIV" color="#114852">
         Internet voting system designed for{' '}
         <b>government-grade election security</b>, with mathematically provable
         privacy & vote verifiability.
