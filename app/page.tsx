@@ -186,7 +186,16 @@ export default function Home() {
         <h4 className="text-center font-bold">Next Steps</h4>
 
         <ol className="mt-5">
-          <li>1. Join the Signal group</li>
+          <li>
+            1.{' '}
+            <a
+              className="underline text-blue-400 font-semibold"
+              target="_blank"
+              href="https://signal.group/#CjQKICsvJxvIn78MHOVlLHyyDZZzRZ6jG62baU0PSvNytGixEhB_0dk6RSLBFcK9o63Qlpx0"
+            >
+              Join the Signal group
+            </a>
+          </li>
           <li>
             2. Signup for updates for:
             <div className="pl-5 opacity-80">
