@@ -208,7 +208,7 @@ export default function Home() {
       <a
         href="https://gist.github.com/dsernst/26b1966dd61183ad256b881d2e51185e#file-defcon-prize-awards-md"
         target="_blank"
-        className="bg-orange-300 text-black/90 px-4 py-2 rounded"
+        className="bg-orange-300 bg-opacity-80 text-black/90 px-4 py-2 rounded hover:bg-opacity-100"
       >
         See{' '}
         <b>
