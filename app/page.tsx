@@ -58,9 +58,24 @@ export default function Home() {
         </a>
       </div>
 
-      <div>
-        We are especially interested in attacks against the SIV Protocol, not
-        just the current implementation
+      <div className="border p-4 rounded border-white/30 text-center">
+        We are especially interested in attacks against{' '}
+        <a
+          className="underline text-blue-400 font-semibold"
+          href="https://docs.siv.org/technical-specifications"
+          target="_blank"
+        >
+          the SIV Protocol
+        </a>
+        , not just{' '}
+        <a
+          className="underline text-blue-400 font-semibold"
+          href="https://github.com/siv-org/siv"
+          target="_blank"
+        >
+          the current implementation
+        </a>
+        .
       </div>
 
       <Box color="red" title={'Found a vulnerability?'}>
