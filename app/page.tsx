@@ -130,7 +130,11 @@ export default function Home() {
               <div>We{"'"}ll share our current favorites, in real time</div>
               <div className="font-bold">
                 See our{' '}
-                <a href="" className="underline text-blue-400 font-semibold">
+                <a
+                  href="https://gist.github.com/dsernst/26b1966dd61183ad256b881d2e51185e#awarding-prizes"
+                  target="_blank"
+                  className="underline text-blue-400 font-semibold"
+                >
                   Judgement Criteria
                 </a>
               </div>
