@@ -253,9 +253,9 @@ export default function Home() {
         Information Security specialists in Las Vegas every year.
       </Box>
 
-      <div>
+      <div className="uppercase font-semibold">
         Submissions close in
-        <div>9 days</div>
+        <div className="text-center text-red-600 mt-1">7 days</div>
       </div>
 
       <h3>Good luck! 🍀</h3>
