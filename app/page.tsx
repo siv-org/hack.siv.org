@@ -30,8 +30,10 @@ export default function Home() {
 
       <div>FIXME Get Notified Component FIXME</div>
 
-      <div>
-        <h3>Can you find novel ways to ....?</h3>
+      <div className="space-y-1.5 mb-0">
+        <h3 className="text-xl font-bold mb-5">
+          Can you find novel ways to ....?
+        </h3>
         {[
           'Vote multiple times',
           "Change someone else's vote, without detection",
@@ -45,9 +47,13 @@ export default function Home() {
         ))}
       </div>
 
-      <div>
+      <div className="!mt-4 text-center">
         <i>Bonus</i>: Convince us of major score updates to{' '}
-        <a href="docs.siv.org/compare" target="_blank">
+        <a
+          className="underline text-blue-400 font-semibold"
+          href="docs.siv.org/compare"
+          target="_blank"
+        >
           docs.siv.org/compare
         </a>
       </div>
