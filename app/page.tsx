@@ -168,9 +168,9 @@ export default function Home() {
             <div className="mt-12 min-[381px]:mt-8 space-y-6 text-left">
               <div>
                 <span className="opacity-60 font-light">
-                  We{"'"}ll share our current favorites, in{' '}
+                  We{"'"}ll share our current favorites, in&nbsp;
                 </span>
-                real time
+                real&nbsp;time
               </div>
               <div className="font-bold">
                 <span className="opacity-60 font-light">See </span>
