@@ -1,4 +1,6 @@
 import { Box } from './Box'
+import sivVoteUI from '../public/images-for-decon-2024/screenshot-of-siv-voter-interface.png'
+import Image from 'next/image'
 
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
@@ -18,6 +20,13 @@ export default function Home() {
         <b>government-grade election security</b>, with mathematically provable
         privacy & vote verifiability.
       </Box>
+
+      <Image
+        src={sivVoteUI}
+        alt="Screenshot of SIV Vote UI"
+        width={300}
+        className="opacity-50"
+      />
 
       <Box
         title={
