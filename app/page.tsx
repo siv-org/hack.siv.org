@@ -188,7 +188,7 @@ export default function Home() {
               </div>
               <div className="font-bold">
                 First-to-Post{' '}
-                <span className="opacity-60 font-light">Qualifies</span>
+                <span className="opacity-60 font-light">qualifies</span>
               </div>
             </div>
           </div>
