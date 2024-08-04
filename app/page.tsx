@@ -5,7 +5,7 @@ const deepRed = 'rgb(92, 1, 1)'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen max-w-3xl mx-auto flex-col items-center p-6 pt-10 sm:p-24 space-y-8 sm:text-lg">
+    <main className="flex min-h-screen max-w-3xl mx-auto flex-col items-center p-6 pt-10 sm:p-24 space-y-12 sm:text-lg">
       <div className="text-center">
         <p className="italic mb-3 opacity-60">NOW OPEN &nbsp;@</p>
         <h4 className="text-3xl font-bold">DEFCON</h4>
