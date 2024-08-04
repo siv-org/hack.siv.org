@@ -241,15 +241,20 @@ export default function Home() {
       </div>
 
       <Box color={deepTeal} title="About SIV">
-        SIV’s mission is to enable accessible & verifiable digital
+        SIV{"'"}s mission is to enable accessible & verifiable digital
         infrastructure for civil society.
       </Box>
       <Box color={deepTeal} title="About the Voting Village">
-        The Voting Village is world’s premier venue for uncovering weaknesses in
-        the technology that runs our elections.
+        The Voting Village is world{"'"}s premier venue for uncovering
+        weaknesses in the technology that runs our elections.
+        <div className="mt-3 text-sm italic opacity-70">
+          The Voting Village supports SIV{"'"}s commitment to transparency &
+          security, but takes no responsibility for any poor decisions they make
+          with this contest.
+        </div>
       </Box>
       <Box color={deepTeal} title="About DEF CON">
-        DEF CON is the world’s largest hacking conference, hosting 30,000
+        DEF CON is the world{"'"}s largest hacking conference, hosting 30,000
         Information Security specialists in Las Vegas every year.
       </Box>
 
