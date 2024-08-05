@@ -300,10 +300,11 @@ export default function Home() {
             </a>
           </div>
         ))}
-        <div className="italic text-green-600/70 mt-1">
-          OPENING SOON: Hacking Live Elections (
+        <div className="italic mt-1">
+          <span className="text-green-600/70">OPENING SOON: </span>Hacking Live
+          Elections (
           <a
-            href="https://hack.siv.org/register"
+            href="/register"
             target="_blank"
             className={`${linkStyle} text-sm font-normal`}
           >
