@@ -265,7 +265,9 @@ export default function Home() {
 
       {/* Resources */}
       <div>
-        <h4 className="text-center font-bold mb-5">Resources</h4>
+        <h4 className="text-center font-bold mb-5 border-b pb-1 border-white/50">
+          Resources
+        </h4>
 
         {[
           ['The SIV codebase', 'https://github.com/siv-org/siv'],
