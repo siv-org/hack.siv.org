@@ -296,7 +296,7 @@ export default function Home() {
             </a>
           </div>
         ))}
-        <div className="italic text-green-700/80 mt-1">
+        <div className="italic text-green-600/70 mt-1">
           OPENING SOON: Mock Elections Live Hacking (
           <a
             href="https://hack.siv.org/register"
