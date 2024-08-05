@@ -314,7 +314,7 @@ export default function Home() {
         technology that run our elections.
         <div className="mt-3 text-sm italic opacity-70">
           The Voting Village supports SIV{"'"}s commitment to transparency &
-          security, but takes no responsibility for any poor decisions they make
+          security, but takes no responsibility for any poor decisions SIV makes
           with this contest.
         </div>
       </Box>
