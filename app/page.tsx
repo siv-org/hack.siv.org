@@ -243,32 +243,25 @@ export default function Home() {
 
       {/* Next Steps */}
       <div>
-        <h4 className="text-center font-bold">Next Steps</h4>
+        <h4 className="text-center font-bold mb-5 border-b pb-1 border-white/50">
+          Next Steps
+        </h4>
+        <a
+          className={`${linkStyle} text-lg`}
+          target="_blank"
+          href="https://signal.group/#CjQKICsvJxvIn78MHOVlLHyyDZZzRZ6jG62baU0PSvNytGixEhB_0dk6RSLBFcK9o63Qlpx0"
+        >
+          Join the{' '}
+          <FaSignalMessenger className="inline relative bottom-0.5 ml-0.5" />{' '}
+          Signal group
+        </a>
 
-        <ol className="mt-5 space-y-0.5">
-          <li>
-            <span className="opacity-50">1. </span>
-            <a
-              className={linkStyle}
-              target="_blank"
-              href="https://signal.group/#CjQKICsvJxvIn78MHOVlLHyyDZZzRZ6jG62baU0PSvNytGixEhB_0dk6RSLBFcK9o63Qlpx0"
-            >
-              Join the{' '}
-              <FaSignalMessenger className="inline relative bottom-0.5 ml-0.5" />{' '}
-              Signal group
-            </a>
-          </li>
-          <li>
-            <span className="opacity-50">2. </span>Signup for updates for:
-            <div className="pl-5 opacity-80">
-              invitations to mock elections, other important announcements, &
-              reminders
-            </div>
-          </li>
-        </ol>
+        <div className="opacity-50 text-center my-6 italic">and / or</div>
       </div>
 
-      <Register />
+      <div className="!mt-0">
+        <Register />
+      </div>
 
       {/* Resources */}
       <div>

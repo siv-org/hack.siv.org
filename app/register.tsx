@@ -17,9 +17,9 @@ export const Register = () => {
       <div className="rounded-t py-3 pl-3 bg-[#114852] font-semibold text-center flex items-center">
         <MdOutlineNotificationsActive className="inline relative text-[40px] pr-2" />
         <div className="pl-3 text-left">
-          <div className="text-xl">Get notified</div>
+          <div className="text-xl">Signup for Invites</div>
           <div className="font-light text-sm opacity-60">
-            of announcements & mock-elections
+            to mock elections & announcements
           </div>
         </div>
       </div>
