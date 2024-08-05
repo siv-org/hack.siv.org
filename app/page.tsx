@@ -266,7 +266,7 @@ export default function Home() {
       {/* Resources */}
       <div>
         <h4 className="text-center font-bold mb-5 border-b pb-1 border-white/50">
-          Resources
+          Hacking Resources
         </h4>
 
         {[
