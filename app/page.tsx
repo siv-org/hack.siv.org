@@ -292,7 +292,7 @@ export default function Home() {
       </div>
 
       {/* Resources */}
-      <div>
+      <div className="border-b pb-12 border-white/20">
         <h4 className="text-center font-bold mb-5 border-b pb-1 border-white/50">
           Hacking Resources
         </h4>
