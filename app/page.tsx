@@ -268,21 +268,26 @@ export default function Home() {
         <h4 className="text-center font-bold mb-5 border-b pb-1 border-white/50">
           Hacking Resources
         </h4>
-
         {[
-          ['The SIV codebase', 'https://github.com/siv-org/siv'],
-          ['The SIV Docs', 'https://docs.siv.org'],
           ['Illustrated Guide to The SIV Protocol', 'https://siv.org/protocol'],
+          ['SIV Documentation', 'https://docs.siv.org'],
           [
             'Known Security Issues',
             'https://github.com/siv-org/siv/issues?q=is%3Aissue+is%3Aopen+label%3Asecurity+',
           ],
-          // ['HACK SIV Schedule', '/schedule'],
+          [
+            'SIV Technical Specifications',
+            'https://docs.siv.org/technical-specifications',
+          ],
+          ['The SIV codebase', 'https://github.com/siv-org/siv'],
           [
             'Detailed Contest Rules',
             'https://gist.github.com/dsernst/26b1966dd61183ad256b881d2e51185e#file-defcon-prize-awards-md',
           ],
-          ['Online Q&A Forum', 'https://github.com/siv-org/siv/discussions'],
+          [
+            'Public Questions Forum',
+            'https://github.com/siv-org/siv/discussions',
+          ],
         ].map(([text, link], i) => (
           <div className="mb-0.5" key={i}>
             <span className="opacity-50">{i + 1}.</span>{' '}
@@ -291,6 +296,17 @@ export default function Home() {
             </a>
           </div>
         ))}
+        <div className="italic text-green-700/80 mt-1">
+          OPENING SOON: Mock Elections Live Hacking (
+          <a
+            href="https://hack.siv.org/register"
+            target="_blank"
+            className={`${linkStyle} text-sm font-normal`}
+          >
+            register
+          </a>
+          )
+        </div>
       </div>
 
       {/* About SIV */}
