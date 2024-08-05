@@ -22,7 +22,9 @@ export default function Home() {
     <main className="flex min-h-screen max-w-3xl mx-auto flex-col items-center p-6 pt-10 sm:p-24 space-y-12 sm:text-lg">
       {/* Now Open! header */}
       <div className="text-center">
-        <p className="italic mb-3 opacity-60">NOW OPEN &nbsp;@</p>
+        <p className="italic mb-3 opacity-60 text-[#59d7ed] font-medium">
+          NOW OPEN &nbsp;@
+        </p>
         <div className="flex sm:flex-row flex-col items-center space-x-5">
           <Image
             src={defCON}
@@ -38,7 +40,9 @@ export default function Home() {
           />
         </div>
 
-        <h5 className="italic mt-3">and online ;)</h5>
+        <h5 className="italic mt-3 text-gray-400 text-base">
+          ...and online ;)
+        </h5>
       </div>
 
       {/* Intro to SIV */}
