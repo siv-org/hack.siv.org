@@ -54,6 +54,30 @@ export default function Home() {
 
       <SIVVoteUIScreenshot />
 
+      {/* Background */}
+      <Box title="BACKGROUND" color={deepTeal}>
+        <div className="space-y-3 px-1 text-[17px]">
+          <p>
+            SIV is already being used for impactful elections, having elected
+            legislators and executives at the local, state, and national levels.
+          </p>
+          <p>
+            There are thousands more election administrators around the world,
+            searching for truly secure, easy-to-use ways to allow citizens to
+            vote and make their voices heard.
+          </p>
+          <p>But the bar for security is incredibly&nbsp;high.</p>
+          <p>
+            The threat model is adversarial Nation States, willing to expend
+            military-sized budgets to seek any advantage available.
+          </p>
+          <p>
+            We are inviting you to play a role in evaluating and strengthening
+            democracy for millions of people around&nbsp;the&nbsp;world.
+          </p>
+        </div>
+      </Box>
+
       {/* YOUR CHALLENGE */}
       <Box
         title={
