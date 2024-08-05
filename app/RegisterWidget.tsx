@@ -60,12 +60,12 @@ export const RegisterWidget = () => {
             setEmail(e.target.value)
             setSuccess(false)
           }}
-          className="p-3 pl-4 rounded-bl-md border-2 border-r-0 border-gray-300/30 bg-white/10 w-full"
+          className="p-3 pl-4 rounded-bl-md border-2 border-gray-300/30 bg-white/10 w-full focus:border-teal-700 outline-none"
         />
         <button
           type="submit"
           disabled={!email || success}
-          className="w-48 border-2 border-gray-300/30 hover:bg-gray-800 text-white/80 p-2 rounded-br-md disabled:cursor-not-allowed disabled:opacity-80"
+          className="w-48 border-2 border-l-0 border-gray-300/30 hover:bg-gray-800 text-white/80 p-2 rounded-br-md disabled:cursor-not-allowed disabled:opacity-80"
         >
           Submit{submitting ? 'ting...' : success && 'ted.'}
         </button>
