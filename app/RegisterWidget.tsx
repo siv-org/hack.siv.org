@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { MdOutlineNotificationsActive } from 'react-icons/md'
 
-export const Register = () => {
+export const RegisterWidget = () => {
   const [email, setEmail] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [success, setSuccess] = useState(false)

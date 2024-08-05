@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Register } from '../register'
+import { Register } from '../RegisterWidget'
 
 export default function RegisterPage() {
   return (

@@ -10,7 +10,7 @@ import { FaSignalMessenger } from 'react-icons/fa6'
 
 import { SIVVoteUIScreenshot } from './SIVVoteUIScreenshot'
 
-import { Register } from './register'
+import { RegisterWidget } from './RegisterWidget'
 
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
@@ -260,7 +260,7 @@ export default function Home() {
       </div>
 
       <div className="!mt-0">
-        <Register />
+        <RegisterWidget />
       </div>
 
       {/* Resources */}
