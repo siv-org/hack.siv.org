@@ -10,6 +10,8 @@ import { FaSignalMessenger } from 'react-icons/fa6'
 
 import { SIVVoteUIScreenshot } from './SIVVoteUIScreenshot'
 
+import { Register } from './register'
+
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
 const linkStyle =
@@ -265,6 +267,8 @@ export default function Home() {
           </li>
         </ol>
       </div>
+
+      <Register />
 
       {/* Resources */}
       <div>
