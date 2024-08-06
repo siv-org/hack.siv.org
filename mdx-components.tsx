@@ -7,6 +7,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </h1>
     ),
+    h2: ({ children }) => (
+      <h2 className="text-2xl font-semibold border-b border-white/30 pb-1.5">
+        {children}
+      </h2>
+    ),
     h3: ({ children }) => <h3 className="text-xl font-semibold">{children}</h3>,
     a: ({ href, children }) => (
       <a
