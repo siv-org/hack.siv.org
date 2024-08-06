@@ -23,6 +23,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </a>
     ),
+    ol: ({ children }) => <ol className="pl-8 list-decimal">{children}</ol>,
+    li: ({ children }) => <li className="pl-1">{children}</li>,
     ...components,
   }
 }
