@@ -7,6 +7,16 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </h1>
     ),
+    a: ({ href, children }) => (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-400 underline"
+      >
+        {children}
+      </a>
+    ),
     ...components,
   }
 }
