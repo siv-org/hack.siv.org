@@ -3,10 +3,11 @@ import type { MDXComponents } from 'mdx/types'
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h1: ({ children }) => (
-      <h1 className="text-3xl font-semibold border-b border-white/30 pb-3 mb-5">
+      <h1 className="text-3xl font-semibold border-b border-white/30 pb-3">
         {children}
       </h1>
     ),
+    h3: ({ children }) => <h3 className="text-xl font-semibold">{children}</h3>,
     a: ({ href, children }) => (
       <a
         href={href}
