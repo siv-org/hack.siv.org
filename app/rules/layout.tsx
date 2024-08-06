@@ -1,3 +1,11 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'HACK SIV: Rules',
+  description:
+    'Find vulnerabilities & get rewarded to make the Secure Internet Voting Protocol as secure as possible.',
+}
+
 export default function Layout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
