@@ -72,7 +72,7 @@ export default function Home() {
             military-sized budgets to seek any advantage available.
           </p>
           <p>
-            We are inviting you to play a role in evaluating and strengthening
+            We invite you to play a role in evaluating and strengthening
             democracy for millions of people around&nbsp;the&nbsp;world.
           </p>
         </div>
