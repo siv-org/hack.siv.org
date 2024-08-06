@@ -207,7 +207,7 @@ export default function Home() {
               <div className="font-bold">
                 <span className="opacity-60 font-light">See </span>
                 <a
-                  href="https://gist.github.com/dsernst/26b1966dd61183ad256b881d2e51185e#awarding-prizes"
+                  href="/rules#awarding-prizes"
                   target="_blank"
                   className={linkStyle}
                 >
@@ -258,7 +258,7 @@ export default function Home() {
 
       {/* Detailed Contest Rules btn */}
       <a
-        href="https://gist.github.com/dsernst/26b1966dd61183ad256b881d2e51185e#file-defcon-prize-awards-md"
+        href="/rules"
         target="_blank"
         className="bg-orange-300 bg-opacity-80 text-black/90 px-4 py-2 rounded hover:bg-opacity-100"
       >
@@ -308,10 +308,7 @@ export default function Home() {
             'https://docs.siv.org/technical-specifications',
           ],
           ['The SIV codebase', 'https://github.com/siv-org/siv'],
-          [
-            'Detailed Contest Rules',
-            'https://gist.github.com/dsernst/26b1966dd61183ad256b881d2e51185e#file-defcon-prize-awards-md',
-          ],
+          ['Detailed Contest Rules', '/rules'],
           [
             'Public Questions Forum',
             'https://github.com/siv-org/siv/discussions',
