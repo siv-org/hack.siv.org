@@ -40,7 +40,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </blockquote>
     ),
     pre: ({ children }) => (
-      <pre className="max-w-full overflow-x-scroll bg-gray-700/50 p-4 text-sm">
+      <pre className="max-w-full overflow-x-scroll bg-gray-700/30 p-4 text-sm">
         {children}
       </pre>
     ),
