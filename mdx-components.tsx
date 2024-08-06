@@ -1,4 +1,13 @@
 import type { MDXComponents } from 'mdx/types'
+import { ReactNode } from 'react'
+
+function headerToId(children: ReactNode) {
+  return children
+    ?.toString()
+    ?.toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[\.\']/g, '')
+}
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -8,7 +17,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h1>
     ),
     h2: ({ children }) => (
-      <h2 className="text-2xl font-semibold border-b border-white/30 pb-1.5">
+      <h2
+        className="text-2xl font-semibold border-b border-white/30 pb-1.5"
+        id={headerToId(children)}
+      >
         {children}
       </h2>
     ),
@@ -16,7 +28,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     a: ({ href, children }) => (
       <a
         href={href}
-        target="_blank"
+        target={href?.startsWith('http') ? '_blank' : '_self'}
         rel="noopener noreferrer"
         className="text-blue-400 underline underline-offset-[3.2px]"
       >
