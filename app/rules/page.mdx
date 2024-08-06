@@ -1,0 +1,266 @@
+# HACK SIV $10k Prizes — Detailed Rules
+
+During this first week of August, leading up to DEF CON 2024, people will have the chance to participate in SIV demo-elections, deeply inspect the system itself, and try to discover any weaknesses or vulnerabilities. Get a much better sense of how it works & what it's like.
+
+<p align="center"><img alt="Mobile interface for casting a vote in the Governor Election. The screen displays a validation message for the Voter Authorization Token, instructions for secure voting, and options for candidates from different parties, with an option to submit the vote at the bottom." src="https://hack-siv-org.vercel.app/images-for-decon-2024/screenshot-of-siv-voter-interface.png" width="300px" /></p>
+
+<p align="center"><i>It's simple on the surface, but under-the-hood there's quite a lot going on...</i></p>
+
+As people find any weaknesses, we highly encourage sharing them with everyone else. Sharing things verbally in person is wonderful, but what we recommend most is to *first* open a GitHub Issue on https://github.com/siv-org/siv.
+
+<br />
+
+### Open a GitHub Issue:
+
+<br />
+
+<img alt="GitHub issues page for the siv-org/defcon repository, highlighting the 'New issue' button. An invitation banner encourages contributions to the project, with a link to the Open Source Guide." src="https://hack-siv-org.vercel.app/images-for-decon-2024/screenshot-of-new-github-issue.jpeg" />
+
+<br />
+<br />
+
+If you don't have/want/like a GitHub account, you can also email your findings to us directly: [defcon@siv.org](mailto:defcon@siv.org). We'll try our best to respond quickly, but can't promise anything if we're stretched too thin.
+
+It's key to note that only the first person to post about any particular attack will be eligible for awards for that specific vulnerability. Two distinct ways to accomplish a similar bad outcome would still count separately, though.
+
+So posting your discovery first is pretty important. If you email it to us, we'll do our best to submit it on your behalf, anonymized if you want. But if you submit it yourself to GitHub, you don't have to rely on or wait on us to re-post it.
+
+*FYI — [Creating a pseudonymous GitHub account](https://github.com/signup) is free, and only takes a few seconds, if you don't have one already.*
+
+Posting your findings publicly will also allow other people to immediately learn from your insights, and comment & ask questions too.
+
+Everyone benefits.
+
+![hack-the-planet](https://nestflix.fun/img/hack-the-planet-thumb-1200w.jpg)
+
+***Tip:*** GitHub also lets you subscribe to the repository ("Watch"), so you can get notifications when anything new is discovered.
+
+<img alt="GitHub repository page for siv-org/defcon, showing the main interface with a focus on the 'Watch' button. An arrow points to the 'Watch' button, indicating where users can subscribe to receive notifications about the repository's updates." src="https://hack-siv-org.vercel.app/images-for-decon-2024/screenshot-with-arrow-to-watch-repo.png" />
+
+## Awarding Prizes
+
+On the final day of DEF CON, Sunday Aug 11, we will be awarding $10,000 in prizes for the best discovered attacks against SIV.
+
+We're committed to awarding 100% of the prize money even if there is only a single, low-quality submission. The only question is *which* submissions are the most deserving, not whether any are deserving at all.
+
+Half of the prize money will be awarded at the SIV Team's discretion. You can see below for the specific types of attacks we're most interested in, and what we consider out-of-scope.
+
+## 1. SIV's Judgement Criteria for Attacks
+1. Impact of the attack
+
+| Attack |  SIV's Impact Scale |
+| ----------- | :-----------: |
+| Vote multiple times | 35x |
+| Change someone else's vote, without them being able to detect the change | 35x |
+| Destroy a vote on the backend that's been confirmed submitted | 20x |
+| Convince us of reasons for the biggest score updates to [docs.siv.org/compare](https://docs.siv.org/compare) | 10x |
+| Obtain proof how a particular voter voted without their cooperation | 5x |
+| Learn other personally identifiable information about another voter | 1x |
+
+#### Other factors:
+
+2. How well does the attack scale to multiple victims?
+3. Difficulty to carry out attack? Is it very quick and easy? Or requires chaining multiple expensive exploits?
+4. How patchable is the attack? Discovering something very hard to mitigate is more valuable.
+5. Is your attack merely theoretical, or do you have a working example? Is it reproducible?
+
+### Explicitly Out-of-Scope
+
+| Out-of-Scope for DEF CON '24                                                                                                                                                                                                                        |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1. DDoS, Volumetric, or other types of attacks on the availability of the system. We're not claiming this is not possible. But for the sake of this contest, it's out-of-scope.                                                                     |
+| 2. Vote Buying / Selling EXCEPT for any elections that explicitly notes otherwise. More details on this explained below. Also see [docs.siv.org/mitigating-attacks/vote-selling](https://docs.siv.org/mitigating-attacks/vote-selling) for more on this issue. |
+
+
+### Preliminary Results
+
+As new submissions come in, we plan to share our rankings of the top attacks in near real-time.
+
+This way, everyone can see early and often how fair or not SIV's judgement is. Instead of waiting until the very end, with lots of tension built up, just to announce disappointing results.
+
+We hope it appears mostly reasonable. But if not, we will communicate early for you to see whether participating is worth it.
+
+If you want to provide arguments we're making the wrong call on any submission, we invite that too. We'd love to be convinced to see more clearly.
+
+We want everyone to be a part of a public conversation about how secure this so-called *"Secure" Internet Voting* Protocol truly is...
+
+...
+
+## Which brings us to the more noteworthy half of the HACK SIV Prize Awards...
+
+As fair as we'll try to be, we don't want it to be all up to us. And so — to also let everyone participate in an impactful SIV election — the remaining $5k half of the prize money will be decided by public vote.
+
+Using the SIV voting system itself, of course.
+
+### 2. The HACK SIV Public Vote
+
+Everyone is invited to weigh in, but only the votes from people in person at DEF CON this year will count in the final official tally.
+
+(The broader Internet can decide it's own People's Choice Awards.)
+
+The official vote will have higher requirements to enforce One-Person, One-Vote, unlike nearly all the other SIV elections throughout the week. Which are meant more for discovery and experimentation.
+
+You will need to pre-register, which you can initiate here: [hack.siv.org/register](https://hack.siv.org/register). You just need a working email address to get started. To finalize your registration, you'll also need to come meet with one of our team members in-person at the Voting Village. We can send you email reminders and let you know when we'll be there, if you still need to complete this step.
+
+For this vote, we will list one entry for every unique new attack submitted. Submissions themselves are open to anyone, online or in person.
+
+Then for every submission, every voter can assign a score 0 — 100 for how much money you think it deserves. 0 = none, 100% = give it all the money.
+
+Each voter's scores will get normalized to add up to no more than 100%. So if you give every single item matching scores of 1 or 5 or 30 or 100, it would make no difference, because they're all going to be normalized against each other anyway. The key is the relative differences you give to each item.
+
+Think of it like: Of the $5k we're committed to giving away in the Public Vote, what % do you think each submission deserves?
+
+{/* ![FIXME: screenshot-of-example-score-ballot]() */}
+
+All scores will be summed up, with the final prize money distributed proportionally.
+
+### Thinking like a hacker
+
+Clever tinkerers may discover ways you can technically submit encrypted votes totally outside the officially allowed range. Infinity? Negative numbers? NaN? Something even ṡ̵̼͎̰͕͍͒̒͑̉t̷̞̮̫͗̉́̈͝r̶̮̿̌à̶̳̥͛̀̕͜͠n̷̪̺̣͇̈́̏̽g̸̱̞̮̝͋͆̑̈͘e̷̠͓̥̪̓͑̎ŗ̵̟̤͓̬͛̃̿͝? 
+
+But we'll disqualify them after Unlocking the votes, before the final tally. Transparently, for everyone to see ;)
+
+Of course, if exploits are discovered that can completely compromise a SIV election, this prize allocation vote could itself be vulnerable.
+
+But that's ok! The whole point is to award money to people who can compromise SIV.
+
+So... *Mission Accomplished*.
+
+One way to think about it: all week people have a chance to play around with SIV. Tinker. Practice.
+
+And now in this final, more "real" vote, we see if what we've learned can pay.
+
+*Important note*: We will try our best to tighten up any vulnerabilities reported before this final vote. They'll still be eligible for prize money, though, so don't hold back.
+
+### The Vote-Buying Elephant in the Room
+
+This vote allocates $5000. So what if you were to offer $30 to anyone at DEF CON to go register and give you their voting credentials? And then award all the money to yourself? Depending on the number of voters, this might seem very profitable.
+
+But that would be frustrating for all us honest white hats.
+
+And it's not *that* novel, people have been fretting about vote buying for ages.
+
+One thing to notice is that vote selling is particularly unusual, because unlike all other attacks, where the voter is the victim, with this one, they become one of the perpetrators. And so auditing after the election whether it has taken place is vastly more difficult. Compare that with nearly all other sorts of attacks, like stolen credentials, on-device malware, spoofed or compromised servers, etc — where the voter should *want* to cooperate to make sure their vote counted.
+
+Some people frame this as a technical problem, unique to digital voting.
+
+But in fact Vote-by-Mail is also trivially vulnerable to vote buying ("Here's $30 for your signed blank ballot, thanks."). And even in-person voting is now pretty challenging to keep 100% "receipt-free", thanks to ubiquitous cameras in our pockets.
+
+In our opinion, there's a promising path forward if we reframe it as an incentives problem, not just a computer science one.
+
+So in order to defend against this, and mix things up, we're excited to introduce and test out a new solution, based on game theory. It's an incentive system, specifically designed to disrupt Vote Buying and Selling. We call it "[The Vote Seller's Dilemma](https://docs.siv.org/research-in-progress/vote-sellers-dilemma)"— inspired by Prisoner's Dilemma.
+
+The basic idea is: if someone convinces you to buy or sell you a vote, they can turn around & ***defect*** on you, and earn significantly ***more benefit*** than they get from the proposed sale.
+
+In existing federal law for civil elections, getting caught trying to buy or sell votes can lead to massive fines— $10k+ for a single vote. And up to *two years* in jail.
+
+So both sides already have huge counter-party risk.
+
+And now, by introducing a Bounty *Reward* system, both sides can also gain a very strong incentive to defect. And so both sides should rationally expect that anyone offering to buy or sell their vote is actually an undercover honeypot, trying to make 5x more money off of them than they're offering. And thus, trust between potential vote buyers and sellers gets fatally disrupted.
+
+![vote-sellers-dilemma-2-by-2](https://docs.siv.org/images/voter-dilemma.png)
+
+That's the theory at least. We're excited to see it tried out.
+
+It's admittedly a bit hard to tell if it works, since successful vote buyers and sellers usually won't out themselves...
+
+But if the results come out especially illogical, with no other explanation, this could be one possibility: that the bounty incentive system wasn't enough. Or, if this system breaks in other ways, such as implementation blockers, that would also be very useful to learn as soon as possible.
+
+Of course, we can't (nor want to) send anyone to prison for contributing to Red team SIV, nor can we impose the massive fines the criminal justice system threatens.
+
+But we can sort of simulate it, with an opt-in, pre-agreed upon contract:
+
+> I ____________ agree that my participation in the **HACK SIV Prize Allocation Vote** explicitly forbids me from attempting to sell my vote or buy anyone else's votes.
+>
+> I understand that if someone else can provide evidence that I attempted to buy or sell a vote to them:
+>
+> 1. The compromised vote will be marked invalid. (An honest whistle-blower can be issued new credentials, to vote again properly.)
+> 2. I agree to contribute an additional $1000 into the ongoing HACK SIV prize pool, for security researchers to discover more vulnerabilities.
+> 3. I understand that SIV's strong cryptographic privacy will not protect me, because selective de-anonymization *is* possible, with Privacy Protector's cooperation.
+> 4. I understand that from my $1k contribution in point #2 above, the defecting party will be awarded 5x our agreed upon vote-sale price, for a total up to $1k. I recognize that this means anyone offering to buy my vote has a far stronger incentive to blow the whistle on me, and earn a lot more money, so I should not trust them.
+> 5. I understand that my peers may find out if I am caught vote buying or selling.
+> 6. I understand that I should report any vote buying or selling attempts against me, by emailing defcon@siv.org.
+>
+> Lastly, I understand that as long as I don't willingly share mathematical proof of how I voted, or transfer my voter credentials, I have nothing to worry about.
+>
+> ```
+> ___________________   _______________________    ___________     ____________________
+> Name                  Email                      Date            Signature
+> ```
+>
+
+This is the best we've come up with for *non-governmental* elections.
+
+It's meant to be opt-in — like SIV itself. In this case, if you don't agree to it, you will still be allowed to vote in the final judging, but your vote will not be counted towards the official prize money allocation totals.
+
+If you have questions, comments, or suggestions about this, we are very receptive. defcon@siv.org
+
+### Post Election Auditing
+
+After the election closes, votes are anonymized, and then unlocked. We would like to then perform statistical auditing on the results of this vote.
+
+Because SIV enables ballot-by-ballot verification, there is a far more powerful variation of Risk-Limiting Auditing that becomes possible, that we've written about here: [docs.siv.org/verifiability/rla](https://docs.siv.org/verifiability/rla)
+
+We are excited about the opportunity to facilitate this process with everyone post-election, to hopefully gain even more confidence in the results of the vote.
+
+
+### "Certifying" the Results
+
+We are excited about this Public Prize Allocation Vote. If it goes well, it could be really great.
+
+But the reality from our experience running many large elections is that *something* nearly always goes wrong.
+
+> Worth noting that this is true for paper elections too. We could tell you countless stories. We've seen many paper vs SIV elections side-by-side, and it turns out humans make mistakes vastly more often than computers. One of many reasons why independently verifiable results are so valuable.
+
+The chance of things going wrong is especially high here, when we're doing many new things.
+
+That's no reason not to try. We'll do our best to keep everything smooth, but it would be irresponsible not to have a backup plan.
+
+SIV is designed to create a written record of exactly what's happened, each step along the way. This means the majority of problems are recoverable.
+
+But in the end, everyone should get independently verifiable results of a "correct" election. You're not supposed to have to take our word for it. Everyone can check for themselves.
+
+So for this public vote, we want all the in-person voters, who themselves could have just personally participated in the Post-Election Auditing, to affirm that they are confident the vote was fair.
+
+We imagine something very simple: After the results are posted and individually verified, **we'll invite all voters present at the Voting Village to cast a simple Yea / Nay show of hands to "Certify" the results.**
+
+Whether something badly breaks, or the majority of people just aren't convinced, we want to offer this contingency plan.
+
+A simple majority can certify. If it fails to certify, instead of half the prize money allocated by the public vote, it would revert back to solely SIV's Awarding allocations. Those allocations will already be posted at this point — see section "[SIV's Judgement Criteria for Attacks](https://gist.github.com/dsernst/26b1966dd61183ad256b881d2e51185e#1-sivs-judgement-criteria-for-attacks)" above for details. In this case they would be doubled.
+
+*We hope this won't be necessary, but want to be prepared ahead of time.*
+
+
+
+## Contributing Financially to the HACK SIV Prize Pool
+
+We've put years of work into making SIV as strong as possible. Secure enough for our most important elections, while also being fast, simple, and easy to use, by default.
+
+Now, we're excited for as many people as possible to attempt to find weaknesses and vulnerabilities.
+
+Whenever someone new looks at SIV, there are three possibilities:
+
+|   | Possibility                                                     | Outcome                                                                                          |
+|---|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| 1 | No new vulnerabilities are found                                | Great.                                                                                            |
+| 2 | A new vulnerability is found, but it's patchable                    | Better to find out sooner than later. And everyone benefits from the system getting more secure. |
+| 3 | A new vulnerability is found, but it's unclear how it can be solved | Unfortunate. But still always better, for everyone, to find out as soon as possible.             |
+
+
+We want SIV's security to be as transparent and well-reviewed as possible.
+
+> "A cryptosystem should be secure even if everything about the system, except the key, is public knowledge."
+>
+> — Auguste Kerckhoffs, 1883
+
+We're creating HACK SIV to be the most powerful system to convert money into testing SIV's security.
+
+100% of the funding goes to novel discoveries from independent security researchers.
+
+We're contributing $10k in prizes for DEF CON 2024, but we'd love if others want to enlarge the pot too.
+
+If you share our goal for safe and accessible voting systems, we invite you to contribute financially to the SIV Prize Pool. You can do so anonymously, or with your name / organization attached. The larger the prize pool, the stronger our election systems can become.
+
+If you oppose internet voting for security reasons, contributing is still a powerful way to substantiate your stance and potentially influence the debate.
+
+Contact hack@siv.org
