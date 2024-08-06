@@ -33,7 +33,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <td className="border border-gray-700 px-2 py-2">{children}</td>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-gray-700 pl-4 text-white/60 space-y-6">
+      <blockquote className="border-l-4 border-gray-700 pl-4 text-white/60 space-y-5">
         {children}
       </blockquote>
     ),
