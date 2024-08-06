@@ -321,17 +321,20 @@ export default function Home() {
             </a>
           </div>
         ))}
-        <div className="italic mt-1">
+        <div className="italic mt-1 text-right">
           <span className="text-green-600/70">OPENING SOON: </span>Hacking Live
-          Elections (
-          <a
-            href="/register"
-            target="_blank"
-            className={`${linkStyle} text-sm font-normal`}
-          >
-            register
-          </a>
-          )
+          Elections{' '}
+          <span className="max-[419px]:block">
+            (
+            <a
+              href="/register"
+              target="_blank"
+              className={`${linkStyle} text-sm font-normal`}
+            >
+              register
+            </a>
+            )
+          </span>
         </div>
       </div>
 
