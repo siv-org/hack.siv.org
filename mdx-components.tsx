@@ -25,6 +25,13 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     ol: ({ children }) => <ol className="pl-8 list-decimal">{children}</ol>,
     li: ({ children }) => <li className="pl-1">{children}</li>,
+    tr: ({ children }) => <tr className="even:bg-gray-400/10">{children}</tr>,
+    th: ({ children }) => (
+      <th className="border border-gray-700 px-2 py-2">{children}</th>
+    ),
+    td: ({ children }) => (
+      <td className="border border-gray-700 px-2 py-2">{children}</td>
+    ),
     ...components,
   }
 }
