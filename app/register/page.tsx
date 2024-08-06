@@ -1,5 +1,10 @@
 import Link from 'next/link'
 import { RegisterWidget } from '../RegisterWidget'
+import type { Metadata } from 'next/types'
+
+export const metadata: Metadata = {
+  title: 'HACK SIV: Register',
+}
 
 export default function RegisterPage() {
   return (
