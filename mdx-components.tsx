@@ -18,7 +18,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-400 underline"
+        className="text-blue-400 underline underline-offset-[3.2px]"
       >
         {children}
       </a>
