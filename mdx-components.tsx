@@ -1,34 +1,11 @@
 import type { MDXComponents } from 'mdx/types'
-import { ReactNode } from 'react'
-
-function headerToId(children: ReactNode) {
-  return children
-    ?.toString()
-    ?.toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[\.\']/g, '')
-}
+import { LinkableHeader } from './app/rules/LinkableHeader'
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
-    h1: ({ children }) => (
-      <h1 className="text-3xl font-semibold border-b border-white/30 pb-3">
-        {children}
-      </h1>
-    ),
-    h2: ({ children }) => (
-      <h2
-        className="text-2xl font-semibold border-b border-white/30 pb-1.5"
-        id={headerToId(children)}
-      >
-        {children}
-      </h2>
-    ),
-    h3: ({ children }) => (
-      <h3 className="text-xl font-semibold" id={headerToId(children)}>
-        {children}
-      </h3>
-    ),
+    h1: LinkableHeader('h1'),
+    h2: LinkableHeader('h2'),
+    h3: LinkableHeader('h3'),
     a: ({ href, children }) => (
       <a
         href={href}
