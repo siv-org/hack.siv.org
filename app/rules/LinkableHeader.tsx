@@ -54,12 +54,11 @@ export const LinkableHeader = (size: keyof typeof headerTypes) =>
     const El = headerTypes[size]
     return (
       <El>
-        <a href={'#' + headerToId(children)}>
-          <FaLink
-            className={`text-[16px] absolute -left-6 ${
-              size == 'h3' ? 'top-1.5' : 'top-2'
-            } group-hover:opacity-70 opacity-0`}
-          />
+        <a
+          href={'#' + headerToId(children)}
+          className="px-2 absolute -left-8 group-hover:opacity-70 opacity-0 h-full"
+        >
+          <FaLink className={`text-[16px] h-full ${size !== 'h3' && 'pb-2'}`} />
         </a>
 
         {children}
