@@ -24,7 +24,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </h2>
     ),
-    h3: ({ children }) => <h3 className="text-xl font-semibold">{children}</h3>,
+    h3: ({ children }) => (
+      <h3 className="text-xl font-semibold" id={headerToId(children)}>
+        {children}
+      </h3>
+    ),
     a: ({ href, children }) => (
       <a
         href={href}
