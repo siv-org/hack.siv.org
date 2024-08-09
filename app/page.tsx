@@ -322,7 +322,7 @@ export default function Home() {
           </div>
         ))}
         <div className="italic mt-1 text-right">
-          <span className="text-green-600/70">OPENING SOON: </span>Hacking Live
+          <span className="text-green-600/70">NOW OPEN: </span>Hacking Live
           Elections{' '}
           <span className="max-[419px]:block">
             (
