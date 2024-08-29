@@ -22,9 +22,6 @@ export default function Home() {
     <main className="flex min-h-screen max-w-3xl mx-auto flex-col items-center p-6 pt-10 sm:p-24 space-y-12 sm:text-lg">
       {/* Now Open! header */}
       <div className="text-center">
-        <p className="italic mb-3 opacity-60 text-[#59d7ed] font-medium">
-          NOW OPEN &nbsp;@
-        </p>
         <div className="flex sm:flex-row flex-col items-center space-x-5">
           <Image
             src={defCON}
