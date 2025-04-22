@@ -1,4 +1,5 @@
 import { CustomCSS } from './CustomCSS'
+import { LinkableHeader } from './LinkableHeader'
 import Content from './content.mdx'
 
 type Children = { children: React.ReactNode }
@@ -9,11 +10,8 @@ const overrideComponents = {
       {children}
     </a>
   ),
-  h2: ({ children }: Children) => (
-    <h2 className="text-[1.8rem] font-bold text-black mb-8 mt-12 relative after:content-[''] after:absolute after:bottom-[-12px] after:left-0 after:w-full after:h-[1px] after:bg-[#1a5fb4] after:opacity-20">
-      {children}
-    </h2>
-  ),
+  h1: LinkableHeader('h1'),
+  h2: LinkableHeader('h2'),
   h4: ({ children }: Children) => (
     <h4 className="text-[1.2rem] font-medium text-black leading-[1.5] mt-10">
       {children}
