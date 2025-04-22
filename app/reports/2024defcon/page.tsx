@@ -14,13 +14,11 @@ const overrideComponents = {
   h2: LinkableHeader('h2'),
   h3: LinkableHeader('h3'),
   h4: ({ children }: Children) => (
-    <h4 className="text-[1.2rem] font-medium text-black leading-[1.5] mt-10">
+    <h4 className="text-[1.2rem] font-medium text-black leading-[1.5]">
       {children}
     </h4>
   ),
-  p: ({ children }: Children) => (
-    <p className="text-[1.1rem] leading-[1.8] mb-6">{children}</p>
-  ),
+  p: ({ children }: Children) => <p className="mb-6">{children}</p>,
   blockquote: ({ children }: Children) => (
     <blockquote className="text-[1.1rem] leading-[1.8] pl-8 p-6 pb-0.5 my-6 bg-[#f8f9fa] text-[#34495e] border-l-4 border-[#95a5a6]">
       {children}
@@ -31,7 +29,9 @@ const overrideComponents = {
 export default function Page() {
   return (
     <>
-      <Content components={overrideComponents} />
+      <div className="text-[1.1rem] leading-[1.8]">
+        <Content components={overrideComponents} />
+      </div>
       <CustomCSS />
     </>
   )

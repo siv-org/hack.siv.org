@@ -1,16 +1,5 @@
 
 
-<div class="relative my-8 p-6 bg-white rounded-lg shadow-[0_4px_12px_rgb(0,0,0,0.08)]">
-  <p class="text-center text-[1.3rem] font-semibold text-indigo-800 mb-4 leading-tight">
-    Don't trust, verify.
-  </p>
-  <p class="text-center text-[1.1rem] leading-[1.8] text-black">
-    The philosophy underlying SIV is: even if Darth Vader is running the
-    election infrastructure, anyone — especially voters, but also independent
-    observers — can verify for themselves whether an election was run fairly and
-    correctly, or not.
-  </p>
-</div>
 
 <br />
 

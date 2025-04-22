@@ -18,7 +18,7 @@ function headerToId(children: ReactNode) {
     .replace(/[\.\']/g, '')
 }
 
-const sharedStyle = `font-semibold relative group`
+const sharedStyle = `font-semibold relative group mb-5`
 
 const headerTypes = {
   h1: ({ children }: { children: ReactNode }) => (
