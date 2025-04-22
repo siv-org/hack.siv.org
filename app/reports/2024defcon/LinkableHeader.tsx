@@ -23,14 +23,14 @@ const sharedStyle = `font-semibold relative group`
 const headerTypes = {
   h1: ({ children }: { children: ReactNode }) => (
     <h1
-      className={`text-[32px] !font-bold border-b border-black/30 pb-3 ${sharedStyle}`}
+      className={`text-[32px] !font-bold ${sharedStyle}`}
       id={headerToId(children)}
       {...{ children }}
     />
   ),
   h2: ({ children }: { children: ReactNode }) => (
     <h2
-      className={`text-[1.8rem] border-b border-black/30 pb-1.5 ${sharedStyle}`}
+      className={`text-[1.8rem] border-b border-[#1a5fb4]/20 pb-1.5 !mt-12 ${sharedStyle}`}
       id={headerToId(children)}
       {...{ children }}
     />
