@@ -5,8 +5,13 @@ import Content from './content.mdx'
 type Children = { children: React.ReactNode }
 
 const overrideComponents = {
-  a: ({ children }: Children) => (
-    <a className="text-[#1a5fb4] underline decoration-[rgba(26,95,180,0.3)] decoration-1 underline-offset-[2px] transition-all duration-200 ease-in-out hover:decoration-[#1a5fb4] hover:bg-[rgba(26,95,180,0.05)] cursor-pointer">
+  a: ({ href, children }: Children & { href: string }) => (
+    <a
+      href={href}
+      target={href?.startsWith('http') ? '_blank' : '_self'}
+      rel="noopener noreferrer"
+      className="text-[#1a5fb4] underline decoration-[rgba(26,95,180,0.3)] decoration-1 underline-offset-[2px] transition-all duration-200 ease-in-out hover:decoration-[#1a5fb4] hover:bg-[rgba(26,95,180,0.05)] cursor-pointer"
+    >
       {children}
     </a>
   ),
