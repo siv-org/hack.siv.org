@@ -2,10 +2,10 @@ import { CustomCSS } from './CustomCSS'
 import { LinkableHeader } from './LinkableHeader'
 import Content from './content.mdx'
 
-type Children = { children: React.ReactNode }
+type Children = { children?: React.ReactNode }
 
 const overrideComponents = {
-  a: ({ href, children }: Children & { href: string }) => (
+  a: ({ href, children }: Children & { href?: string }) => (
     <a
       href={href}
       target={href?.startsWith('http') ? '_blank' : '_self'}
