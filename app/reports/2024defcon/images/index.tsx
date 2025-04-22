@@ -2,6 +2,8 @@ import Image from 'next/image'
 
 import AwardsProcessScreenshot from './awards-process.png'
 import ReutersScreenshot from './reuters.png'
+import EmailFromSecOfStateScreenshot from './EmailFromSecOfState.jpeg'
+import EmailFromPublicVoteJudgeScreenshot from './EmailFromPublicVoteJudge.png'
 
 export const AwardsProcessImage = ({
   children,
@@ -28,4 +30,22 @@ export const ReutersImage = ({ href }: { href: string }) => (
       style={{ width: '100%', maxWidth: '386px' }}
     />
   </a>
+)
+
+export const EmailFromSecOfStateImage = () => (
+  <Image
+    src={EmailFromSecOfStateScreenshot}
+    alt="Email from Secretary of State official"
+    style={{ maxWidth: '386px' }}
+    className="mx-auto w-full"
+  />
+)
+
+export const EmailFromPublicVoteJudgeImage = () => (
+  <Image
+    src={EmailFromPublicVoteJudgeScreenshot}
+    alt="Email from Public Vote Judge"
+    style={{ maxWidth: '650px' }}
+    className="mx-auto w-full"
+  />
 )
