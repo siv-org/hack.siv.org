@@ -28,7 +28,7 @@ export const CustomJS = () => {
             // Ignore clicks originating from the button itself
             if (
               event.target === toggleButton ||
-              toggleButton.contains(event.target)
+              toggleButton.contains(event.target as Node)
             ) {
               return
             }
@@ -47,7 +47,7 @@ export const CustomJS = () => {
       })
 
       // Shared function to handle the toggle with animation
-      function handleToggle(detailElement) {
+      function handleToggle(detailElement: HTMLElement & { open: boolean }) {
         if (detailElement.open) {
           // Start closing animation
           detailElement.classList.add('closing')
