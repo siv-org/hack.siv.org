@@ -37,7 +37,7 @@ const headerTypes = {
   ),
   h3: ({ children }: { children: ReactNode }) => (
     <h3
-      className={`text-xl ${sharedStyle}`}
+      className={`text-[1.4rem] ${sharedStyle}`}
       id={headerToId(children)}
       {...{ children }}
     />
