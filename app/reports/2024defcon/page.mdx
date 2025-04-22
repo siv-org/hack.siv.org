@@ -1,0 +1,1497 @@
+<p class="text-[1.2rem] font-medium text-black leading-[1.5] mt-10">
+  We are creating the{' '}
+  <a href="https://siv.org/protocol">Secure Internet Voting Protocol</a> (SIV)
+  to enable accessible & verifiable digital infrastructure for civil society.
+</p>
+
+<h2 class="text-[1.8rem] font-bold text-black mb-8 mt-12 relative after:content-[''] after:absolute after:bottom-[-12px] after:left-0 after:w-full after:h-[1px] after:bg-[#1a5fb4] after:opacity-20">
+  Unique Challenges
+</h2>
+
+<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
+  We started building SIV with the awareness of the unique challenges
+  highlighted by many in the
+  <a href="https://verifiedvoting.org/internet-voting-faq/">
+    computer security community
+  </a> and institutions like the
+  <a href="https://www.nationalacademies.org/news/2018/09/securing-the-vote-new-report">
+    National Academy of Sciences
+  </a>
+  .
+</p>
+
+<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
+  Since the beginning, we have worked to address these concerns and created SIV
+  specifically as a step forward to solve many of the remaining issues.
+</p>
+
+<div class="relative pl-6 my-6 bg-[#f8f9fa] text-[#34495e] before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#95a5a6]">
+  <p class="m-0 py-4 px-6 text-[0.95rem]">
+    The National Academy of Engineering's article
+    <a href="https://www.nationalacademies.org/news/2023/03/moving-to-evidence-based-elections#_ftn4">
+      "Moving to Evidence-Based Elections"
+    </a>
+    presents the concept of "evidence-based elections as those in which the
+    voting system provides 'convincing, affirmative' evidence to the public that
+    the outcome was correctly computed." It continues with saying that "the
+    challenge of designing secure voting systems is to provide public evidence
+    of outcome correctness while yielding no information about individual votes
+    beyond that contained in the tally."
+  </p>
+</div>
+
+<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
+  This is precisely what SIV is designed to achieve, and what we wanted to test
+  by running a red-teaming contest.
+</p>
+
+<br />
+
+<h2 class="text-[1.8rem] font-bold text-black mb-8 mt-12 relative after:content-[''] after:absolute after:bottom-[-12px] after:left-0 after:w-full after:h-[1px] after:bg-[#1a5fb4] after:opacity-20">
+  Introducing SIV
+</h2>
+
+<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
+  Our design philosophy is to be fast, simple, and easy to use for everyone. To
+  protect election processes and voters' privacy, thoughtfully designed security
+  tools are baked in by-default.
+</p>
+
+<p>
+  A big part of our inspiration is to create software for digital voting like
+  what Signal Messenger has done for digital messaging.
+</p>
+
+<h3 class="text-[1.4rem] font-semibold text-black mt-10 mb-6">
+  SIV in U.S. elections
+</h3>
+
+<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
+  SIV is already being used for impactful elections, having elected legislators
+  and executives at the local, state, and national levels.
+</p>
+
+<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
+  There are thousands more election administrators around the world, searching
+  for verifiable, easy-to-use ways to allow citizens to vote and make their
+  voices heard.
+</p>
+
+<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
+  But the bar for election security is incredibly high.
+</p>
+
+<h3 class="text-[1.4rem] font-semibold text-black mt-10 mb-6">Threat Model</h3>
+
+<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
+  The threat model is adversarial Nation States, willing to expend
+  military-sized budgets to seek any advantage available.
+</p>
+
+<br />
+
+<h2 class="text-[1.8rem] font-bold text-black mb-8 mt-12 relative after:content-[''] after:absolute after:bottom-[-12px] after:left-0 after:w-full after:h-[1px] after:bg-[#1a5fb4] after:opacity-20">
+  HACK SIV
+</h2>
+
+A key piece of fulfilling our mission is inviting a broad, critical audience to examine, evaluate, and search for vulnerabilities.
+
+In August 2024, we were allowed to bring our technology to the [Voting Village](https://votingvillage.org) at DEF CON, one of the premier venues for uncovering weaknesses in the equipment and processes that run our public elections.
+
+<h3 style="font-size: 20px; padding-top: 10px;">
+  30,000 DEF CON hackers — 6 days — $10,000 in prizes
+</h3>
+
+We invited security researchers & engineers in-person and online to attempt to find novel vulnerabilities in SIV to:
+
+<div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 2rem 0;">
+  
+  <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+    <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">1</div>
+    <div style="flex: 1;">
+      <p style="margin: 0; font-size: 1.1rem;"><strong>Vote multiple times</strong> — <span class="text-emerald-600">Not accomplished</span></p>
+    </div>
+  </div>
+
+<div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+  <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">
+    2
+  </div>
+  <div style="flex: 1;">
+    <p style="margin: 0; font-size: 1.1rem;">
+      <strong>Change someone else's vote, without detection</strong> —
+      <span class="text-emerald-600">Not Accomplished</span>
+    </p>
+    <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.95rem;">
+      Although no one successfully accomplished this, one submission got partway
+      by identifying a weakness in one of the anti-malware defensive layers. 2
+      solutions now identified. More details below under{' '}
+      <em>Detailed Information</em> →<em>Top 3 Submissions Examined</em> →{' '}
+      <em>No. 3</em>.
+    </p>
+  </div>
+</div>
+
+<div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+  <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">
+    3
+  </div>
+  <div style="flex: 1;">
+    <p style="margin: 0; font-size: 1.1rem;">
+      <strong>Destroy a vote already confirmed submitted</strong> —
+      <span class="text-emerald-600">Not accomplished</span>
+    </p>
+  </div>
+</div>
+
+<div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+  <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">
+    4
+  </div>
+  <div style="flex: 1;">
+    <p style="margin: 0; font-size: 1.1rem;">
+      <strong>Learn how someone voted, without their help</strong> —
+      <span class="text-emerald-600">
+        One person showed impressive ways to directly install spyware on-device.
+      </span>
+    </p>
+    <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.95rem;">
+      The SIV Protocol defends against vote tampering by on-device malware, but
+      it does not protect vote secrecy from compromised devices themselves. If
+      an attacker controls the device, they can see everything a person does
+      with it, including using SIV. While this was previously known and
+      documented, the Voter Interface failed to clearly warn users. More below,
+      under: <em>Detailed Information</em> →{' '}
+      <em>Attacks Discussed But Not Submitted</em> → <em>On-Device Spyware</em>.
+    </p>
+  </div>
+</div>
+
+  <div style="display: flex; gap: 1rem;">
+    <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">5</div>
+    <div style="flex: 1;">
+      <p style="margin: 0; font-size: 1.1rem;"><strong>Learn other personal info about voters</strong> — <span class="text-emerald-600">Not accomplished</span></p>
+    </div>
+  </div>
+</div>
+
+<br />
+
+### 42 Total Submissions, 4 Common Types
+
+We greatly appreciate the enthusiasm and engagement of all submitters.
+
+After careful review, we have determined that only a handful of the submissions identified exploitable weaknesses. We have already addressed the top few and are working hard to resolve all the rest.
+
+Even the submissions that were not directly exploitable help us identify shortcomings in our documentation and communication.
+
+In the _Detailed Information_ section below, we provide in-depth examinations of the Top Earning Submissions, along with links to all 42 submissions.
+
+In broad strokes, there were four major categories of submissions, summarized here:
+
+<div class="my-8 space-y-6">
+
+<div class="border-l-4 rounded-md border-[#1a5fb4] pl-6 pr-8 py-2 bg-[#f8f9fa]">
+  <h4 class="text-[1.1rem] font-semibold text-[#0d4795] mb-2">
+    1) Technical Flaws in System Design
+  </h4>
+  <p class="text-[#4b5563] leading-relaxed">
+    <a
+      href="https://github.com/siv-org/siv/issues/178"
+      class="text-[#1a5fb4] decoration-[rgba(26,95,180,0.3)] underline underline-offset-2 decoration-1 hover:decoration-[#1a5fb4] hover:bg-[rgba(26,95,180,0.05)] transition-all duration-200 ease-in-out"
+    >
+      Two
+    </a>
+    different
+    <a
+      href="https://github.com/siv-org/siv/issues/231"
+      class="text-[#1a5fb4] decoration-[rgba(26,95,180,0.3)] underline underline-offset-2 decoration-1 hover:decoration-[#1a5fb4] hover:bg-[rgba(26,95,180,0.05)] transition-all duration-200 ease-in-out"
+    >
+      people
+    </a>
+    found ways in theory to weaken a defensive layer. These alone weren't enough
+    to achieve any of the goals above— other layers provide reinforced defense-in-depth.
+    But they were both excellent discoveries in their own right, earned top rewards,
+    and solutions have already been adopted for both, in collaboration with the discoverers.
+  </p>
+</div>
+
+<div class="border-l-4 rounded-md border-[#1a5fb4] pl-6 pr-8 py-2 bg-[#f8f9fa]">
+  <h4 class="text-[1.1rem] font-semibold text-[#0d4795] mb-2">
+    2) Vote Selling & Voter Coercion
+  </h4>
+  <p class="text-[#4b5563] leading-relaxed">
+    A few submissions centered on Vote Selling and Voter Coercion. We were quite
+    excited to use this contest as an opportunity to test out a limited version
+    of one of our anti-Vote-Selling solutions, a system based on bounty-rewards
+    we call
+    <a
+      href="https://docs.siv.org/research-in-progress/vote-sellers-dilemma"
+      class="text-[#1a5fb4] decoration-[rgba(26,95,180,0.3)] underline underline-offset-2 decoration-1 hover:decoration-[#1a5fb4] hover:bg-[rgba(26,95,180,0.05)] transition-all duration-200 ease-in-out"
+    >
+      The Vote Seller's Dilemma
+    </a>. This appeared to work well enough for the $5,000 Public Vote. It did not
+    seem like decisions were significantly compromised by vote selling, and we are
+    excited to run a prize-awarding vote again in the future using a similar format.
+  </p>
+  <p class="text-[#4b5563] leading-relaxed mt-4">
+    We are also working on a new, additional tool against this sort of
+    compromise that would allow SIV votes to achieve a level of
+    coercion-resistance similar to in-person paper voting.
+  </p>
+</div>
+
+<div class="border-l-4 rounded-md border-[#1a5fb4] pl-6 pr-8 py-2 bg-[#f8f9fa]">
+  <h4 class="text-[1.1rem] font-semibold text-[#0d4795] mb-2">
+    3) Unclear Dispute Resolution Scenarios
+  </h4>
+  <p class="text-[#4b5563] leading-relaxed">
+    A number of other people helpfully pointed out edge-cases in dispute
+    resolution during post-election auditing, which need to be documented more
+    clearly and rigorously.
+  </p>
+</div>
+
+<div class="border-l-4 rounded-md border-[#1a5fb4] pl-6 pr-8 py-2 bg-[#f8f9fa]">
+  <h4 class="text-[1.1rem] font-semibold text-[#0d4795] mb-2">
+    4) Supply Chain Vulnerabilities
+  </h4>
+  <p class="text-[#4b5563] leading-relaxed">
+    A few others wrote about supply chain vulnerabilities that can be further
+    secured. We appreciate the submissions and are searching for ways to tighten
+    up our hardware & software supply chains.
+  </p>
+  <p class="text-[#4b5563] leading-relaxed mt-4">
+    Nonetheless, one of SIV's advantages is that it offers active proof of
+    correct results, even in the face of supply chain attacks.
+  </p>
+</div>
+
+</div>
+
+<div class="relative my-8 p-6 bg-white rounded-lg shadow-[0_4px_12px_rgb(0,0,0,0.08)]">
+  <p class="text-center text-[1.3rem] font-semibold text-indigo-800 mb-4 leading-tight">
+    Don't trust, verify.
+  </p>
+  <p class="text-center text-[1.1rem] leading-[1.8] text-black">
+    The philosophy underlying SIV is: even if Darth Vader is running the
+    election infrastructure, anyone — especially voters, but also independent
+    observers — can verify for themselves whether an election was run fairly and
+    correctly, or not.
+  </p>
+</div>
+
+<br />
+
+### Awarding Financial Prizes
+
+As committed before the contest began, the full $10,000 in prize money has been awarded across the 42 submissions. Every submission received at least some reward.
+
+The SIV team decided how to allocate half of the prize money, and DEF CON attendees chose how to distribute the other half, awarding $5,000 to the submissions they found most interesting through a public vote using SIV.
+
+<img
+  src="/images/2024/08/awards-process.png"
+  style="width:85%;border-radius: 20px;"
+/>
+
+<p style="text-align:center; font-size: 16px;">
+  <i>
+    Screenshot from the <a href="https://hack.siv.org">HACK SIV landing page</a>.
+    And here is the link to
+    <a href="https://hack.siv.org/rules#awarding-prizes">
+      SIV's Judgment Criteria
+    </a>
+  </i>
+</p>
+
+<br />
+
+### Gauging Participation
+
+<div style="display: flex; align-items: center; margin: 2.5rem 0 1.5rem; position: relative;">
+  <div style="position: relative; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 0.4rem 1.2rem; border-radius: 2rem; box-shadow: 0 1px 6px rgba(0,0,0,0.05); border: 1px solid rgba(26,95,180,0.1); z-index: 1;">
+    <span style="font-weight: 500; letter-spacing: 0.03em; font-size: 0.8rem; color: #1a5fb4; text-transform: uppercase; white-space: nowrap;">
+      Launch Announcement
+    </span>
+  </div>
+  <div style="flex-grow: 1; height: 1px; background: linear-gradient(90deg, rgba(26,95,180,0.3) 0%, rgba(26,95,180,0) 100%); margin-left: -10px;"></div>
+</div>
+
+HACK SIV was originally announced by the Voting Village:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🚨 Breaking News from the Voting Village! 🚨<br><br>We are excited to announce a special and unprecedented event that is officially open to the public: a real-world hacking challenge using an internet voting system that&#39;s been deployed in actual elections! This is your chance to test…</p>&mdash; Harri &quot;scofield&quot; Hursti (@HarriHursti) <a href="https://twitter.com/HarriHursti/status/1820910389208453577?ref_src=twsrc%5Etfw">August 6, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<div style="display: flex; align-items: center; margin: 3.5rem 0 1.5rem; position: relative;">
+  <div style="position: relative; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 0.4rem 1.2rem; border-radius: 2rem; box-shadow: 0 1px 6px rgba(0,0,0,0.05); border: 1px solid rgba(26,95,180,0.1); z-index: 1;">
+    <span style="font-weight: 500; letter-spacing: 0.03em; font-size: 0.8rem; color: #1a5fb4; text-transform: uppercase; white-space: nowrap;">
+      Media Coverage
+    </span>
+  </div>
+  <div style="flex-grow: 1; height: 1px; background: linear-gradient(90deg, rgba(26,95,180,0.3) 0%, rgba(26,95,180,0) 100%); margin-left: -10px;"></div>
+</div>
+
+From August 6th to 11th, the HACK SIV announcement was retweeted by hundreds of cybersecurity organizations and individuals.
+
+Publications like [Reuters](https://www.reuters.com/technology/can-online-voting-be-secure-experts-las-vegas-try-hack-new-platform-2024-08-09/) also covered the competition, which was syndicated widely.
+
+<div style="text-align: center; margin: 20px 0;">
+<a href="https://www.reuters.com/technology/can-online-voting-be-secure-experts-las-vegas-try-hack-new-platform-2024-08-09/" target="_blank">
+<img src="/images/2024/08/reuters.png" alt="Reuters coverage" style="max-width: 386px; width: 100%;">
+</a>
+</div>
+
+<div style="display: flex; align-items: center; margin: 3.5rem 0 1.5rem; position: relative;">
+  <div style="position: relative; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 0.4rem 1.2rem; border-radius: 2rem; box-shadow: 0 1px 6px rgba(0,0,0,0.05); border: 1px solid rgba(26,95,180,0.1); z-index: 1;">
+    <span style="font-weight: 500; letter-spacing: 0.03em; font-size: 0.8rem; color: #1a5fb4; text-transform: uppercase; white-space: nowrap;">
+      DEF CON Participant Engagement
+    </span>
+  </div>
+  <div style="flex-grow: 1; height: 1px; background: linear-gradient(90deg, rgba(26,95,180,0.3) 0%, rgba(26,95,180,0) 100%); margin-left: -10px;"></div>
+</div>
+
+During DEF CON, hundreds of attendees engaged with the SIV team daily. Dozens sat at the SIV table to attempt hacking the system. Countless people from a wide range of demographics and countries expressed enthusiasm and support for what SIV has already achieved and for the project's overall direction and goals.
+
+<div style="text-align:center;">
+
+<div style="background-color: #f8f9fa; border-left: 4px solid #0d6efd; padding: 20px; margin: 20px 0; border-radius: 0 4px 4px 0; font-size: 16px; line-height: 1.6;">
+  <img
+    src="/images/2024/08/election-official.jpeg"
+    style="width:60%; margin: 0 auto; display: block;"
+  />
+  <div style="text-align: right; margin-top: 15px; font-style: italic; color: #666;">
+    — From An Election Official
+  </div>
+</div>
+
+<div style="background-color: #f8f9fa; border-left: 4px solid #0d6efd; padding: 20px; margin: 20px 0; border-radius: 0 4px 4px 0; font-size: 16px; line-height: 1.6;">
+  <img
+    src="/images/2024/08/quote-voter.png"
+    style="width:90%; margin: 0 auto; display: block; border-radius: 4px;"
+  />
+  <div style="text-align: right; margin-top: 15px; font-style: italic; color: #666;">
+    — From Judge In The Public Vote
+  </div>
+</div>
+
+<div style="border-left: 4px solid #0d6efd;" class="bg-[#f8f9fa] p-5 px-8 my-5 rounded-r text-base leading-relaxed text-left">
+  <p class="m-0 mb-4 text-black">At DEF CON I had the opportunity to work with SIV's election solution. Upon subjecting the system to extensive testing and making an effort to break into it, the evident conclusion was that the SIV protocol has been built from the ground up for security.</p>
+
+<p class="m-0 mb-4 text-black">
+  There are evident layers of security, and a well-thought-out system design
+  that makes it highly resilient—even in the onslaught of DEF CON. In the
+  election security space positive change is scarce, those willing to adopt
+  change are scarcer still.
+</p>
+
+<p class="m-0 mb-4 text-black">
+  Ultimately, SIV's system not only withstood rigorous physical testing but also
+  stood firm against critics' doubts, underscoring its robust design and
+  resilience. SIV is a refreshing take on election security in an otherwise
+  stagnant space.
+</p>
+
+  <div class="text-right mt-4 italic text-[#666]">
+  — Jason Green<br/>
+  Cybersecurity and Elections Researcher at <a href="https://www.ncat.edu/research/centers/creo/index.php" class="text-[#0d6efd]">CREO Lab</a><br/>
+  North Carolina A&T University
+  </div>
+</div>
+
+</div>
+
+<br />
+
+<h2 class="text-[1.8rem] font-bold text-black mb-8 mt-12 relative after:content-[''] after:absolute after:bottom-[-12px] after:left-0 after:w-full after:h-[1px] after:bg-[#1a5fb4] after:opacity-20">
+  Security Is A Process
+</h2>
+
+Bruce Schneier, an influential cryptography and security author, has a famous maxim:
+
+<div class="relative pl-6 my-6 bg-[#f8f9fa] text-[#34495e] before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#95a5a6]">
+  <p class="m-0 py-4 px-6 text-[1.2rem]">
+    Security is a process, not a product.
+  </p>
+</div>
+
+This is what HACK SIV is all about — why we have made the SIV source code public, why we brought it to DEF CON to be attacked, and why we'd like to continue running similar contests in the future.
+
+<br />
+
+<p class="text-sm italic text-center text-slate-400">
+  For questions or collaborations, email us at{' '}
+  <a href="mailto:hack@siv.org">hack@siv.org</a>
+</p>
+
+<br />
+
+<div
+  class="h-0.5 my-12 rounded-full bg-gradient-to-r from-emerald-500 via-emerald-200 to-emerald-500"
+  style="filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1))"
+></div>
+
+<br />
+
+<div class="detailed-information-section">
+<h2 class="text-[1.8rem] font-bold text-black mb-8 mt-12">
+  HACK SIV Detailed Information
+</h2>
+
+<details>
+<summary>
+Timeline <span style="font-size: 75%; opacity: 50%;">(1.5 min read)</span>
+</summary>
+<div>
+
+- 2020: SIV development began
+
+- July 2024:
+
+  - SIV codebase is made public
+
+- August 6th
+
+  - HACK SIV Contest is publicly launched:
+
+    - Live on SIV's website: [hack.siv.org](https://hack.siv.org)
+    - Live on Voting Village's website: [votingvillage.org/siv](https://www.votingvillage.org/siv)
+    - [Twitter Announcement](https://x.com/HarriHursti/status/1820910389208453577)
+
+- August 8th
+
+  - DEF CON begins
+  - SIV Team @ Voting Village
+
+- August 10th
+
+  - People register in-person for joining the Public Vote for the $5k prize distribution
+  - SIV announced its own preliminary rankings for the other half of the prize money
+
+- August 11th
+
+  - HACK SIV Submissions Close
+  - DEF CON ends
+
+- August 12th
+
+  - SIV emails an agreement against vote selling to the in-person registered voters for the Public Vote
+  - SIV announces the final rankings for its half of the prize money allocation
+
+- August 13th
+
+  - HACK SIV Signal Community discusses the implications of Privacy Protectors & the Decentralized Key Generation Ceremony for the Public Vote
+  - SIV invites voters who agreed to Anti-Vote Selling agreement to become Privacy Protectors of the Public Vote
+
+- August 14th
+
+  - [Decentralized Keygen Ceremony](https://docs.siv.org/technical-specifications#c-register-privacy-protectors) for enabling strong privacy takes place using a 4-part key
+  - Voters receive their invitations to vote
+  - Voting window is open for 24 hours
+
+- August 15th
+
+  - Cryptographic Anonymizing Shuffling & Privacy Protectors Decryption take place
+  - The Public Vote's Preliminary Results are posted
+
+- August 15th to 18th
+
+  - Voters verify if their vote is correct in the final tally
+  - Contest submitters & HACK SIV community check for election irregularities
+
+- August 19th
+
+  - Public Election results are certified
+  - HACK SIV contest submitters begin receiving payments
+
+</div>
+<br />
+</details>
+
+<details>
+<summary>
+Contest Rules <span style="font-size: 75%; opacity: 50%;">(1 min read)</span>
+</summary>
+<div>
+
+The detailed rules for the HACK SIV contest were published on <a href="https://hack.siv.org/rules">HACK SIV contest rules</a>.
+
+In summary, $10,000 in prize money was committed to be awarded in full, regardless of submission quality.
+
+Vulnerabilities were reported publicly on [SIV's GitHub](https://github.com/siv-org/siv/issues?q=is%3Aissue+is%3Aopen+created%3A2024-08-06..2024-08-11) for full transparency.
+
+Half of the $10,000 prize was awarded by the SIV team based on criteria such as impact, scalability, and the complexity of the attack.
+
+The other half was allocated through public voting using the SIV system. Only DEF CON attendees were eligible to vote, with a strong "One Person, One Vote" process detailed below under _"How The HACK SIV Contest Was Structured"_ > _"Public Prize Awarding Process"_.
+
+For the Public Vote, we also [used one of our anti-vote-selling solutions](https://hack.siv.org/rules#the-vote-buying-elephant-in-the-room), based on game-theory, to disrupt trust between would-be buyers and sellers. Also detailed below under _"How The HACK SIV Contest Was Structured"_ > _"Public Prize Awarding Process"_ > _"Anti-Vote-Selling"_.
+
+</div>
+<br />
+</details>
+
+<details>
+<summary>
+Hacking Resources <span style="font-size: 75%; opacity: 50%;">(0.5 min read)</span>
+</summary>
+<div>
+
+When the contest officially opened, SIV provided the following resources for people to evaluate and test the system:
+
+- [HACK SIV Landing Page](https://hack.siv.org)
+- [Illustrated Guide to The SIV Protocol](https://siv.org/protocol)
+- [SIV Documentation](https://docs.siv.org)
+- [The full SIV Codebase](https://github.com/siv-org/siv)
+- [SIV Technical Specifications](https://docs.siv.org/technical-specifications)
+- [Known Security Issues](https://github.com/siv-org/siv/issues?q=is%3Aissue+is%3Aopen+label%3Asecurity+)
+
+Once DEF CON began a few days later, we also [set up a mock election](https://github.com/siv-org/siv/issues/182) so people could poke at a live version of SIV without needing to install anything.
+
+</div>
+<br />
+</details>
+<details>
+<summary>
+List of Submissions <span style="font-size: 75%; opacity: 50%;">(0.5 min read)</span>
+</summary>
+<div>
+
+Between the launch of the contest on August 6th and its conclusion on August 11th, there were 42 submissions from 11 submitters (some of the 11 included multi-person teams).
+
+All submissions are publicly visible on [Github](https://github.com/siv-org/siv/issues?q=is%3Aissue+is%3Aopen+created%3A2024-08-06..2024-08-11), each accompanied by SIV's evaluation and the prize awarded.
+
+For a list of submissions ranked by awarded prize money, check out this [public spreadsheet](https://docs.google.com/spreadsheets/d/1PLiGplqv6N22nn1fOg503_H_jq_1tsvAJnmAs-c-Axc/edit?usp=sharing).
+
+</div>
+<br />
+</details>
+
+<details>
+<summary>
+Top 3 Submissions Examined <span style="font-size: 75%; opacity: 50%;">(9&nbsp;min read)</span>
+</summary>
+
+Although all the submissions are visible on [GitHub](https://github.com/siv-org/siv/issues?q=is%3Aissue+is%3Aopen+created%3A2024-08-06..2024-08-11), understanding them in context can be challenging. To simplify this, we will highlight the top prize-winning issues and explain our approach to addressing them.
+
+<details>
+<summary style="font-size: 20px; font-weight: bold; margin-left: 20px;">
+1. Weak RNG in Auth Token Generation <span style="font-size: 75%; opacity: 50%;">(1.5 min read)</span>
+</summary>
+
+<div style="margin-left: 40px;">
+
+This submission was reported by Dr. Chris Jackett ([@cjackett](https://github.com/cjackett)), a computer scientist and machine learning researcher at Australia's National Science Agency, [CSIRO](https://www.csiro.au/).
+
+It highlighted a security implementation flaw in the Voter Authentication Token generation process. The Authentication Tokens are one-time codes sent by election administrators to voters to enable them to identify themselves and cast their vote.
+
+The issue identified was that the SIV backend was using `Math.random()` to generate these, which is not a cryptographically secure random number generator. SIV was already aware of this issue, documented [here](https://github.com/siv-org/siv/issues/143).
+
+Exploiting this attack would require repeatedly hitting the production API, at a minimum hundreds of times. SIV had other logging and alerting mechanisms to immediately warn if such an attempt took place, and the team is confident that it never has. Even if it did ever take place, auth tokens can be invalidated and re-issued to remediate the issue.
+
+Dr. Jackett also provided sample code to attempt a proof-of-concept brute force attack against the auth tokens, which was tested locally for 24-hours. Even after 24-hours of tries, this approach did not find any valid tokens.
+
+However, highlighting this weak RNG problem and helping SIV prioritize it was valuable.
+
+Especially admirable is that Dr. Jackett not only identified the vulnerability, but also provided a strong solution. He offered simple and straightforward code to upgrade the RNG to use cryptographically secure randomness, completely mitigating the issue, which SIV has already validated and now implemented. This also greatly validated the decision to make the full SIV codebase public as part of the prep for this contest.
+
+In total, this submission earned a combined $1,133.36.
+
+For the full submission details, [see its public issue](https://github.com/siv-org/siv/issues/178).
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 20px; font-weight: bold; margin-left: 20px;">
+2. "I will pay $1 for your vote" <span style="font-size: 75%; opacity: 50%;">(5.5 min read)</span>
+</summary>
+
+<div style="margin-left: 40px;">
+
+This submission, reported by Dr. Michael Specter ([@mspecter](https://github.com/mspecter)), a Computer Science professor at Georgia Tech and computer security researcher, highlighted the increased risks of vote buying and selling in a system where voters can easily verify if their vote was cast correctly.
+
+The issue was written to demonstrate an attack against the Public Vote, where DEF CON attendees were allocating $5,000 in prize money. Because this vote was allocating money, it's particularly straightforward to _offer_ money to buy votes. This strategy could be directly profitable, enabling such an attack to quickly scale.
+
+SIV was aware of the risks of vote selling, and had planned from the beginning to use the public Prize Awarding vote as an opportunity to test a new proposal to prevent vote buying, called the ["Vote Seller's Dilemma"](https://docs.siv.org/research-in-progress/vote-sellers-dilemma). It aims to disrupt trust between would-be buyers and sellers, by publicly incentivizing honeypots.
+
+Dr. Specter's submission explicitly considered the Voter Seller's Dilemma mechanism. He evaluated that while it may provide benefits against:
+
+1. _anonymous buyers_ — because of distrust created by incentivized honeypots
+2. _prosecutable non-anonymous buyers_ — vote buying is a felony carrying jail-time if caught
+
+It may not work against a Vote Buyer who is both outside of law-enforcement jurisdiction, and willing to publicly identify themselves in a reliable way. For example, this could include the leader of a hostile foreign nation. While we [had previously examined](https://docs.siv.org/research-in-progress/vote-sellers-dilemma#on-foreign-interference) this issue, Dr. Specter's submission was particularly valuable as it brought the possible threat to life.
+
+Dr. Specter's submission had another novel element: it used the HACK SIV contest's public submissions venue of GitHub Issues to advertise the vote buying offer. While we could have closed or deleted the issue, that would not have been in the spirit of the contest — a point Dr. Specter preemptively highlighted. For future contests, we lean towards incorporating an additional rule that we will remove any explicit offers of vote buying, which would more closely match real-world conditions. However, since we had not established this ahead-of-time for this contest's rules, we did want to leave the submission in place.
+
+For these helpful contributions, we awarded the issue $113 of our $5,000 allotment.
+
+#### A key question is whether the attack actually worked or not.
+
+6 of the 7 independent judges voted to award the issue even less than us. 1 of the 7 voted to award it $4999 of the $5000 available. On one hand, this looks rather suspicious. But it's hard to be sure, as voting for it could be genuinely and sincerely wanting to call attention to the issue of vote selling. Rather than being motivated to collect $1.
+
+<img src="/images/2024/08/buy-votes.png" style="max-width:266px;" />
+
+<p style="text-align:center; font-size: 16px; margin-top: 2px">
+  <i>
+    From the
+    <a href="https://siv.org/election/1723655385175" target="_blank">
+      Public Vote results page
+    </a>
+  </i>
+</p>
+
+This contrast — between 6 of the 7 judges awarding the issue a relatively low amount, and 1 giving it 99.9% of their allotment — reflects a broader trend we've observed beyond this contest.
+
+The vast majority of people we've spoken with — including citizens, candidates, and election officials — do not prioritize risks of vote buying & selling as reasons to reject secure internet voting. In contrast, some people view it almost axiomatically as a show-stopping problem, despite vote-by-mail ballots already being trivially easy to coerce (in addition to other problems) and in widespread use.
+
+We don't mean to dismiss the issue out of hand, and believe those most vocal about it are genuine in their concern. We too don't want to see our governments compromised by corruption, of course. But we do hope to see more thoughtful analysis weighing the issue on both sides, recognizing the inherent compromises and trade-offs with verifiability, accessibility, and other key considerations that currently weaken our voices as citizens.
+
+SIV has been thinking about threats of vote buying since its inception in 2020. We have attempted to provide more [detailed analysis examining the risks more holistically, especially in context compared the current status quo](https://docs.siv.org/mitigating-attacks/vote-selling).
+
+One aspect of this issue that makes it particularly challenging is the difficulty to objectively quantify the threat, as opposed to merely theorizing about it.
+
+In the end, in our best evaluation, we don't feel the Public Vote was compromised by this particular $1 offer.
+
+This issue ended up earning $744 of the $5000 public allotment— approximately 15%. We had already awarded it $113, or about 2% of our allotment. So the public vote awarded it 13% more than our judgment. If this difference had been overwhelming, we could not deny its influence. But as it stands, the impact is not clear.
+
+As of now, we would like to continue using a similar Public Vote format to evaluate future HACK SIV submissions.
+
+#### Improving the Attack
+
+While we don't want to see SIV compromised, in the spirit of open adversarial challenge to uncover potential threats as early as possible, we wished this particular vote-buying offer had actually been _higher_ than just $1. This could have provided clearer data showing definitive compromise.
+
+We offer that an optimal amount might look more like "Whatever your vote awards me, minus $1". For instance, the one judge's $4999 vote divided by 7 (averaged among all the votes), would earn that seller $713.
+
+#### Improving Anti-Vote Selling and Coercion Resistance
+
+With all of the above said, SIV is taking the threat seriously and aims to continue testing and refining its game-theoretic solution, the ["Vote Seller's Dilemma"](https://docs.siv.org/research-in-progress/vote-sellers-dilemma).
+
+Additionally, since the end of the HACK SIV contest, our team and several expert collaborators have started working on an additional solution, built on Zero-Knowledge Proofs. This enables a would-be seller to secretly trick any would-be compromisers. This technique works against both financial offers to buy votes _and_ physical threats of coercion, which some other contest participants had also asked about. Importantly, the external compromiser can't be certain whether a seemingly cooperative voter has actually used this capability or not.
+
+This would allow SIV votes to achieve a similar level of coercion resistance as in-person paper voting. Even at an official polling center, voters can already photograph or video record themselves filling out a ballot a certain way as evidence for a coercer. But such photographic or video evidence can also be faked, by a particularly crafty voter. This possibility deters would-be vote buyers. Similarly, this new SIV capability can enable voters to secretly _trick_ 3rd-party coercers or would-be vote buyers.
+
+This design also includes strong protection against abuse from malicious election administrators or malware on voters' devices. They cannot use the technique to secretly trick voters themselves.
+
+This solution is not perfect, but in combination with the _Vote Seller's Dilemma_ bounty-reward approach, we believe a high level of defense can be achieved, disrupting voter's trust of would-be buyers or coercers, and the reverse as well.
+
+More details forthcoming, but do [feel free to reach out](https://signal.me/#eu/BoJi_hXAgZij8SBK2mGyEoemAKKgZ7_RYOjAOnkgVYCu8IjJAH5EjblXfQ0U3Cbc) if you are interested in seeing an early draft.
+
+In total, Dr. Specter's submission earned a total of $857.67, which he has chosen to donate to the [Electronic Frontier Foundation](https://eff.org).
+
+For the full submission details [see its public issue](https://github.com/siv-org/siv/issues/181).
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 20px; font-weight: bold; margin-left: 20px;">
+3. Second-device malware verification check could be fooled by rerouting the QR code to another malicious site <span style="font-size: 75%; opacity: 50%;">(2 min read)</span>
+</summary>
+
+<div style="margin-left: 40px;">
+
+This submission was reported by Dr. Drew Springall ([@aaspring](https://github.com/aaspring)), professor at Auburn University and an election security researcher.
+
+It identifies a vulnerability in one of SIV's verification layers — specifically, the second-device check. This feature is designed to enable voters to confirm their own device didn't tamper with their vote selections maliciously.
+As an additional verification method, voters can scan a QR code with a second device to double check their selections were submitted as intended.
+
+Dr. Springall highlighted a potential attack in which the QR code used for the second-device verification could be redirected by the compromised device to a malicious site or a fake verification website.
+
+During in-person discussions with Dr. Springall, two possible solutions were identified:
+
+1. In civic elections where vote invitations are sent via postal mail, include a verification QR code in the mailed invitation, instead of getting it from the compromised device. This QR code would link directly to the second-device verification page, and _that_ page would capture the necessary private vote data from the first device.
+
+2. In lower stakes non-civic elections, voters can be reminded to confirm that the second device loads the correct domain (e.g., siv.org). This requires a reliable broadcast channel to communicate with voters, which is common.
+
+While this is one out of a few verification layers, enhancing this particular one is important. It offers voters a straightforward means to identify potential malware before preliminary results are disclosed to the public.
+
+For those unfamiliar with SIV's election design, _"made public"_ means that everyone's vote contents (how people voted) is published as a list, without voters' identities, accessible to all. Each vote content is linked to each voters' secret Verification Number, that only the voter knows. This Verification Number then allows voters to personally find & check their vote was accurately recorded in the tally.
+
+Example:
+
+<img src="/images/2024/08/verification-number.png" style="width:95%;" />
+
+While other verification methods, such as SIV's [Risk Limiting Audits](https://docs.siv.org/verifiability/rla), would also catch this type of attack, addressing the issue at the second-device-check level offers earlier detection.
+
+In the end, the two proposed solutions appear to effectively address the attack, and SIV plans to focus on implementing them.
+
+This submission earned a total of $851.82.
+
+For full details, [see the public issue](https://github.com/siv-org/siv/issues/231).
+
+</div>
+</details>
+<br />
+</details>
+
+<details>
+<summary>
+How The HACK SIV Contest Was Structured <span style="font-size: 75%; opacity: 50%;">(8.5 min read)</span>
+</summary>
+
+<details>
+<summary style="font-size: 20px; margin-left: 20px;">
+Prize Rewards <span style="font-size: 75%; opacity: 50%;">(0.5 min read)</span>
+</summary>
+
+<div style="margin-left: 40px;">
+
+While planning the contest, we discussed the pros and cons of offering financial rewards for identifying vulnerabilities. We knew we wanted to reward people for their time and insight.
+
+One concern raised was that similar contests offering financial rewards can often backfire. Too often, organizers receive numerous submissions, but in the end, claim that few or none deserve payout. This can lead to anger, disappointment, and a sense of betrayal.
+
+To avoid this, the SIV team committed from the outset to awarding the full $10,000 amount, regardless of submission quality. This ensured there would be no debate over whether the money would be awarded or not — only a question of _who_ would receive it.
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 20px; margin-left: 20px;">
+Judges <span style="font-size: 75%; opacity: 50%;">(0.5 min read)</span>
+</summary>
+
+<div style="margin-left: 40px;">
+
+With that settled, the next question became: Who decides who receives awards?
+
+To ensure fairness, we initially planned to divide the decision among three groups: a panel of expert judges, DEF CON attendees, and the SIV team.
+
+Some people suggested we enlist third-party commercial providers, like HackerOne or similar, as independent judges. But we were skeptical they would have the bandwidth and specific product-knowledge to closely and effectively evaluate the different submissions we hoped for. Coincidentally, since our contest has ended, this was proven out with an embarrassing viral episode of low-quality triage: [1 bug, $50,000+ in bounties, how Zendesk intentionally left a backdoor in hundreds of Fortune 500 companies](https://gist.github.com/hackermondev/68ec8ed145fcee49d2f5e2b9d2cf2e52).
+
+Due to time constraints, we ultimately decided to split the decision between two groups: DEF CON attendees and the SIV team, each deciding half of the award money.
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 20px; margin-left: 20px;">
+End-Of-Day Reports <span style="font-size: 75%; opacity: 50%;">(0.5 min read)</span>
+</summary>
+<div>
+
+We published daily End-of-Day Reports from the contest's start to its conclusion, sharing them widely with the community:
+
+- Day 1, Launch Day, August 6th: [github.com/siv-org/siv/issues/179](https://github.com/siv-org/siv/issues/179)
+
+- Day 2, August 7th: [github.com/siv-org/siv/issues/180](https://github.com/siv-org/siv/issues/180)
+
+- Day 3, August 8th: [github.com/siv-org/siv/issues/192](https://github.com/siv-org/siv/issues/192)
+
+- Day 4, August 9th: [github.com/siv-org/siv/issues/200](https://github.com/siv-org/siv/issues/200)
+
+- Day 5, August 10th: [github.com/siv-org/siv/issues/222](https://github.com/siv-org/siv/issues/222)
+
+- Day 6, August 11th: [github.com/siv-org/siv/issues/233](https://github.com/siv-org/siv/issues/233)
+
+- Day 7, August 12th: [github.com/siv-org/siv/issues/234](https://github.com/siv-org/siv/issues/234)
+
+</div>
+
+</details>
+
+<details>
+<summary style="font-size: 20px; margin-left: 20px;">
+SIV's Selections <span style="font-size: 75%; opacity: 50%;">(0.5 min read)</span>
+</summary>
+
+<div style="margin-left: 40px;">
+
+The SIV team first reviewed each submission, documenting what we found interesting and detracting from each.
+
+This assessment is available in [this public spreadsheet under the "SIV Scoring" tab](https://docs.google.com/spreadsheets/d/1PLiGplqv6N22nn1fOg503_H_jq_1tsvAJnmAs-c-Axc/edit?usp=sharing).
+
+Before finalizing the SIV awards, we shared our preliminary rankings with the contest submitters and the HACK SIV updates-subscribers community via Signal & email, inviting them to provide rebuttals. No one raised any issues, publicly nor privately, with our allocations.
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 20px; margin-left: 20px;">
+Public Prize Awarding Process <span style="font-size: 75%; opacity: 50%;">(6.5 min read)</span>
+</summary>
+
+<div style="margin-left: 40px;">
+
+For the second $5000 of prize awards, we wanted anyone attending DEF CON to be able to weigh in. But we needed to protect against a few unique threats, detailed below.
+
+</div>
+
+<details>
+<summary style="font-size: 16px; margin-left: 40px;">
+Voter Registration <span style="font-size: 75%; opacity: 50%;">(0.5 min read)</span>
+</summary>
+
+<div style="margin-left: 60px;">
+
+To enforce 'One Person, One Vote' — including an auditable voter roll — we registered voters — the public judges, in this case — in person. We did not want to ask for legal names or government IDs, as the DEFCON culture highly values privacy and pseudonymity.
+
+Instead, we wanted a unique anonymous identifier for each voter. We luckily discovered the DEFCON badges could serve this role, as they had a unique serial number in the form of a QR code, printed on the inside of each badge.
+
+<img
+  src="/images/2024/08/defcon-badge-outside.jpeg"
+  style="max-width: 300px; width: 100%; border-radius: 10px; margin-bottom: 20px;"
+/>
+
+<img
+  src="/images/2024/08/defcon-badge-inside.jpg"
+  style="max-width: 350px; width: 100%; border-radius: 10px;"
+/>
+
+So we took a photo of the badge's QR code, noted down the unique serial number, and recorded an email address for each voter to send them their custom vote invitation.
+
+Everyone can view this information in [this public spreadsheet](https://docs.google.com/spreadsheets/d/1404ypX5rZ0ZlUbO8vvfKa-lOROuCCEHkIKmyjwJ7C7w/edit?usp=sharing), with emails hidden for privacy.
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 16px; margin-left: 40px;">
+Anti-Vote-Selling <span style="font-size: 75%; opacity: 50%;">(1.5 min read)</span>
+</summary>
+
+<div style="margin-left: 60px;">
+
+We have actively been working on solutions to mitigate the potential threat of vote selling, and one such proposal is ["The Vote Seller's Dilemma"](https://docs.siv.org/research-in-progress/vote-sellers-dilemma), a bounty reward system. This system creates an incentive for honey-potting vote buyers to defect on would-be vote sellers, and earn even more money. This is meant to destroy the trust necessary between would-be voter buyers and vote sellers.
+
+We were excited to get the chance to partially test it during DEF CON, as the public vote provided a great opportunity to gather data on its effectiveness in a real election with $5,000 on the line.
+
+After voter registration, we sent all 19 voters the agreement below. Seven agreed, one declined, and the rest did not respond.
+
+<img src="/images/2024/08/anti-vote-selling.png" />
+
+In a civic election, law enforcement can also often restrict and fine the 3rd-party vote buyers. Vote buying is a federal felony, with existing laws authorized to fine $10k for a single purchased vote. This contest, on the other hand, could only provide contractual enforcement against the sellers (voters), not criminal enforcement against both sellers and buyers.
+
+In other words, in a government election, the offered bounty reward (point #4 in the email above) can go in both directions, but for this HACK SIV contest, it can only reward defecting buyers, not defecting sellers.
+
+Nonetheless, in the end we were satisfied, as the vote itself did not appear to be compromised.
+
+For future contests, we are also exploring options to strengthen these protections even further. See the detailed discussion above in the section **2. "I will pay $1 for your vote"** for more.
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 16px; margin-left: 40px;">
+Privacy <span style="font-size: 75%; opacity: 50%;">(1.5 min read)</span>
+</summary>
+
+<div style="margin-left: 60px;">
+
+SIV's privacy design is based on knowing who is voting, but keeping individual vote selections private.
+
+This is meant to enable a truly "Free & Fair Election", where voters can make their choices freely, without anyone — including election officials or technology providers — learning how they voted.
+
+Strong security comes from independently verifiable privacy design, not just unverifiable promises to delete data without looking. It is not simply a question of ethics or ill-intent, but also resistance from vendors' systems being compromised.
+
+This is achieved through what SIV calls ["Privacy Protectors"](https://docs.siv.org/privacy/privacy-protectors). These are individuals who each contribute an additional anonymizing shuffle of the encrypted votes. To complete the election, Privacy Protectors must collaborate to decrypt the anonymized votes for final tallying. This is a type of cryptographic "mixnet".
+
+In addition to anonymizing votes, each Privacy Protector's device also creates and publishes cryptographic proofs that the list of votes entering the shuffle are the same as the one exiting it. Or in other words, that no votes are lost or tampered with.
+
+The power of this Privacy Protectors design is that all Privacy Protectors need to be compromised in order for voter's individual selections to be de-anonymized. Only a single Privacy Protector needs to remain honest and not be compromised to ensure the election's vote privacy.
+
+For the HACK SIV awarding process, all voters were invited to participate as additional Privacy Protectors. In the end, the election's decryption key was split into 4 parts, with one 1/4 each held by 3 Privacy Protectors and the SIV server.
+
+<img src="/images/2024/08/shuffling.gif" />
+
+Before voting began, the Privacy Protectors published individual statements about their participation in the pre-election multi-part key-generation ceremony. After voting closed, the votes were shuffled and unlocked. Again, all privacy protectors published another statement acknowledging their participation in this process, with no issues detected. All of this was [documented publicly on Github](https://github.com/siv-org/siv/issues/236), and shared with participants in real-time as the vote took place.
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 16px; margin-left: 40px;">
+Public Vote Ballot <span style="font-size: 75%; opacity: 50%;">(0.5 min read)</span>
+</summary>
+
+<div style="margin-left: 60px;">
+
+Each voter saw [this ballot design](https://siv.org/election/1723655385175/vote?auth=22671df063), which included the title of each submission, a link to the original submission, and if the voter chose to view them: SIV's evaluations and reward amounts. The names of the submitters were not displayed on this page, in an attempt to minimize bias. Although voters could discover them by following the links to the original Github submission.
+
+The order in which the items were displayed was randomized for each voter, again to promote fairness.
+
+<img src="/images/2024/08/ballot.png" style="width:75%; border-radius: 10px;" />
+
+This ballot used a new [Participatory Budgeting](https://en.wikipedia.org/wiki/Participatory_budgeting) format (`type=budget`) that we added to SIV specifically for this contest. It allows the administrator to set a total budget amount — $5000 in this case — which is then tracked and subtracted from as voters enter their individual allocations.
+
+<img
+  src="/images/2024/08/ballot-ui-budget.gif"
+  style="max-width: 386px; width: 100%; border-radius: 40px"
+/>
+
+This new budget format is now available for everyone to use in any SIV election.
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 16px; margin-left: 40px;">
+Public Vote Results <span style="font-size: 75%; opacity: 50%;">(0.5 min read)</span>
+</summary>
+
+<div style="margin-left: 60px;">
+
+The preliminary results were posted after the 24-hour voting period ended.
+
+You can view SIV's [Election Results Page](https://siv.org/election/1723655385175), which was mirrored into [a public Github file](https://github.com/siv-org/hack.siv.org/commit/ba0c16b66d49a7dfaf28bc096f5a4b1892549367). The mirrored document was an additional layer provided to offer more assurance that SIV's page was not altering the results, without anyone seeing it.
+
+Additionally, we created a [detailed analysis](https://docs.google.com/spreadsheets/d/1PLiGplqv6N22nn1fOg503_H_jq_1tsvAJnmAs-c-Axc/edit?usp=sharing), which includes, amongst others, differences between SIV allocations and public allocations.
+
+After a 48-hour period of allowing everyone to check for anomalies, SIV [officially announced the winners on Github and the Signal Group](https://github.com/siv-org/siv/issues/236#issuecomment-2297574529).
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 16px; margin-left: 40px;">
+Voters Verify Election Results <span style="font-size: 75%; opacity: 50%;">(1.5 min read)</span>
+</summary>
+
+<div style="margin-left: 60px;">
+
+SIV is designed to enable a "Zero Trust" election process. Voters can confirm for themselves that their vote was cast and counted as intended. They do not need to trust election administrators or the many intermediate providers involved in the process.
+
+Not only must such a process be available — without it, the entire election can be secretly corrupted. It must also be quick and easy to use, so that voters actually do it.
+
+For this HACK SIV contest, [7 of 7 judges confirmed vote verification](https://github.com/siv-org/siv/issues/236#issuecomment-2295093149). In other elections we ran, we have similarly seen very high numbers, nearing 100%.
+
+For this election, the process took place as follows — After preliminary results were published, voters were each invited to check if their vote was accurately recorded in the final tally.
+
+They were sent a [Voter Verification Guide](https://app.simplenote.com/publish/cqqKhx). This guide included instructions on how to use their secret Verification Number. It also detailed more advanced checks. The secret Verification Number is a unique 12-digit number. It is randomly generated on the voter's own device. This number is a very quick and simple tool available to voters.
+
+_Example of a general Verification Number check:_
+
+<img
+  src="/images/2024/08/verification-number.png"
+  style="width:95%; margin-bottom: 20px;"
+/>
+
+After a 48-hour period, each voter confirmed that they saw their votes correctly recorded in the tally.
+
+<img
+  src="/images/2024/08/vote-confirmation-2.png"
+  style="border: 1px solid #666; border-radius: 10px; border-radius:4px; padding: 13px 0; margin-bottom: 20px;"
+/>
+
+All voter confirmations are [publicly documented on Github](https://github.com/siv-org/siv/issues/236#issuecomment-2295093149).
+
+There are more advanced checks possible — against on-device malware, paper-only to achieve software independence, risk limiting audits, and auditing the voter roll, detailed in the [Voter Verification Guide](https://app.simplenote.com/publish/cqqKhx).
+
+The entire HACK SIV process was [documented on Github](https://github.com/siv-org/siv/issues/236), making it accessible for public inspection.
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 16px; margin-left: 40px;">
+Distributing The Prize Money <span style="font-size: 75%; opacity: 50%;">(0.5 min read)</span>
+</summary>
+
+<div style="margin-left: 60px;">
+
+As no issues were raised, we proceeded with distributing the prize money. A few have taken longer than others, as we work out unique circumstances specific to that winner.
+
+This process, like all others implemented during this contest, is designed to be publicly verifiable.
+
+You can track the status of each winner's payment at the bottom of [this Github issue](https://github.com/siv-org/siv/issues/236#issuecomment-2297574529).
+
+</div>
+</details>
+
+<br />
+
+</details>
+
+<br />
+
+</details>
+
+<details>
+<summary>
+Attacks Discussed But Not Submitted To The Contest <span style="font-size: 75%; opacity: 50%;">(5 min read)</span>
+</summary>
+
+<details>
+<summary style="font-size: 20px; margin-left: 20px;">
+Availability Attacks <span style="font-size: 75%; opacity: 50%;">(1 min read)</span>
+</summary>
+<div style="margin-left: 40px;">
+
+For the 2024 HACK SIV challenge, we decided to define availability attacks as out-of-scope. One reason was that any successful ones would make it significantly harder for other participants to engage with the system during the contest period, which would not be fun.
+
+Our priorities for this contest were Integrity — altered votes, lost votes, changed results, false voters — and Confidentiality Attacks.
+
+Nonetheless, many people proposed all sorts of creative ways to take SIV's infrastructure offline.
+
+Though SIV has not yet faced any significant Availability Attacks, we acknowledge they are crucial to defend against— especially because in an election setting such attacks can act as a form of voter suppression.
+
+We have begun documenting defenses against Denial of Service Attacks at [docs.siv.org/mitigating-attacks/dos](https://docs.siv.org/mitigating-attacks/dos), and have a number of other potentially promising ideas to make the system even more resilient in the face of these types of threats.
+
+In the future, we would like to hold other challenges, explicitly focused on taking SIV offline.
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 20px; margin-left: 20px;">
+Increased Surface Area <span style="font-size: 75%; opacity: 50%;">(1.5 min read)</span>
+</summary>
+<div style="margin-left: 40px;">
+
+One critique is that if a person can break into a ballot center, they can switch the ballots only for that location. But if one can break into SIV, they might be able to change ballot selections for millions of people. This is about the increased blast radius.
+
+Another concern is that SIV has many complex parts, which in turn have many of their own sub-components. And every last one of them needs to work well and not be compromised by attacks. This is about the total surface area through which attacks can potentially occur.
+
+SIV addresses these concerns by providing mathematical evidence of correct results, which a paper-only system does not offer. In a paper system, someone can simply switch out ballots, and no one finds out. With SIV, this is not possible.
+
+For a proper comparison, it would be incorrect to assume these problems do not exist in the current status quo. For example, over 90% of voting equipment used in the US comes from just three companies, producing a huge blast area if any of them are compromised.
+
+Current US elections also suffer from a massive geographic surface area. There are tens of thousands of polling centers, and it is simply not possible for all of them to be observed simultaneously for correctness.
+
+In contrast, SIV empowers vastly more people to verify correctness against compromise. And specifically to be able to verify _after_ the election has taken place, not just during the election itself, which paper processes are limited to.
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 20px; margin-left: 20px;">
+On-Device Spyware <span style="font-size: 75%; opacity: 50%;">(3 min read)</span>
+</summary>
+<div style="margin-left: 40px;">
+While the SIV Protocol is designed to defend against on-device malware tampering with voters' votes, it had not yet been designed to defend against on-device spyware (a particular type of malware) learning people's private vote choices. We had [documented this issue](https://github.com/siv-org/siv/issues/162) before the HACK SIV contest and labeled spyware as out-of-scope, as we do not claim to solve it.
+
+Very simply if you're tapping your vote selections into a touch-screen, it is quite challenging to prevent that device itself from learning the selections you are making. There have been some strategies developed to be able to defend against this risk, using a technique known as Code Voting. This involves voters receiving a randomized set of numeric codes, each corresponding to a choice on the ballot, which they enter instead of the choice itself. Unfortunately, this makes the voting process significantly more difficult and prone to errors.
+For this reason, defending vote confidentiality against on-device spyware has been out-of-scope for the SIV Protocol.
+
+Nonetheless, one person at DEF CON this year demonstrated impressive in-person spyware attacks to show they could learn how people vote.
+
+They had multiple ways to almost instantaneously install spyware, while holding a target's unlocked phone for just a few seconds. This allowed the attacker to view the phone's screen remotely, including the vote content.
+
+This type of attack extends beyond the SIV Protocol to compromise the phone's entire operating system. This allows the attacker to see anything and everything a victim does on their phone, including other private data such as financial info, messages, and photos.
+
+From Day 1, we have built SIV to be an additional voting option, so that people who do not trust or want to use their devices can continue to vote in-person or via postal mail.
+
+To compare the levels of privacy of existing systems, consider the vulnerabilities of current methods. Mail-in voting is susceptible to both minor and major privacy breaches: postal workers can open ballots, or workers at the polling centers that receive the ballots have some ability to look at how people voted. Overseas voters currently have to agree to abdicate their right to a secret ballot altogether. And even in-person voting could also be compromised by hidden cameras at polling places. Both in-person and postal votes privacy could be secretly compromised for all voters at once if there are unique IDs linking marked ballots back to individuals. These are present on many ballot designs, and required for certain types of Post-Election Audits.
+
+We are not claiming these privacy attacks are currently taking place on any sort of large scale, but they are relevant threats if we are fairly evaluating different voting options.
+
+<p style="text-align:center; opacity:1;">
+  <a href="https://docs.siv.org/compare" target="_blank">
+    <img
+      src="/images/2024/08/privacy-comparison.png"
+      style="border-radius: 10px;"
+    />
+  </a>
+</p>
+
+<p style="font-style: italic; opacity: 0.6; text-align: center; font-size:16px; margin-top: -12px;">
+  Click the specific scores from the
+  <a href="https://docs.siv.org/compare" target="_blank">
+    Comparing Voting Methods page
+  </a>
+  for more details
+</p>
+
+We have already added support to SIV for preparing encrypted votes on [separate air-gapped devices](https://docs.siv.org/privacy#air-gapping). We are also open to adding support for voters to be able to opt-in to a Code Voting mode, which can defend against this on-device spyware threat. There are a number of details to be worked out, to ensure using such a feature would not sacrifice SIV's many other privacy and verifiability defenses. We would appreciate if interested people would write to us at hack@siv.org, so we can prioritize it sooner.
+
+SIV focuses on protecting voters from servers or election administrators learning how people voted. For this, SIV uses [strong cryptographic privacy](https://docs.siv.org/privacy), which can be investigated by all at their own pace.
+
+If the spyware can gain remote control as well, SIV does claim to defend voters from attempts to alter their votes. SIV provides [various methods to check for tampering](https://docs.siv.org/verifiability), allows vote-by-vote remediation when necessary, and enables [rigorous post-election auditing](https://docs.siv.org/verifiability/rla) tools to ensure that sufficient verifications are conducted.
+
+</div>
+</details>
+
+<br />
+
+</details>
+
+<details>
+<summary>
+Frequently Asked Questions <span style="font-size: 75%; opacity: 50%;">(2&nbsp;min&nbsp;read)</span>
+</summary>
+
+<details>
+<summary style="font-size: 20px; margin-left: 20px;">
+Since we don't want to rely on computers alone, is there a paper trail? <span style="font-size: 75%; opacity: 50%;">(0.5 min read)</span>
+</summary>
+<div style="margin-left: 40px;">
+
+Yes, paper printouts of cast ballot selections can be made available in public places like the Department of Elections, local libraries, or delivered to voters by auditors conducting [Risk Limiting Audits](<(https://docs.siv.org/verifiability/rla)>). Voters can use their private [Verification Numbers](https://docs.siv.org/verifiability/personal-vote) to personally check if their selections were tallied correctly.
+
+Although doing [checks with multiple devices](https://docs.siv.org/verifiability/detecting-malware) or using paper printouts may seem more time-consuming, only a small number of people verifying this way can be combined with powerful statistical methods to calibrate the far more accessible digital verification methods.
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 20px; margin-left: 20px;">
+Verifiability After the Fact? <span style="font-size: 75%; opacity: 50%;">(0.5 min read)</span>
+</summary>
+<div style="margin-left: 40px;">
+
+A key difference between paper-only and SIV is that with the paper-only, privacy requirements force key verification steps (e.g. against ballot stuffing or tampering) to be done during the voting process itself. In contrast, SIV allows people to verify each step after the fact.
+
+On Election Day, it is impossible to be everywhere at once to ensure legitimacy. This is exacerbated even further by longer voting period. But with SIV, anyone can revisit the entire process afterward and verify it top-to-bottom.
+
+Anyone dissatisfied with results has a strong incentive to do this, especially after preliminary results are announced.
+
+In contrast, with paper, by the time preliminary results are announced, it is already too late.
+
+</div>
+</details>
+
+<details>
+<summary style="font-size: 20px; margin-left: 20px;">
+Can SIV do Risk Limiting Audits? <span style="font-size: 75%; opacity: 50%;">(1 min read)</span>
+</summary>
+<div style="margin-left: 40px;">
+
+Once preliminary results are published, official auditors and independent parties can conduct post-election audits. For example, they can call voters from the voter roll to guide them through verifying their votes without compromising the privacy of their selections. In addition, the voter roll can be displayed in public spaces, such as libraries, allowing individuals to confirm their votes against paper records. Auditors may also visit voters in person for verification.
+
+<img src="/images/2024/08/rla-options.png" style="width:85%;" />
+
+The [SIV Post-Election Audit](https://docs.siv.org/verifiability/rla) aims to determine if voters' devices are cheating and whether ballots were received correctly.
+
+Significantly, such paper-based checks provide "software independence", preventing potential tampering by malware.
+
+We can employ all three methods outlined in the table above, and specifically use the more expensive ones to calibrate the cheaper ones.
+
+SIV's RLAs are also efficient in their execution. For example, in Georgia's 2020 election where the margin of error was only 0.12%, a SIV RLA would have required checking just 7,500 votes out of 5 million to get 99.98% confidence of correct results. This is a stark contrast to the actual scenario, which involved a labor-intensive hand recount of all 5 million ballots.
+
+</div>
+</details>
+
+</details>
+
+</div>
+
+<br />
+
+<div
+  class="h-0.5 my-12 rounded-full bg-gradient-to-r from-emerald-500 via-emerald-200 to-emerald-500"
+  style="filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1))"
+></div>
+
+<br />
+
+<h2 class="text-[1.8rem] font-bold text-black mb-8 mt-12">
+  Conclusions & The Future of HACK SIV
+</h2>
+
+DEF CON attendees pushed us to sharpen how we explain SIV's security. Now it's distilled into clearer, testable claims—for the next HACK SIV:
+
+<div class="space-y-12 max-w-[900px] mx-auto conclusion-details">
+
+<details class="bg-[#f8f9fa] rounded-[20px] shadow-[0_2px_12px_rgba(0,0,0,0.04)] overflow-hidden border border-[#e5e7eb]">
+  <summary class="px-12 py-4 list-none cursor-pointer hover:bg-[#f9fafb] transition-colors">
+    <div class="flex flex-col items-start md:flex-row md:justify-between md:items-center max-w-[850px] mx-auto">
+      <div class="flex-1 w-full">
+        <h3 class="text-[1.4rem] font-medium text-[#1d1d1f] mb-1 tracking-[-0.02em] leading-tight">
+          Authentication
+        </h3>
+        <p class="text-[#86868b] text-[1.25rem] font-normal tracking-[-0.01em]">
+          One Person, One Vote
+        </p>
+      </div>
+      <div class="w-full mt-4 md:mt-0 md:ml-8 md:w-auto">
+        <button class="details-toggle text-[15px] font-medium px-5 py-2.5 rounded-[10px] shadow-sm border border-[#e5e7eb] transition-all duration-200 whitespace-nowrap bg-gray-100 text-gray-800 hover:bg-gray-200">
+          Show Details
+        </button>
+      </div>
+    </div>
+  </summary>
+  <div class="px-8 pb-8 pt-2 max-w-[850px] mx-auto">
+    <ol class="grid grid-cols-1 pl-4 list-decimal list-inside md:grid-cols-2 gap-x-12 gap-y-3">
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Enable each eligible voter to vote just once
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Support many different authentication methods, depending on the election
+        requirements
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Work alongside in-person & postal-mail voting
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Enable invalidating, remediating, & issuing new voter credentials when
+        necessary
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Ballot-Stuffing Resistance: Allow the entire voter authentication
+        process to be audited by 3rd parties, even long after voting has taken
+        place
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Allow voters to mathematically prove that they voted, without needing to
+        reveal how they voted
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Reusable authentication for future votes: even if election
+        administrators become anti-democratic
+      </li>
+    </ol>
+  </div>
+</details>
+
+<details class="bg-[#f8f9fa] rounded-[20px] shadow-[0_2px_12px_rgba(0,0,0,0.04)] overflow-hidden border border-[#e5e7eb]">
+  <summary class="px-12 py-4 list-none cursor-pointer hover:bg-[#f9fafb] transition-colors">
+    <div class="flex flex-col items-start md:flex-row md:justify-between md:items-center max-w-[850px] mx-auto">
+      <div class="flex-1 w-full">
+        <h3 class="text-[1.4rem] font-medium text-[#1d1d1f] mb-1 tracking-[-0.02em] leading-tight">
+          Verifiable Results
+        </h3>
+        <p class="text-[#86868b] text-[1.25rem] font-normal tracking-[-0.01em]">
+          Vote Count Accuracy
+        </p>
+      </div>
+      <div class="w-full mt-4 md:mt-0 md:ml-8 md:w-auto">
+        <button class="details-toggle text-[15px] font-medium px-5 py-2.5 rounded-[10px] shadow-sm border border-[#e5e7eb] transition-all duration-200 whitespace-nowrap bg-gray-100 text-gray-800 hover:bg-gray-200">
+          Show Details
+        </button>
+      </div>
+    </div>
+  </summary>
+  <div class="px-8 pb-8 pt-2 max-w-[850px] mx-auto">
+    <ol class="grid grid-cols-1 pl-4 list-decimal list-inside md:grid-cols-2 gap-x-12 gap-y-3">
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Allow anyone to recount final results. Nearly instant, and runs
+        automatically on every voting device for 1000s of free recounts
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Allow voters to confirm their vote was cast & counted correctly
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Allow election administrators to prove they are not cheating
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Public proof that election servers are not cheating
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Open Source: source code publicly inspectable, so as many people as
+        possible can detect problems
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Ability to detect & remediate on-device malware tampering with voters'
+        votes
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        High-efficiency Post-Election Audits: Ensure enough voters verified to
+        not change election outcomes, with arbitrarily high confidence %
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Software independence: allow all results to be manually checked with
+        paper, no dependency on software for detecting tampered results
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Protection against voters falsely claiming their vote was compromised
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Quantum-Resistant Results: Can verify correct election results, even if
+        attacker possesses large quantum computers
+      </li>
+    </ol>
+  </div>
+</details>
+
+<details class="bg-[#f8f9fa] rounded-[20px] shadow-[0_2px_12px_rgba(0,0,0,0.04)] overflow-hidden border border-[#e5e7eb]">
+  <summary class="px-12 py-4 list-none cursor-pointer hover:bg-[#f9fafb] transition-colors">
+    <div class="flex flex-col items-start md:flex-row md:justify-between md:items-center max-w-[850px] mx-auto">
+      <div class="flex-1 w-full">
+        <h3 class="text-[1.4rem] font-medium text-[#1d1d1f] mb-1 tracking-[-0.02em] leading-tight">
+          Privacy
+        </h3>
+        <p class="text-[#86868b] text-[1.25rem] font-normal tracking-[-0.01em]">
+          Free & Fair Vote Selection
+        </p>
+      </div>
+      <div class="w-full mt-4 md:mt-0 md:ml-8 md:w-auto">
+        <button class="details-toggle text-[15px] font-medium px-5 py-2.5 rounded-[10px] shadow-sm border border-[#e5e7eb] transition-all duration-200 whitespace-nowrap bg-gray-100 text-gray-800 hover:bg-gray-200">
+          Show Details
+        </button>
+      </div>
+    </div>
+  </summary>
+  <div class="px-8 pb-8 pt-2 max-w-[850px] mx-auto">
+    <ol class="grid grid-cols-1 pl-4 list-decimal list-inside md:grid-cols-2 gap-x-12 gap-y-3">
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Strong Encryption: end-to-end privacy from election administrators or
+        servers learning individual vote selections
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Quick way for voters to airgap voter interface, so it can't secretly
+        exfiltrate private vote selections, without needing to review any source
+        code
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Anonymization of vote selections, not voters — like existing
+        vote-by-mail: sealed envelope, private selections inside, outside signed
+        by voter
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Protected against network-level de-anonymizations such as IP address or
+        timing correlations
+      </li>
+    </ol>
+  </div>
+</details>
+
+<p class="mt-10">
+  In addition to the security properties listed above, SIV is also designed to
+  make voting highly accessible:
+</p>
+
+<details class="bg-[#f8f9fa] rounded-[20px] shadow-[0_2px_12px_rgba(0,0,0,0.04)] overflow-hidden border border-[#e5e7eb]">
+  <summary class="px-12 py-4 list-none cursor-pointer hover:bg-[#f9fafb] transition-colors">
+    <div class="flex flex-col items-start md:flex-row md:justify-between md:items-center max-w-[850px] mx-auto">
+      <div class="flex-1 w-full">
+        <h3 class="text-[1.4rem] font-medium text-[#1d1d1f] mb-1 tracking-[-0.02em] leading-tight">
+          Accessibility
+        </h3>
+        <p class="text-[#86868b] text-[1.25rem] font-normal tracking-[-0.01em]">
+          Making it easy for all citizens to participate
+        </p>
+      </div>
+      <div class="w-full mt-4 md:mt-0 md:ml-8 md:w-auto">
+        <button class="details-toggle text-[15px] font-medium px-5 py-2.5 rounded-[10px] shadow-sm border border-[#e5e7eb] transition-all duration-200 whitespace-nowrap bg-gray-100 text-gray-800 hover:bg-gray-200">
+          Show Details
+        </button>
+      </div>
+    </div>
+  </summary>
+  <div class="px-8 pb-8 pt-2 max-w-[850px] mx-auto">
+    <ol class="grid grid-cols-1 pl-4 list-decimal list-inside md:grid-cols-2 gap-x-12 gap-y-3">
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Easy to use point-and-click voter interface
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Available on phones, laptops, & desktops that voters already use
+        countless times per day
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        No software installation necessary
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Supports existing accessibility tools for voters with vision or mobility
+        challenges
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Nearly-instant voter experience: like snail-mail vs email
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Quick results: tally thousands of votes per second
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Internationalization: easy translations for hundreds of languages
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Free for voters: no gas fees, tolls, parking, or transportation costs
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Significant cost-savings for election administrators: 10x less staff,
+        polling locations, equipment, paper, costs
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Easier to use advanced spoiler-resistant voting methods, such as
+        Ranked-Choice, Score, Approval, STAR, Participatory Budgeting
+      </li>
+      <li class="text-[1rem] leading-relaxed text-[#1d1d1f] font-light mb-2">
+        Highly resilient in the face of extreme weather events or other
+        disruptions like pandemics
+      </li>
+    </ol>
+  </div>
+</details>
+
+</div>
+
+<br />
+
+<div
+  class="h-0.5 my-12 rounded-full bg-gradient-to-r from-slate-400 via-slate-300 to-slate-400"
+  style="filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1))"
+></div>
+
+<br />
+
+<h2 class="text-[1.7rem] font-bold text-black mb-8 mt-12">
+  Contribute to HACK SIV
+</h2>
+
+<div class="contribution-card">
+  <h3>Evaluate The SIV Protocol</h3>
+
+<p class="lead-text">
+  We've made the <a href="https://docs.siv.org">SIV Protocol</a> and
+  <a href="https://github.com/siv-org/siv">codebase</a> publicly available, and invite
+  anyone with interest and technical curiosity to learn more about SIV and independently
+  verify our claims.
+</p>
+
+<div class="action-item">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="18"
+    height="18"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="action-icon"
+  >
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+  </svg>
+  <p>
+    Share your findings with us at{' '}
+    <a href="mailto:hack@siv.org">hack@siv.org</a>
+  </p>
+</div>
+
+<div class="note">
+  <p>
+    Please allow us 2-3 weeks to review any identified vulnerabilities before
+    public disclosure, so that we can protect active elections.
+  </p>
+</div>
+
+  <p class="cta-text">
+    Join us in strengthening democracy for millions of people around the world.
+  </p>
+</div>
+
+<br />
+
+<div class="contribution-card">
+  <h3>Fund Security Researchers</h3>
+  
+  <p class="text-lg font-medium text-black apple-style">We want SIV's security to be as transparent and well-reviewed as possible.</p>
+  
+  <div style="padding-left: 0; border-left: none; margin-left: 0; margin-top: 0.5rem; margin-bottom: 4.5rem;">
+    <p class="apple-subtext">That's why we created HACK SIV — to be the most powerful system to convert money into rewarding researchers to test SIV's system, and advance election security worldwide.</p>
+  </div>
+  
+  <div class="supporter-message">
+    <strong>For supporters of digital democracy:</strong>
+    <p>If you share our goal for safe and accessible voting systems, we invite you to contribute financially to the prize pool for the next round of HACK SIV. You can do so anonymously, or with your name & organization attached.</p>
+  </div>
+  
+  <div class="skeptic-message">
+    <strong>For those with security concerns:</strong>
+    <p>If you oppose internet voting for security reasons, contributing is still a powerful way to substantiate your stance and potentially influence the debate.</p>
+  </div>
+
+  <p class="text-lg font-medium text-black apple-style">100% of HACK SIV contributions go to rewarding novel discoveries by independent security researchers.</p>  
+  
+  <p class="mt-14" style="font-style: italic; color: #666; text-align: left; padding-left: 0;">Contact us at <a href="mailto:hack@siv.org">hack@siv.org</a></p>
+</div>
+
+<div class="mt-20 text-center">
+  <div class="h-[1px] w-24 mx-auto mb-8 bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+  <blockquote class="relative max-w-2xl px-8 mx-auto text-xl italic leading-relaxed text-slate-700">
+    <div class="absolute top-0 text-4xl -left-2 text-slate-300">"</div>
+    <div class="absolute bottom-0 text-4xl -right-2 text-slate-300">"</div>A system
+    should be secure even if everything about the system, except the key, is public
+    knowledge.
+    <footer class="mt-6 text-base not-italic tracking-wide text-slate-500">
+      — Kerckhoffs' Principle, 1883
+    </footer>
+  </blockquote>
+</div>
