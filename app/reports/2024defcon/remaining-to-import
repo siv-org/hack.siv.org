@@ -1,14 +1,4 @@
 
-
-<div style="display: flex; align-items: center; margin: 3.5rem 0 1.5rem; position: relative;">
-  <div style="position: relative; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 0.4rem 1.2rem; border-radius: 2rem; box-shadow: 0 1px 6px rgba(0,0,0,0.05); border: 1px solid rgba(26,95,180,0.1); z-index: 1;">
-    <span style="font-weight: 500; letter-spacing: 0.03em; font-size: 0.8rem; color: #1a5fb4; text-transform: uppercase; white-space: nowrap;">
-      Media Coverage
-    </span>
-  </div>
-  <div style="flex-grow: 1; height: 1px; background: linear-gradient(90deg, rgba(26,95,180,0.3) 0%, rgba(26,95,180,0) 100%); margin-left: -10px;"></div>
-</div>
-
 From August 6th to 11th, the HACK SIV announcement was retweeted by hundreds of cybersecurity organizations and individuals.
 
 Publications like [Reuters](https://www.reuters.com/technology/can-online-voting-be-secure-experts-las-vegas-try-hack-new-platform-2024-08-09/) also covered the competition, which was syndicated widely.
