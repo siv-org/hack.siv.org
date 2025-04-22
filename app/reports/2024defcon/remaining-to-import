@@ -1,220 +1,123 @@
-<p class="text-[1.2rem] font-medium text-black leading-[1.5] mt-10">
-  We are creating the{' '}
-  <a href="https://siv.org/protocol">Secure Internet Voting Protocol</a> (SIV)
-  to enable accessible & verifiable digital infrastructure for civil society.
-</p>
-
-<h2 class="text-[1.8rem] font-bold text-black mb-8 mt-12 relative after:content-[''] after:absolute after:bottom-[-12px] after:left-0 after:w-full after:h-[1px] after:bg-[#1a5fb4] after:opacity-20">
-  Unique Challenges
-</h2>
-
-<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
-  We started building SIV with the awareness of the unique challenges
-  highlighted by many in the
-  <a href="https://verifiedvoting.org/internet-voting-faq/">
-    computer security community
-  </a> and institutions like the
-  <a href="https://www.nationalacademies.org/news/2018/09/securing-the-vote-new-report">
-    National Academy of Sciences
-  </a>
-  .
-</p>
-
-<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
-  Since the beginning, we have worked to address these concerns and created SIV
-  specifically as a step forward to solve many of the remaining issues.
-</p>
-
-<div class="relative pl-6 my-6 bg-[#f8f9fa] text-[#34495e] before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#95a5a6]">
-  <p class="m-0 py-4 px-6 text-[0.95rem]">
-    The National Academy of Engineering's article
-    <a href="https://www.nationalacademies.org/news/2023/03/moving-to-evidence-based-elections#_ftn4">
-      "Moving to Evidence-Based Elections"
-    </a>
-    presents the concept of "evidence-based elections as those in which the
-    voting system provides 'convincing, affirmative' evidence to the public that
-    the outcome was correctly computed." It continues with saying that "the
-    challenge of designing secure voting systems is to provide public evidence
-    of outcome correctness while yielding no information about individual votes
-    beyond that contained in the tally."
-  </p>
-</div>
-
-<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
-  This is precisely what SIV is designed to achieve, and what we wanted to test
-  by running a red-teaming contest.
-</p>
-
-<br />
-
-<h2 class="text-[1.8rem] font-bold text-black mb-8 mt-12 relative after:content-[''] after:absolute after:bottom-[-12px] after:left-0 after:w-full after:h-[1px] after:bg-[#1a5fb4] after:opacity-20">
-  Introducing SIV
-</h2>
-
-<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
-  Our design philosophy is to be fast, simple, and easy to use for everyone. To
-  protect election processes and voters' privacy, thoughtfully designed security
-  tools are baked in by-default.
-</p>
-
-<p>
-  A big part of our inspiration is to create software for digital voting like
-  what Signal Messenger has done for digital messaging.
-</p>
-
-<h3 class="text-[1.4rem] font-semibold text-black mt-10 mb-6">
-  SIV in U.S. elections
-</h3>
-
-<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
-  SIV is already being used for impactful elections, having elected legislators
-  and executives at the local, state, and national levels.
-</p>
-
-<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
-  There are thousands more election administrators around the world, searching
-  for verifiable, easy-to-use ways to allow citizens to vote and make their
-  voices heard.
-</p>
-
-<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
-  But the bar for election security is incredibly high.
-</p>
-
-<h3 class="text-[1.4rem] font-semibold text-black mt-10 mb-6">Threat Model</h3>
-
-<p class="text-[1.1rem] leading-[1.8] mb-6 text-black">
-  The threat model is adversarial Nation States, willing to expend
-  military-sized budgets to seek any advantage available.
-</p>
-
-<br />
-
-<h2 class="text-[1.8rem] font-bold text-black mb-8 mt-12 relative after:content-[''] after:absolute after:bottom-[-12px] after:left-0 after:w-full after:h-[1px] after:bg-[#1a5fb4] after:opacity-20">
-  HACK SIV
-</h2>
-
-A key piece of fulfilling our mission is inviting a broad, critical audience to examine, evaluate, and search for vulnerabilities.
-
-In August 2024, we were allowed to bring our technology to the [Voting Village](https://votingvillage.org) at DEF CON, one of the premier venues for uncovering weaknesses in the equipment and processes that run our public elections.
 
 <h3 style="font-size: 20px; padding-top: 10px;">
-  30,000 DEF CON hackers — 6 days — $10,000 in prizes
-</h3>
-
-We invited security researchers & engineers in-person and online to attempt to find novel vulnerabilities in SIV to:
-
-<div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 2rem 0;">
+    30,000 DEF CON hackers — 6 days — $10,000 in prizes
+  </h3>
+  
+  We invited security researchers & engineers in-person and online to attempt to find novel vulnerabilities in SIV to:
+  
+  <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 2rem 0;">
+    
+    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+      <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">1</div>
+      <div style="flex: 1;">
+        <p style="margin: 0; font-size: 1.1rem;"><strong>Vote multiple times</strong> — <span class="text-emerald-600">Not accomplished</span></p>
+      </div>
+    </div>
   
   <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-    <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">1</div>
+    <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">
+      2
+    </div>
     <div style="flex: 1;">
-      <p style="margin: 0; font-size: 1.1rem;"><strong>Vote multiple times</strong> — <span class="text-emerald-600">Not accomplished</span></p>
+      <p style="margin: 0; font-size: 1.1rem;">
+        <strong>Change someone else's vote, without detection</strong> —
+        <span class="text-emerald-600">Not Accomplished</span>
+      </p>
+      <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.95rem;">
+        Although no one successfully accomplished this, one submission got partway
+        by identifying a weakness in one of the anti-malware defensive layers. 2
+        solutions now identified. More details below under{' '}
+        <em>Detailed Information</em> →<em>Top 3 Submissions Examined</em> →{' '}
+        <em>No. 3</em>.
+      </p>
     </div>
   </div>
+  
 
 <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-  <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">
-    2
-  </div>
-  <div style="flex: 1;">
-    <p style="margin: 0; font-size: 1.1rem;">
-      <strong>Change someone else's vote, without detection</strong> —
-      <span class="text-emerald-600">Not Accomplished</span>
-    </p>
-    <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.95rem;">
-      Although no one successfully accomplished this, one submission got partway
-      by identifying a weakness in one of the anti-malware defensive layers. 2
-      solutions now identified. More details below under{' '}
-      <em>Detailed Information</em> →<em>Top 3 Submissions Examined</em> →{' '}
-      <em>No. 3</em>.
-    </p>
-  </div>
-</div>
-
-<div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-  <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">
-    3
-  </div>
-  <div style="flex: 1;">
-    <p style="margin: 0; font-size: 1.1rem;">
-      <strong>Destroy a vote already confirmed submitted</strong> —
-      <span class="text-emerald-600">Not accomplished</span>
-    </p>
-  </div>
-</div>
-
-<div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-  <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">
-    4
-  </div>
-  <div style="flex: 1;">
-    <p style="margin: 0; font-size: 1.1rem;">
-      <strong>Learn how someone voted, without their help</strong> —
-      <span class="text-emerald-600">
-        One person showed impressive ways to directly install spyware on-device.
-      </span>
-    </p>
-    <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.95rem;">
-      The SIV Protocol defends against vote tampering by on-device malware, but
-      it does not protect vote secrecy from compromised devices themselves. If
-      an attacker controls the device, they can see everything a person does
-      with it, including using SIV. While this was previously known and
-      documented, the Voter Interface failed to clearly warn users. More below,
-      under: <em>Detailed Information</em> →{' '}
-      <em>Attacks Discussed But Not Submitted</em> → <em>On-Device Spyware</em>.
-    </p>
-  </div>
-</div>
-
-  <div style="display: flex; gap: 1rem;">
-    <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">5</div>
+    <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">
+      3
+    </div>
     <div style="flex: 1;">
-      <p style="margin: 0; font-size: 1.1rem;"><strong>Learn other personal info about voters</strong> — <span class="text-emerald-600">Not accomplished</span></p>
+      <p style="margin: 0; font-size: 1.1rem;">
+        <strong>Destroy a vote already confirmed submitted</strong> —
+        <span class="text-emerald-600">Not accomplished</span>
+      </p>
     </div>
   </div>
-</div>
-
-<br />
-
-### 42 Total Submissions, 4 Common Types
-
-We greatly appreciate the enthusiasm and engagement of all submitters.
-
-After careful review, we have determined that only a handful of the submissions identified exploitable weaknesses. We have already addressed the top few and are working hard to resolve all the rest.
-
-Even the submissions that were not directly exploitable help us identify shortcomings in our documentation and communication.
-
-In the _Detailed Information_ section below, we provide in-depth examinations of the Top Earning Submissions, along with links to all 42 submissions.
-
-In broad strokes, there were four major categories of submissions, summarized here:
-
-<div class="my-8 space-y-6">
-
-<div class="border-l-4 rounded-md border-[#1a5fb4] pl-6 pr-8 py-2 bg-[#f8f9fa]">
-  <h4 class="text-[1.1rem] font-semibold text-[#0d4795] mb-2">
-    1) Technical Flaws in System Design
-  </h4>
-  <p class="text-[#4b5563] leading-relaxed">
-    <a
-      href="https://github.com/siv-org/siv/issues/178"
-      class="text-[#1a5fb4] decoration-[rgba(26,95,180,0.3)] underline underline-offset-2 decoration-1 hover:decoration-[#1a5fb4] hover:bg-[rgba(26,95,180,0.05)] transition-all duration-200 ease-in-out"
-    >
-      Two
-    </a>
-    different
-    <a
-      href="https://github.com/siv-org/siv/issues/231"
-      class="text-[#1a5fb4] decoration-[rgba(26,95,180,0.3)] underline underline-offset-2 decoration-1 hover:decoration-[#1a5fb4] hover:bg-[rgba(26,95,180,0.05)] transition-all duration-200 ease-in-out"
-    >
-      people
-    </a>
-    found ways in theory to weaken a defensive layer. These alone weren't enough
-    to achieve any of the goals above— other layers provide reinforced defense-in-depth.
-    But they were both excellent discoveries in their own right, earned top rewards,
-    and solutions have already been adopted for both, in collaboration with the discoverers.
-  </p>
-</div>
+  
+  <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+    <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">
+      4
+    </div>
+    <div style="flex: 1;">
+      <p style="margin: 0; font-size: 1.1rem;">
+        <strong>Learn how someone voted, without their help</strong> —
+        <span class="text-emerald-600">
+          One person showed impressive ways to directly install spyware on-device.
+        </span>
+      </p>
+      <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.95rem;">
+        The SIV Protocol defends against vote tampering by on-device malware, but
+        it does not protect vote secrecy from compromised devices themselves. If
+        an attacker controls the device, they can see everything a person does
+        with it, including using SIV. While this was previously known and
+        documented, the Voter Interface failed to clearly warn users. More below,
+        under: <em>Detailed Information</em> →{' '}
+        <em>Attacks Discussed But Not Submitted</em> → <em>On-Device Spyware</em>.
+      </p>
+    </div>
+  </div>
+  
+    <div style="display: flex; gap: 1rem;">
+      <div style="background: #1a5fb4; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 500;">5</div>
+      <div style="flex: 1;">
+        <p style="margin: 0; font-size: 1.1rem;"><strong>Learn other personal info about voters</strong> — <span class="text-emerald-600">Not accomplished</span></p>
+      </div>
+    </div>
+  </div>
+  
+  <br />
+  
+  ### 42 Total Submissions, 4 Common Types
+  
+  We greatly appreciate the enthusiasm and engagement of all submitters.
+  
+  After careful review, we have determined that only a handful of the submissions identified exploitable weaknesses. We have already addressed the top few and are working hard to resolve all the rest.
+  
+  Even the submissions that were not directly exploitable help us identify shortcomings in our documentation and communication.
+  
+  In the _Detailed Information_ section below, we provide in-depth examinations of the Top Earning Submissions, along with links to all 42 submissions.
+  
+  In broad strokes, there were four major categories of submissions, summarized here:
+  
+  <div class="my-8 space-y-6">
+  
+  <div class="border-l-4 rounded-md border-[#1a5fb4] pl-6 pr-8 py-2 bg-[#f8f9fa]">
+    <h4 class="text-[1.1rem] font-semibold text-[#0d4795] mb-2">
+      1) Technical Flaws in System Design
+    </h4>
+    <p class="text-[#4b5563] leading-relaxed">
+      <a
+        href="https://github.com/siv-org/siv/issues/178"
+        class="text-[#1a5fb4] decoration-[rgba(26,95,180,0.3)] underline underline-offset-2 decoration-1 hover:decoration-[#1a5fb4] hover:bg-[rgba(26,95,180,0.05)] transition-all duration-200 ease-in-out"
+      >
+        Two
+      </a>
+      different
+      <a
+        href="https://github.com/siv-org/siv/issues/231"
+        class="text-[#1a5fb4] decoration-[rgba(26,95,180,0.3)] underline underline-offset-2 decoration-1 hover:decoration-[#1a5fb4] hover:bg-[rgba(26,95,180,0.05)] transition-all duration-200 ease-in-out"
+      >
+        people
+      </a>
+      found ways in theory to weaken a defensive layer. These alone weren't enough
+      to achieve any of the goals above— other layers provide reinforced defense-in-depth.
+      But they were both excellent discoveries in their own right, earned top rewards,
+      and solutions have already been adopted for both, in collaboration with the discoverers.
+    </p>
+  </div>
+  
 
 <div class="border-l-4 rounded-md border-[#1a5fb4] pl-6 pr-8 py-2 bg-[#f8f9fa]">
   <h4 class="text-[1.1rem] font-semibold text-[#0d4795] mb-2">
@@ -296,8 +199,8 @@ The SIV team decided how to allocate half of the prize money, and DEF CON attend
 
 <p style="text-align:center; font-size: 16px;">
   <i>
-    Screenshot from the <a href="https://hack.siv.org">HACK SIV landing page</a>.
-    And here is the link to
+    Screenshot from the <a href="https://hack.siv.org">HACK SIV landing page</a>
+    . And here is the link to
     <a href="https://hack.siv.org/rules#awarding-prizes">
       SIV's Judgment Criteria
     </a>

@@ -1,20 +1,8 @@
+'use client'
+
 export const CustomCSS = () => {
   return (
     <style jsx global>{`
-      a {
-        color: #1a5fb4;
-        text-decoration-color: rgba(26, 95, 180, 0.3);
-        text-decoration-line: underline;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 2px;
-        transition: all 0.2s ease-in-out;
-      }
-
-      a:hover {
-        text-decoration-color: #1a5fb4;
-        background-color: rgba(26, 95, 180, 0.05);
-      }
-
       .apple-style {
         font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display',
           'Helvetica Neue', sans-serif;
