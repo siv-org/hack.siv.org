@@ -1,15 +1,4 @@
 
-<div style="display: flex; align-items: center; margin: 3.5rem 0 1.5rem; position: relative;">
-  <div style="position: relative; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 0.4rem 1.2rem; border-radius: 2rem; box-shadow: 0 1px 6px rgba(0,0,0,0.05); border: 1px solid rgba(26,95,180,0.1); z-index: 1;">
-    <span style="font-weight: 500; letter-spacing: 0.03em; font-size: 0.8rem; color: #1a5fb4; text-transform: uppercase; white-space: nowrap;">
-      DEF CON Participant Engagement
-    </span>
-  </div>
-  <div style="flex-grow: 1; height: 1px; background: linear-gradient(90deg, rgba(26,95,180,0.3) 0%, rgba(26,95,180,0) 100%); margin-left: -10px;"></div>
-</div>
-
-During DEF CON, hundreds of attendees engaged with the SIV team daily. Dozens sat at the SIV table to attempt hacking the system. Countless people from a wide range of demographics and countries expressed enthusiasm and support for what SIV has already achieved and for the project's overall direction and goals.
-
 <div style="text-align:center;">
 
 <div style="background-color: #f8f9fa; border-left: 4px solid #0d6efd; padding: 20px; margin: 20px 0; border-radius: 0 4px 4px 0; font-size: 16px; line-height: 1.6;">
