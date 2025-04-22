@@ -14,13 +14,13 @@ const overrideComponents = {
       {children}
     </h2>
   ),
-  h3: ({ children }: Children) => (
-    <h3 className="text-xl font-bold text-purple-600">{children}</h3>
-  ),
   h4: ({ children }: Children) => (
     <h4 className="text-[1.2rem] font-medium text-black leading-[1.5] mt-10">
       {children}
     </h4>
+  ),
+  p: ({ children }: Children) => (
+    <p className="text-[1.1rem] leading-[1.8] mb-6">{children}</p>
   ),
 }
 
