@@ -1,4 +1,5 @@
 import { AttacksInvitedList } from './AttacksInvitedList'
+import { CategoriesOfSubmissions } from './CategoriesOfSubmissions'
 
 # Hack SIV • DEF CON 2024 Report
 
@@ -43,7 +44,7 @@ In August 2024, we were allowed to bring our technology to the [Voting Village](
 We invited security researchers & engineers in-person and online to attempt to find novel vulnerabilities in SIV to:
 
 <AttacksInvitedList
-  content={[
+  data={[
     { title: 'Vote multiple times', status: 'Not accomplished' },
     {
       title: "Change someone else's vote, without detection",
@@ -86,3 +87,33 @@ Even the submissions that were not directly exploitable help us identify shortco
 In the _Detailed Information_ section below, we provide in-depth examinations of the Top Earning Submissions, along with links to all 42 submissions.
 
 In broad strokes, there were four major categories of submissions, summarized here:
+
+<CategoriesOfSubmissions title="1) Technical Flaws in System Design">
+  [Two](https://github.com/siv-org/siv/issues/178) different
+  [people](https://github.com/siv-org/siv/issues/231) found ways in theory to
+  weaken a defensive layer. These alone weren't enough to achieve any of the
+  goals above— other layers provide reinforced defense-in-depth. But they were
+  both excellent discoveries in their own right, earned top rewards, and
+  solutions have already been adopted for both, in collaboration with the
+  discoverers.
+</CategoriesOfSubmissions>
+
+<CategoriesOfSubmissions title="2) Vote Selling & Voter Coercion">
+A few submissions centered on Vote Selling and Voter Coercion. We were quite excited to use this contest as an opportunity to test out a limited version of one of our anti-Vote-Selling solutions, a system based on bounty-rewards we call [The Vote Seller's Dilemma](https://docs.siv.org/research-in-progress/vote-sellers-dilemma). This appeared to work well enough for the $5,000 Public Vote. It did not seem like decisions were significantly compromised by vote selling, and we are excited to run a prize-awarding vote again in the future using a similar format.
+
+We are also working on a new, additional tool against this sort of compromise that would allow SIV votes to achieve a level of coercion-resistance similar to in-person paper voting.
+
+</CategoriesOfSubmissions>
+
+<CategoriesOfSubmissions title="3) Unclear Dispute Resolution Scenarios">
+  A number of other people helpfully pointed out edge-cases in dispute
+  resolution during post-election auditing, which need to be documented more
+  clearly and rigorously.
+</CategoriesOfSubmissions>
+
+<CategoriesOfSubmissions title="4) Supply Chain Vulnerabilities">
+A few others wrote about supply chain vulnerabilities that can be further secured. We appreciate the submissions and are searching for ways to tighten up our hardware & software supply chains.
+
+Nonetheless, one of SIV's advantages is that it offers active proof of correct results, even in the face of supply chain attacks.
+
+</CategoriesOfSubmissions>
