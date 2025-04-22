@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import AwardsProcessScreenshot from './awards-process.png'
+import ReutersScreenshot from './reuters.png'
 
 export const AwardsProcessImage = ({
   children,
@@ -16,4 +17,15 @@ export const AwardsProcessImage = ({
     />
     {children && <div className="text-center text-base italic">{children}</div>}
   </div>
+)
+
+export const ReutersImage = ({ href }: { href: string }) => (
+  <a href={href} target="_blank" rel="noopener noreferrer">
+    <Image
+      src={ReutersScreenshot}
+      alt="reuters.com: Can online voting be secure? Experts in Las Vegas try to hack new platform"
+      className="mx-auto"
+      style={{ width: '100%', maxWidth: '386px' }}
+    />
+  </a>
 )
