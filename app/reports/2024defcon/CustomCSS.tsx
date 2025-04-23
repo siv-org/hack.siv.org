@@ -84,23 +84,6 @@ export const CustomCSS = () => {
         margin-top: 2rem;
       }
 
-      /* Important from line 441 or so */
-      .detailed-information-section details summary {
-        cursor: pointer;
-        font-size: 22px;
-        font-weight: 500;
-        line-height: 1.5;
-        margin-bottom: 1.2rem;
-        color: #111827;
-      }
-
-      .detailed-information-section details summary span {
-        font-size: 14px;
-        font-weight: 400;
-        color: #6b7280; /* muted gray */
-        margin-left: 0.5rem;
-      }
-
       /* Imported from line 1400 or so */
       .conclusion-details details summary::-webkit-details-marker {
         display: none;
