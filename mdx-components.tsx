@@ -19,6 +19,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ol: ({ children }) => (
       <ol className="pl-8 list-decimal space-y-1">{children}</ol>
     ),
+    ul: ({ children }) => (
+      <ul className="pl-8 list-disc space-y-1">{children}</ul>
+    ),
     li: ({ children }) => <li className="pl-1">{children}</li>,
     tr: ({ children }) => <tr className="even:bg-gray-700/25">{children}</tr>,
     th: ({ children }) => (
