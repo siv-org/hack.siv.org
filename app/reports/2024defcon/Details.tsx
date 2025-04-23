@@ -15,7 +15,7 @@ export const Details = ({
           ({readTime} min read)
         </span>
       </summary>
-      {children}
+      <div className="pl-3">{children}</div>
     </details>
   )
 }
