@@ -2,6 +2,7 @@ import { AttacksInvitedList } from './AttacksInvitedList'
 import { CategoriesOfSubmissions } from './CategoriesOfSubmissions'
 import {
   AwardsProcessImage,
+  BuyVotesImage,
   ReutersImage,
   EmailFromSecOfStateImage,
   EmailFromPublicVoteJudgeImage,
@@ -337,6 +338,75 @@ Especially admirable is that Dr. Jackett not only identified the vulnerability, 
 In total, this submission earned a combined $1,133.36.
 
 For the full submission details, [see its public issue](https://github.com/siv-org/siv/issues/178).
+
+</Details>
+
+<Details title='2. "I will pay $1 for your vote."' readTime={5.5}>
+
+This submission, reported by Dr. Michael Specter ([@mspecter](https://github.com/mspecter)), a Computer Science professor at Georgia Tech and computer security researcher, highlighted the increased risks of vote buying and selling in a system where voters can easily verify if their vote was cast correctly.
+
+The issue was written to demonstrate an attack against the Public Vote, where DEF CON attendees were allocating $5,000 in prize money. Because this vote was allocating money, it's particularly straightforward to _offer_ money to buy votes. This strategy could be directly profitable, enabling such an attack to quickly scale.
+
+SIV was aware of the risks of vote selling, and had planned from the beginning to use the public Prize Awarding vote as an opportunity to test a new proposal to prevent vote buying, called the ["Vote Seller's Dilemma"](https://docs.siv.org/research-in-progress/vote-sellers-dilemma). It aims to disrupt trust between would-be buyers and sellers, by publicly incentivizing honeypots.
+
+Dr. Specter's submission explicitly considered the Voter Seller's Dilemma mechanism. He evaluated that while it may provide benefits against:
+
+1. _anonymous buyers_ — because of distrust created by incentivized honeypots
+2. _prosecutable non-anonymous buyers_ — vote buying is a felony carrying jail-time if caught
+
+It may not work against a Vote Buyer who is both outside of law-enforcement jurisdiction, and willing to publicly identify themselves in a reliable way. For example, this could include the leader of a hostile foreign nation. While we [had previously examined](https://docs.siv.org/research-in-progress/vote-sellers-dilemma#on-foreign-interference) this issue, Dr. Specter's submission was particularly valuable as it brought the possible threat to life.
+
+Dr. Specter's submission had another novel element: it used the HACK SIV contest's public submissions venue of GitHub Issues to advertise the vote buying offer. While we could have closed or deleted the issue, that would not have been in the spirit of the contest — a point Dr. Specter preemptively highlighted. For future contests, we lean towards incorporating an additional rule that we will remove any explicit offers of vote buying, which would more closely match real-world conditions. However, since we had not established this ahead-of-time for this contest's rules, we did want to leave the submission in place.
+
+For these helpful contributions, we awarded the issue $113 of our $5,000 allotment.
+
+#### A key question is whether the attack actually worked or not.
+
+6 of the 7 independent judges voted to award the issue even less than us. 1 of the 7 voted to award it $4999 of the $5000 available. On one hand, this looks rather suspicious. But it's hard to be sure, as voting for it could be genuinely and sincerely wanting to call attention to the issue of vote selling. Rather than being motivated to collect $1.
+
+<BuyVotesImage>
+  From the [Public Vote results page](https://siv.org/election/1723655385175)
+</BuyVotesImage>
+
+This contrast — between 6 of the 7 judges awarding the issue a relatively low amount, and 1 giving it 99.9% of their allotment — reflects a broader trend we've observed beyond this contest.
+
+The vast majority of people we've spoken with — including citizens, candidates, and election officials — do not prioritize risks of vote buying & selling as reasons to reject secure internet voting. In contrast, some people view it almost axiomatically as a show-stopping problem, despite vote-by-mail ballots already being trivially easy to coerce (in addition to other problems) and in widespread use.
+
+We don't mean to dismiss the issue out of hand, and believe those most vocal about it are genuine in their concern. We too don't want to see our governments compromised by corruption, of course. But we do hope to see more thoughtful analysis weighing the issue on both sides, recognizing the inherent compromises and trade-offs with verifiability, accessibility, and other key considerations that currently weaken our voices as citizens.
+
+SIV has been thinking about threats of vote buying since its inception in 2020. We have attempted to provide more [detailed analysis examining the risks more holistically, especially in context compared the current status quo](https://docs.siv.org/mitigating-attacks/vote-selling).
+
+One aspect of this issue that makes it particularly challenging is the difficulty to objectively quantify the threat, as opposed to merely theorizing about it.
+
+In the end, in our best evaluation, we don't feel the Public Vote was compromised by this particular $1 offer.
+
+This issue ended up earning $744 of the $5000 public allotment— approximately 15%. We had already awarded it $113, or about 2% of our allotment. So the public vote awarded it 13% more than our judgment. If this difference had been overwhelming, we could not deny its influence. But as it stands, the impact is not clear.
+
+As of now, we would like to continue using a similar Public Vote format to evaluate future HACK SIV submissions.
+
+#### Improving the Attack
+
+While we don't want to see SIV compromised, in the spirit of open adversarial challenge to uncover potential threats as early as possible, we wished this particular vote-buying offer had actually been _higher_ than just $1. This could have provided clearer data showing definitive compromise.
+
+We offer that an optimal amount might look more like "Whatever your vote awards me, minus $1". For instance, the one judge's $4999 vote divided by 7 (averaged among all the votes), would earn that seller $713.
+
+#### Improving Anti-Vote Selling and Coercion Resistance
+
+With all of the above said, SIV is taking the threat seriously and aims to continue testing and refining its game-theoretic solution, the ["Vote Seller's Dilemma"](https://docs.siv.org/research-in-progress/vote-sellers-dilemma).
+
+Additionally, since the end of the HACK SIV contest, our team and several expert collaborators have started working on an additional solution, built on Zero-Knowledge Proofs. This enables a would-be seller to secretly trick any would-be compromisers. This technique works against both financial offers to buy votes _and_ physical threats of coercion, which some other contest participants had also asked about. Importantly, the external compromiser can't be certain whether a seemingly cooperative voter has actually used this capability or not.
+
+This would allow SIV votes to achieve a similar level of coercion resistance as in-person paper voting. Even at an official polling center, voters can already photograph or video record themselves filling out a ballot a certain way as evidence for a coercer. But such photographic or video evidence can also be faked, by a particularly crafty voter. This possibility deters would-be vote buyers. Similarly, this new SIV capability can enable voters to secretly _trick_ 3rd-party coercers or would-be vote buyers.
+
+This design also includes strong protection against abuse from malicious election administrators or malware on voters' devices. They cannot use the technique to secretly trick voters themselves.
+
+This solution is not perfect, but in combination with the _Vote Seller's Dilemma_ bounty-reward approach, we believe a high level of defense can be achieved, disrupting voter's trust of would-be buyers or coercers, and the reverse as well.
+
+More details forthcoming, but do [feel free to reach out](https://signal.me/#eu/BoJi_hXAgZij8SBK2mGyEoemAKKgZ7_RYOjAOnkgVYCu8IjJAH5EjblXfQ0U3Cbc) if you are interested in seeing an early draft.
+
+In total, Dr. Specter's submission earned a total of $857.67, which he has chosen to donate to the [Electronic Frontier Foundation](https://eff.org).
+
+For the full submission details [see its public issue](https://github.com/siv-org/siv/issues/181).
 
 </Details>
 

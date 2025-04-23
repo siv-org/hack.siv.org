@@ -4,6 +4,7 @@ import AwardsProcessScreenshot from './awards-process.png'
 import ReutersScreenshot from './reuters.png'
 import EmailFromSecOfStateScreenshot from './EmailFromSecOfState.jpeg'
 import EmailFromPublicVoteJudgeScreenshot from './EmailFromPublicVoteJudge.png'
+import BuyVotes from './BuyVotes.png'
 
 export const AwardsProcessImage = ({
   children,
@@ -48,4 +49,16 @@ export const EmailFromPublicVoteJudgeImage = () => (
     style={{ maxWidth: '650px' }}
     className="mx-auto w-full"
   />
+)
+
+export const BuyVotesImage = ({ children }: { children?: React.ReactNode }) => (
+  <div className="space-y-2">
+    <Image
+      src={BuyVotes}
+      alt="Table of prize awards for mspecter-4"
+      width={250}
+      className="mx-auto"
+    />
+    {children && <div className="text-center text-base italic">{children}</div>}
+  </div>
 )
