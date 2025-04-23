@@ -19,7 +19,7 @@ export const overrideComponents = {
   h2: LinkableHeader('h2'),
   h3: LinkableHeader('h3'),
   h4: ({ children }: Children) => (
-    <h4 className="text-[1.2rem] font-medium text-black leading-[1.5]">
+    <h4 className="mt-6 text-[1.2rem] font-medium text-black leading-[1.5]">
       {children}
     </h4>
   ),
