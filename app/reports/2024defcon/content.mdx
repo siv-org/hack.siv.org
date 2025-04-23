@@ -313,3 +313,31 @@ All submissions are publicly visible on [Github](https://github.com/siv-org/siv/
 For a list of submissions ranked by awarded prize money, check out this [public spreadsheet](https://docs.google.com/spreadsheets/d/1PLiGplqv6N22nn1fOg503_H_jq_1tsvAJnmAs-c-Axc/edit?usp=sharing).
 
 </Details>
+
+<Details title="Top 3 Submissions Examined" readTime={9}>
+
+Although all the submissions are visible on [GitHub](https://github.com/siv-org/siv/issues?q=is%3Aissue+is%3Aopen+created%3A2024-08-06..2024-08-11), understanding them in context can be challenging. To simplify this, we will highlight the top prize-winning issues and explain our approach to addressing them.
+
+<Details title="1. Weak RNG in Auth Token Generation" readTime={1.5}>
+This submission was reported by Dr. Chris Jackett
+([@cjackett](https://github.com/cjackett)), a computer scientist and machine learning researcher at Australia's National Science Agency, [CSIRO](https://www.csiro.au/).
+
+It highlighted a security implementation flaw in the Voter Authentication Token generation process. The Authentication Tokens are one-time codes sent by election administrators to voters to enable them to identify themselves and cast their vote.
+
+The issue identified was that the SIV backend was using `Math.random()` to generate these, which is not a cryptographically secure random number generator. SIV was already aware of this issue, documented [here](https://github.com/siv-org/siv/issues/143).
+
+Exploiting this attack would require repeatedly hitting the production API, at a minimum hundreds of times. SIV had other logging and alerting mechanisms to immediately warn if such an attempt took place, and the team is confident that it never has. Even if it did ever take place, auth tokens can be invalidated and re-issued to remediate the issue.
+
+Dr. Jackett also provided sample code to attempt a proof-of-concept brute force attack against the auth tokens, which was tested locally for 24-hours. Even after 24-hours of tries, this approach did not find any valid tokens.
+
+However, highlighting this weak RNG problem and helping SIV prioritize it was valuable.
+
+Especially admirable is that Dr. Jackett not only identified the vulnerability, but also provided a strong solution. He offered simple and straightforward code to upgrade the RNG to use cryptographically secure randomness, completely mitigating the issue, which SIV has already validated and now implemented. This also greatly validated the decision to make the full SIV codebase public as part of the prep for this contest.
+
+In total, this submission earned a combined $1,133.36.
+
+For the full submission details, [see its public issue](https://github.com/siv-org/siv/issues/178).
+
+</Details>
+
+</Details>
