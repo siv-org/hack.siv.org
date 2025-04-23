@@ -1,29 +1,3 @@
-
-<br />
-
-<h2 class="text-[1.8rem] font-bold text-black mb-8 mt-12 relative after:content-[''] after:absolute after:bottom-[-12px] after:left-0 after:w-full after:h-[1px] after:bg-[#1a5fb4] after:opacity-20">
-  Security Is A Process
-</h2>
-
-Bruce Schneier, an influential cryptography and security author, has a famous maxim:
-
-<div class="relative pl-6 my-6 bg-[#f8f9fa] text-[#34495e] before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#95a5a6]">
-  <p class="m-0 py-4 px-6 text-[1.2rem]">
-    Security is a process, not a product.
-  </p>
-</div>
-
-This is what HACK SIV is all about — why we have made the SIV source code public, why we brought it to DEF CON to be attacked, and why we'd like to continue running similar contests in the future.
-
-<br />
-
-<p class="text-sm italic text-center text-slate-400">
-  For questions or collaborations, email us at{' '}
-  <a href="mailto:hack@siv.org">hack@siv.org</a>
-</p>
-
-<br />
-
 <div
   class="h-0.5 my-12 rounded-full bg-gradient-to-r from-emerald-500 via-emerald-200 to-emerald-500"
   style="filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1))"
