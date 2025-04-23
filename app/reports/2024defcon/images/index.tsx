@@ -10,6 +10,9 @@ import DEFCONBadgeInside from './defcon-badge-inside.jpg'
 import DEFCONBadgeOutside from './defcon-badge-outside.jpeg'
 import AntiVoteSellingAgreementImg from './anti-vote-selling.png'
 import AnonymizationProcessGif from './anonymization.gif'
+import BallotScreenshot from './ballot.png'
+import BallotGIF from './ballot-ui-budget.gif'
+
 export const AwardsProcessImage = ({
   children,
 }: {
@@ -106,5 +109,21 @@ export const AnonymizationProcess = () => (
     src={AnonymizationProcessGif}
     alt="Votes anonymization process"
     className="mx-auto w-full"
+  />
+)
+
+export const BallotImg = () => (
+  <Image
+    src={BallotScreenshot}
+    alt="Screenshot of the Election Ballot"
+    className="mx-auto w-96 rounded-md"
+  />
+)
+
+export const BallotUIGIF = () => (
+  <Image
+    src={BallotGIF}
+    alt="GIF of Election Ballot"
+    className="mx-auto w-80"
   />
 )

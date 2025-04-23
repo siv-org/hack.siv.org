@@ -11,6 +11,8 @@ import {
   DEFCONBadgeOutsideImg,
   AntiVoteSellingAgreement,
   AnonymizationProcess,
+  BallotImg,
+  BallotUIGIF,
 } from './images'
 import { TimelineHeader } from './TimelineHeader'
 import { Tweet } from './Tweet'
@@ -562,6 +564,22 @@ For the HACK SIV awarding process, all voters were invited to participate as add
 Before voting began, the Privacy Protectors published individual statements about their participation in the pre-election multi-part key-generation ceremony. After voting closed, the votes were shuffled and unlocked. Again, all privacy protectors published another statement acknowledging their participation in this process, with no issues detected.
 
 All of this was [documented publicly on Github](https://github.com/siv-org/siv/issues/236), and shared with participants in real-time as the vote took place.
+
+</Details>
+
+<Details title="Public Vote Ballot" readTime={0.5}>
+
+Each voter saw [this ballot design](https://siv.org/election/1723655385175/vote?auth=22671df063), which included the title of each submission, a link to the original submission, and if the voter chose to view them: SIV's evaluations and reward amounts. The names of the submitters were not displayed on this page, in an attempt to minimize bias. Although voters could discover them by following the links to the original Github submission.
+
+The order in which the items were displayed was randomized for each voter, again to promote fairness.
+
+<BallotImg />
+
+This ballot used a new [Participatory Budgeting](https://en.wikipedia.org/wiki/Participatory_budgeting) format (`type=budget`) that we added to SIV specifically for this contest. It allows the administrator to set a total budget amount — $5000 in this case — which is then tracked and subtracted from as voters enter their individual allocations.
+
+<BallotUIGIF />
+
+This new budget format is now available for everyone to use in any SIV election.
 
 </Details>
 
