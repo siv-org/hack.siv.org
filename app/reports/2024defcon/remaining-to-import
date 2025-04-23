@@ -1,27 +1,5 @@
 <details>
 <summary>
-Contest Rules <span style="font-size: 75%; opacity: 50%;">(1 min read)</span>
-</summary>
-<div>
-
-The detailed rules for the HACK SIV contest were published on <a href="https://hack.siv.org/rules">HACK SIV contest rules</a>.
-
-In summary, $10,000 in prize money was committed to be awarded in full, regardless of submission quality.
-
-Vulnerabilities were reported publicly on [SIV's GitHub](https://github.com/siv-org/siv/issues?q=is%3Aissue+is%3Aopen+created%3A2024-08-06..2024-08-11) for full transparency.
-
-Half of the $10,000 prize was awarded by the SIV team based on criteria such as impact, scalability, and the complexity of the attack.
-
-The other half was allocated through public voting using the SIV system. Only DEF CON attendees were eligible to vote, with a strong "One Person, One Vote" process detailed below under _"How The HACK SIV Contest Was Structured"_ > _"Public Prize Awarding Process"_.
-
-For the Public Vote, we also [used one of our anti-vote-selling solutions](https://hack.siv.org/rules#the-vote-buying-elephant-in-the-room), based on game-theory, to disrupt trust between would-be buyers and sellers. Also detailed below under _"How The HACK SIV Contest Was Structured"_ > _"Public Prize Awarding Process"_ > _"Anti-Vote-Selling"_.
-
-</div>
-<br />
-</details>
-
-<details>
-<summary>
 Hacking Resources <span style="font-size: 75%; opacity: 50%;">(0.5 min read)</span>
 </summary>
 <div>
