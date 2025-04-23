@@ -12,6 +12,7 @@ import AntiVoteSellingAgreementImg from './anti-vote-selling.png'
 import AnonymizationProcessGif from './anonymization.gif'
 import BallotScreenshot from './ballot.png'
 import BallotGIF from './ballot-ui-budget.gif'
+import VoteConfirmation from './VoteConfirmationEmail.png'
 
 export const AwardsProcessImage = ({
   children,
@@ -125,5 +126,13 @@ export const BallotUIGIF = () => (
     src={BallotGIF}
     alt="GIF of Election Ballot"
     className="mx-auto w-80"
+  />
+)
+
+export const VoteConfirmationImg = () => (
+  <Image
+    src={VoteConfirmation}
+    alt="Email confirming voter verified their vote"
+    className="mx-auto w-full border border-gray-300 rounded-md"
   />
 )

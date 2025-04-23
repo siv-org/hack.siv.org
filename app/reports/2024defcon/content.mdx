@@ -13,6 +13,7 @@ import {
   AnonymizationProcess,
   BallotImg,
   BallotUIGIF,
+  VoteConfirmationImg,
 } from './images'
 import { TimelineHeader } from './TimelineHeader'
 import { Tweet } from './Tweet'
@@ -580,6 +581,56 @@ This ballot used a new [Participatory Budgeting](https://en.wikipedia.org/wiki/P
 <BallotUIGIF />
 
 This new budget format is now available for everyone to use in any SIV election.
+
+</Details>
+
+<Details title="Public Vote Results" readTime={0.5}>
+
+The preliminary results were posted after the 24-hour voting period ended.
+
+You can view SIV's [Election Results Page](https://siv.org/election/1723655385175), which was mirrored into [a public Github file](https://github.com/siv-org/hack.siv.org/commit/ba0c16b66d49a7dfaf28bc096f5a4b1892549367). The mirrored document was an additional layer provided to offer more assurance that SIV's page was not altering the results, without anyone seeing it.
+
+Additionally, we created a [detailed analysis](https://docs.google.com/spreadsheets/d/1PLiGplqv6N22nn1fOg503_H_jq_1tsvAJnmAs-c-Axc/edit?usp=sharing), which includes, amongst others, differences between SIV allocations and public allocations.
+
+After a 48-hour period of allowing everyone to check for anomalies, SIV [officially announced the winners on Github and the Signal Group](https://github.com/siv-org/siv/issues/236#issuecomment-2297574529).
+
+</Details>
+
+<Details title="Voters Verify Election Results" readTime={1.5}>
+
+SIV is designed to enable a "Zero Trust" election process. Voters can confirm for themselves that their vote was cast and counted as intended. They do not need to trust election administrators or the many intermediate providers involved in the process.
+
+Not only must such a process be available — without it, the entire election can be secretly corrupted. It must also be quick and easy to use, so that voters actually do it.
+
+For this HACK SIV contest, [7 of 7 judges confirmed vote verification](https://github.com/siv-org/siv/issues/236#issuecomment-2295093149). In other elections we ran, we have similarly seen very high numbers, nearing 100%.
+
+For this election, the process took place as follows — After preliminary results were published, voters were each invited to check if their vote was accurately recorded in the final tally.
+
+They were sent a [Voter Verification Guide](https://app.simplenote.com/publish/cqqKhx). This guide included instructions on how to use their secret Verification Number. It also detailed more advanced checks. The secret Verification Number is a unique 12-digit number. It is randomly generated on the voter's own device. This number is a very quick and simple tool available to voters.
+
+_Example of a general Verification Number check:_
+
+<VerificationNumberImage />
+
+After a 48-hour period, each voter confirmed that they saw their votes correctly recorded in the tally.
+
+<VoteConfirmationImg />
+
+All voter confirmations are [publicly documented on Github](https://github.com/siv-org/siv/issues/236#issuecomment-2295093149).
+
+There are more advanced checks possible — against on-device malware, paper-only to achieve software independence, risk limiting audits, and auditing the voter roll, detailed in the [Voter Verification Guide](https://app.simplenote.com/publish/cqqKhx).
+
+The entire HACK SIV process was [documented on Github](https://github.com/siv-org/siv/issues/236), making it accessible for public inspection.
+
+</Details>
+
+<Details title="Distributing The Prize Money" readTime={0.5}>
+
+As no issues were raised, we proceeded with distributing the prize money. A few have taken longer than others, as we work out unique circumstances specific to that winner.
+
+This process, like all others implemented during this contest, is designed to be publicly verifiable.
+
+You can track the status of each winner's payment at the bottom of [this Github issue](https://github.com/siv-org/siv/issues/236#issuecomment-2297574529).
 
 </Details>
 
