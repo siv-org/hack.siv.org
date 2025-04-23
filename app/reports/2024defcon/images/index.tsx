@@ -5,6 +5,7 @@ import ReutersScreenshot from './reuters.png'
 import EmailFromSecOfStateScreenshot from './EmailFromSecOfState.jpeg'
 import EmailFromPublicVoteJudgeScreenshot from './EmailFromPublicVoteJudge.png'
 import BuyVotes from './BuyVotes.png'
+import VerificationNumberScreenshot from './VerificationNumber.png'
 
 export const AwardsProcessImage = ({
   children,
@@ -61,4 +62,12 @@ export const BuyVotesImage = ({ children }: { children?: React.ReactNode }) => (
     />
     {children && <div className="text-center text-base italic">{children}</div>}
   </div>
+)
+
+export const VerificationNumberImage = () => (
+  <Image
+    src={VerificationNumberScreenshot}
+    alt="Screenshot of Verification Number flow"
+    className="mx-auto w-full"
+  />
 )

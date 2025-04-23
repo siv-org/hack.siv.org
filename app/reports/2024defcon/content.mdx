@@ -6,6 +6,7 @@ import {
   ReutersImage,
   EmailFromSecOfStateImage,
   EmailFromPublicVoteJudgeImage,
+  VerificationNumberImage,
 } from './images'
 import { TimelineHeader } from './TimelineHeader'
 import { Tweet } from './Tweet'
@@ -407,6 +408,39 @@ More details forthcoming, but do [feel free to reach out](https://signal.me/#eu/
 In total, Dr. Specter's submission earned a total of $857.67, which he has chosen to donate to the [Electronic Frontier Foundation](https://eff.org).
 
 For the full submission details [see its public issue](https://github.com/siv-org/siv/issues/181).
+
+</Details>
+
+<Details title="3. Second-device malware verification check could be fooled by rerouting the QR code to another malicious site" readTime={2}>
+
+This submission was reported by Dr. Drew Springall ([@aaspring](https://github.com/aaspring)), professor at Auburn University and an election security researcher.
+
+It identifies a vulnerability in one of SIV's verification layers — specifically, the second-device check. This feature is designed to enable voters to confirm their own device didn't tamper with their vote selections maliciously.
+As an additional verification method, voters can scan a QR code with a second device to double check their selections were submitted as intended.
+
+Dr. Springall highlighted a potential attack in which the QR code used for the second-device verification could be redirected by the compromised device to a malicious site or a fake verification website.
+
+During in-person discussions with Dr. Springall, two possible solutions were identified:
+
+1. In civic elections where vote invitations are sent via postal mail, include a verification QR code in the mailed invitation, instead of getting it from the compromised device. This QR code would link directly to the second-device verification page, and _that_ page would capture the necessary private vote data from the first device.
+
+2. In lower stakes non-civic elections, voters can be reminded to confirm that the second device loads the correct domain (e.g., siv.org). This requires a reliable broadcast channel to communicate with voters, which is common.
+
+While this is one out of a few verification layers, enhancing this particular one is important. It offers voters a straightforward means to identify potential malware before preliminary results are disclosed to the public.
+
+For those unfamiliar with SIV's election design, _"made public"_ means that everyone's vote contents (how people voted) is published as a list, without voters' identities, accessible to all. Each vote content is linked to each voters' secret Verification Number, that only the voter knows. This Verification Number then allows voters to personally find & check their vote was accurately recorded in the tally.
+
+Example:
+
+<VerificationNumberImage />
+
+While other verification methods, such as SIV's [Risk Limiting Audits](https://docs.siv.org/verifiability/rla), would also catch this type of attack, addressing the issue at the second-device-check level offers earlier detection.
+
+In the end, the two proposed solutions appear to effectively address the attack, and SIV plans to focus on implementing them.
+
+This submission earned a total of $851.82.
+
+For full details, [see the public issue](https://github.com/siv-org/siv/issues/231).
 
 </Details>
 
