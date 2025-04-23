@@ -10,6 +10,7 @@ import {
   DEFCONBadgeInsideImg,
   DEFCONBadgeOutsideImg,
   AntiVoteSellingAgreement,
+  AnonymizationProcess,
 } from './images'
 import { TimelineHeader } from './TimelineHeader'
 import { Tweet } from './Tweet'
@@ -537,6 +538,30 @@ In other words, in a government election, the offered bounty reward (point #4 in
 Nonetheless, in the end we were satisfied, as the vote itself did not appear to be compromised.
 
 For future contests, we are also exploring options to strengthen these protections even further. See the detailed discussion above in the section **2. "I will pay $1 for your vote"** for more.
+
+</Details>
+
+<Details title="Privacy" readTime={1.5}>
+
+SIV's privacy design is based on knowing who is voting, but keeping individual vote selections private.
+
+This is meant to enable a truly "Free & Fair Election", where voters can make their choices freely, without anyone — including election officials or technology providers — learning how they voted.
+
+Strong security comes from independently verifiable privacy design, not just unverifiable promises to delete data without looking. It is not simply a question of ethics or ill-intent, but also resistance from vendors' systems being compromised.
+
+This is achieved through what SIV calls ["Privacy Protectors"](https://docs.siv.org/privacy/privacy-protectors). These are individuals who each contribute an additional anonymizing shuffle of the encrypted votes. To complete the election, Privacy Protectors must collaborate to decrypt the anonymized votes for final tallying. This is a type of cryptographic "mixnet".
+
+In addition to anonymizing votes, each Privacy Protector's device also creates and publishes cryptographic proofs that the list of votes entering the shuffle are the same as the one exiting it. Or in other words, that no votes are lost or tampered with.
+
+The power of this Privacy Protectors design is that all Privacy Protectors need to be compromised in order for voter's individual selections to be de-anonymized. Only a single Privacy Protector needs to remain honest and not be compromised to ensure the election's vote privacy.
+
+For the HACK SIV awarding process, all voters were invited to participate as additional Privacy Protectors. In the end, the election's decryption key was split into 4 parts, with one 1/4 each held by 3 Privacy Protectors and the SIV server.
+
+<AnonymizationProcess />
+
+Before voting began, the Privacy Protectors published individual statements about their participation in the pre-election multi-part key-generation ceremony. After voting closed, the votes were shuffled and unlocked. Again, all privacy protectors published another statement acknowledging their participation in this process, with no issues detected.
+
+All of this was [documented publicly on Github](https://github.com/siv-org/siv/issues/236), and shared with participants in real-time as the vote took place.
 
 </Details>
 

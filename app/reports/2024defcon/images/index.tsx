@@ -9,7 +9,7 @@ import VerificationNumberScreenshot from './VerificationNumber.png'
 import DEFCONBadgeInside from './defcon-badge-inside.jpg'
 import DEFCONBadgeOutside from './defcon-badge-outside.jpeg'
 import AntiVoteSellingAgreementImg from './anti-vote-selling.png'
-
+import AnonymizationProcessGif from './anonymization.gif'
 export const AwardsProcessImage = ({
   children,
 }: {
@@ -97,6 +97,14 @@ export const AntiVoteSellingAgreement = () => (
   <Image
     src={AntiVoteSellingAgreementImg}
     alt="Screenshot of the Anti-Vote-Selling Agreement"
+    className="mx-auto w-full"
+  />
+)
+
+export const AnonymizationProcess = () => (
+  <Image
+    src={AnonymizationProcessGif}
+    alt="Votes anonymization process"
     className="mx-auto w-full"
   />
 )
