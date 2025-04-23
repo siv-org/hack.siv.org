@@ -23,9 +23,9 @@ export const overrideComponents = {
       {children}
     </h4>
   ),
-  p: ({ children }: Children) => <p className="mb-6">{children}</p>,
+  p: ({ children }: Children) => <p className="my-3">{children}</p>,
   blockquote: ({ children }: Children) => (
-    <blockquote className="text-[1.1rem] leading-[1.8] pl-8 p-6 pb-0.5 my-6 bg-[#f8f9fa] text-[#34495e] border-l-4 border-[#95a5a6]">
+    <blockquote className="text-[1.1rem] leading-[1.8] pl-8 p-6 my-6 bg-[#f8f9fa] text-[#34495e] border-l-4 border-[#95a5a6]">
       {children}
     </blockquote>
   ),
