@@ -6,6 +6,9 @@ import EmailFromSecOfStateScreenshot from './EmailFromSecOfState.jpeg'
 import EmailFromPublicVoteJudgeScreenshot from './EmailFromPublicVoteJudge.png'
 import BuyVotes from './BuyVotes.png'
 import VerificationNumberScreenshot from './VerificationNumber.png'
+import DEFCONBadgeInside from './defcon-badge-inside.jpg'
+import DEFCONBadgeOutside from './defcon-badge-outside.jpeg'
+import AntiVoteSellingAgreementImg from './anti-vote-selling.png'
 
 export const AwardsProcessImage = ({
   children,
@@ -68,6 +71,32 @@ export const VerificationNumberImage = () => (
   <Image
     src={VerificationNumberScreenshot}
     alt="Screenshot of Verification Number flow"
+    className="mx-auto w-full"
+  />
+)
+
+export const DEFCONBadgeOutsideImg = () => (
+  <Image
+    src={DEFCONBadgeOutside}
+    alt="Photo of the outside of a DEFCON badge"
+    className="mx-auto my-2 rounded-md"
+    width={250}
+  />
+)
+
+export const DEFCONBadgeInsideImg = () => (
+  <Image
+    src={DEFCONBadgeInside}
+    alt="Photo of inside of a DEFCON badge"
+    className="mx-auto my-2 rounded-md"
+    width={250}
+  />
+)
+
+export const AntiVoteSellingAgreement = () => (
+  <Image
+    src={AntiVoteSellingAgreementImg}
+    alt="Screenshot of the Anti-Vote-Selling Agreement"
     className="mx-auto w-full"
   />
 )
