@@ -15,6 +15,7 @@ import {
   BallotUIGIF,
   VoteConfirmationImg,
   PrivacyComparison,
+  RLAoptions,
 } from './images'
 import { TimelineHeader } from './TimelineHeader'
 import { Tweet } from './Tweet'
@@ -702,6 +703,46 @@ We have already added support to SIV for preparing encrypted votes on [separate 
 SIV focuses on protecting voters from servers or election administrators learning how people voted. For this, SIV uses [strong cryptographic privacy](https://docs.siv.org/privacy), which can be investigated by all at their own pace.
 
 If the spyware can gain remote control as well, SIV does claim to defend voters from attempts to alter their votes. SIV provides [various methods to check for tampering](https://docs.siv.org/verifiability), allows vote-by-vote remediation when necessary, and enables [rigorous post-election auditing](https://docs.siv.org/verifiability/rla) tools to ensure that sufficient verifications are conducted.
+
+</Details>
+
+</Details>
+
+<Details title="Frequently Asked Questions" readTime={2}>
+
+<Details title="Since we don't want to rely on computers alone, is there a paper trail?" readTime={0.5}>
+
+Yes, paper printouts of cast ballot selections can be made available in public places like the Department of Elections, local libraries, or delivered to voters by auditors conducting [Risk Limiting Audits](<(https://docs.siv.org/verifiability/rla)>). Voters can use their private [Verification Numbers](https://docs.siv.org/verifiability/personal-vote) to personally check if their selections were tallied correctly.
+
+Although doing [checks with multiple devices](https://docs.siv.org/verifiability/detecting-malware) or using paper printouts may seem more time-consuming, only a small number of people verifying this way can be combined with powerful statistical methods to calibrate the far more accessible digital verification methods.
+
+</Details>
+
+<Details title="Verifiability After the Fact?" readTime={0.5}>
+
+A key difference between paper-only and SIV is that with the paper-only, privacy requirements force key verification steps (e.g. against ballot stuffing or tampering) to be done during the voting process itself. In contrast, SIV allows people to verify each step after the fact.
+
+On Election Day, it is impossible to be everywhere at once to ensure legitimacy. This is exacerbated even further by longer voting period. But with SIV, anyone can revisit the entire process afterward and verify it top-to-bottom.
+
+Anyone dissatisfied with results has a strong incentive to do this, especially after preliminary results are announced.
+
+In contrast, with paper, by the time preliminary results are announced, it is already too late.
+
+</Details>
+
+<Details title="Can SIV do Risk Limiting Audits?" readTime={1}>
+
+Once preliminary results are published, official auditors and independent parties can conduct post-election audits. For example, they can call voters from the voter roll to guide them through verifying their votes without compromising the privacy of their selections. In addition, the voter roll can be displayed in public spaces, such as libraries, allowing individuals to confirm their votes against paper records. Auditors may also visit voters in person for verification.
+
+<RLAoptions />
+
+The [SIV Post-Election Audit](https://docs.siv.org/verifiability/rla) aims to determine if voters' devices are cheating and whether ballots were received correctly.
+
+Significantly, such paper-based checks provide "software independence", preventing potential tampering by malware.
+
+We can employ all three methods outlined in the table above, and specifically use the more expensive ones to calibrate the cheaper ones.
+
+SIV's RLAs are also efficient in their execution. For example, in Georgia's 2020 election where the margin of error was only 0.12%, a SIV RLA would have required checking just 7,500 votes out of 5 million to get 99.98% confidence of correct results. This is a stark contrast to the actual scenario, which involved a labor-intensive hand recount of all 5 million ballots.
 
 </Details>
 

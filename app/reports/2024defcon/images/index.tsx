@@ -14,6 +14,7 @@ import BallotScreenshot from './ballot.png'
 import BallotGIF from './ballot-ui-budget.gif'
 import VoteConfirmation from './VoteConfirmationEmail.png'
 import PrivacyComparisonScreenshot from './PrivacyComparison.png'
+import RLAoptionsImg from './rla-options.png'
 
 export const AwardsProcessImage = ({
   children,
@@ -156,4 +157,13 @@ export const PrivacyComparison = ({
     </a>
     {children && <div className="text-center text-base italic">{children}</div>}
   </div>
+)
+
+export const RLAoptions = () => (
+  <Image
+    src={RLAoptionsImg}
+    alt="Options for conducting Risk Limiting Audits"
+    className="mx-auto"
+    width={550}
+  />
 )
