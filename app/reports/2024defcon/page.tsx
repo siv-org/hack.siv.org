@@ -4,7 +4,7 @@ import Content from './content.mdx'
 
 type Children = { children?: React.ReactNode }
 
-const overrideComponents = {
+export const overrideComponents = {
   a: ({ href, children }: Children & { href?: string }) => (
     <a
       href={href}

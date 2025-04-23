@@ -5,7 +5,7 @@ export const Testimonial = ({
   children,
 }: {
   author: string
-  secondLine?: string
+  secondLine?: React.ReactNode
   thirdLine?: string
   children: React.ReactNode
 }) => {
