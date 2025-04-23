@@ -14,6 +14,7 @@ import {
   BallotImg,
   BallotUIGIF,
   VoteConfirmationImg,
+  PrivacyComparison,
 } from './images'
 import { TimelineHeader } from './TimelineHeader'
 import { Tweet } from './Tweet'
@@ -633,6 +634,74 @@ This process, like all others implemented during this contest, is designed to be
 You can track the status of each winner's payment at the bottom of [this Github issue](https://github.com/siv-org/siv/issues/236#issuecomment-2297574529).
 
 </Details>
+
+</Details>
+
+</Details>
+
+<Details title="Attacks Discussed But Not Submitted To The Contest" readTime={5}>
+
+<Details title="Availability Attacks" readTime={1}>
+
+For the 2024 HACK SIV challenge, we decided to define availability attacks as out-of-scope. One reason was that any successful ones would make it significantly harder for other participants to engage with the system during the contest period, which would not be fun.
+
+Our priorities for this contest were Integrity — altered votes, lost votes, changed results, false voters — and Confidentiality Attacks.
+
+Nonetheless, many people proposed all sorts of creative ways to take SIV's infrastructure offline.
+
+Though SIV has not yet faced any significant Availability Attacks, we acknowledge they are crucial to defend against— especially because in an election setting such attacks can act as a form of voter suppression.
+
+We have begun documenting defenses against Denial of Service Attacks at [docs.siv.org/mitigating-attacks/dos](https://docs.siv.org/mitigating-attacks/dos), and have a number of other potentially promising ideas to make the system even more resilient in the face of these types of threats.
+
+In the future, we would like to hold other challenges, explicitly focused on taking SIV offline.
+
+</Details>
+
+<Details title="Increased Surface Area" readTime={1.5}>
+
+One critique is that if a person can break into a ballot center, they can switch the ballots only for that location. But if one can break into SIV, they might be able to change ballot selections for millions of people. This is about the increased blast radius.
+
+Another concern is that SIV has many complex parts, which in turn have many of their own sub-components. And every last one of them needs to work well and not be compromised by attacks. This is about the total surface area through which attacks can potentially occur.
+
+SIV addresses these concerns by providing mathematical evidence of correct results, which a paper-only system does not offer. In a paper system, someone can simply switch out ballots, and no one finds out. With SIV, this is not possible.
+
+For a proper comparison, it would be incorrect to assume these problems do not exist in the current status quo. For example, over 90% of voting equipment used in the US comes from just three companies, producing a huge blast area if any of them are compromised.
+
+Current US elections also suffer from a massive geographic surface area. There are tens of thousands of polling centers, and it is simply not possible for all of them to be observed simultaneously for correctness.
+
+In contrast, SIV empowers vastly more people to verify correctness against compromise. And specifically to be able to verify _after_ the election has taken place, not just during the election itself, which paper processes are limited to.
+
+</Details>
+
+<Details title="On-Device Spyware" readTime={3}>
+
+While the SIV Protocol is designed to defend against on-device malware tampering with voters' votes, it had not yet been designed to defend against on-device spyware (a particular type of malware) learning people's private vote choices. We had [documented this issue](https://github.com/siv-org/siv/issues/162) before the HACK SIV contest and labeled spyware as out-of-scope, as we do not claim to solve it.
+
+Very simply if you're tapping your vote selections into a touch-screen, it is quite challenging to prevent that device itself from learning the selections you are making. There have been some strategies developed to be able to defend against this risk, using a technique known as Code Voting. This involves voters receiving a randomized set of numeric codes, each corresponding to a choice on the ballot, which they enter instead of the choice itself. Unfortunately, this makes the voting process significantly more difficult and prone to errors.
+For this reason, defending vote confidentiality against on-device spyware has been out-of-scope for the SIV Protocol.
+
+Nonetheless, one person at DEF CON this year demonstrated impressive in-person spyware attacks to show they could learn how people vote.
+
+They had multiple ways to almost instantaneously install spyware, while holding a target's unlocked phone for just a few seconds. This allowed the attacker to view the phone's screen remotely, including the vote content.
+
+This type of attack extends beyond the SIV Protocol to compromise the phone's entire operating system. This allows the attacker to see anything and everything a victim does on their phone, including other private data such as financial info, messages, and photos.
+
+From Day 1, we have built SIV to be an additional voting option, so that people who do not trust or want to use their devices can continue to vote in-person or via postal mail.
+
+To compare the levels of privacy of existing systems, consider the vulnerabilities of current methods. Mail-in voting is susceptible to both minor and major privacy breaches: postal workers can open ballots, or workers at the polling centers that receive the ballots have some ability to look at how people voted. Overseas voters currently have to agree to abdicate their right to a secret ballot altogether. And even in-person voting could also be compromised by hidden cameras at polling places. Both in-person and postal votes privacy could be secretly compromised for all voters at once if there are unique IDs linking marked ballots back to individuals. These are present on many ballot designs, and required for certain types of Post-Election Audits.
+
+We are not claiming these privacy attacks are currently taking place on any sort of large scale, but they are relevant threats if we are fairly evaluating different voting options.
+
+<PrivacyComparison href="https://docs.siv.org/compare">
+  Click the specific scores from the [Comparing Voting Methods
+  page](https://docs.siv.org/compare) for more details
+</PrivacyComparison>
+
+We have already added support to SIV for preparing encrypted votes on [separate air-gapped devices](https://docs.siv.org/privacy#air-gapping). We are also open to adding support for voters to be able to opt-in to a Code Voting mode, which can defend against this on-device spyware threat. There are a number of details to be worked out, to ensure using such a feature would not sacrifice SIV's many other privacy and verifiability defenses. We would appreciate if interested people would write to us at hack@siv.org, so we can prioritize it sooner.
+
+SIV focuses on protecting voters from servers or election administrators learning how people voted. For this, SIV uses [strong cryptographic privacy](https://docs.siv.org/privacy), which can be investigated by all at their own pace.
+
+If the spyware can gain remote control as well, SIV does claim to defend voters from attempts to alter their votes. SIV provides [various methods to check for tampering](https://docs.siv.org/verifiability), allows vote-by-vote remediation when necessary, and enables [rigorous post-election auditing](https://docs.siv.org/verifiability/rla) tools to ensure that sufficient verifications are conducted.
 
 </Details>
 

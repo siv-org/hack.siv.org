@@ -13,6 +13,7 @@ import AnonymizationProcessGif from './anonymization.gif'
 import BallotScreenshot from './ballot.png'
 import BallotGIF from './ballot-ui-budget.gif'
 import VoteConfirmation from './VoteConfirmationEmail.png'
+import PrivacyComparisonScreenshot from './PrivacyComparison.png'
 
 export const AwardsProcessImage = ({
   children,
@@ -135,4 +136,24 @@ export const VoteConfirmationImg = () => (
     alt="Email confirming voter verified their vote"
     className="mx-auto w-full border border-gray-300 rounded-md"
   />
+)
+
+export const PrivacyComparison = ({
+  href,
+  children,
+}: {
+  href: string
+  children?: React.ReactNode
+}) => (
+  <div className="space-y-2">
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      <Image
+        src={PrivacyComparisonScreenshot}
+        alt="Comparison of privacy levels of existing voting systems"
+        width={600}
+        className="rounded-xl mx-auto"
+      />
+    </a>
+    {children && <div className="text-center text-base italic">{children}</div>}
+  </div>
 )
