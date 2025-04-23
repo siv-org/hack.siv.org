@@ -9,7 +9,7 @@ import {
 import { TimelineHeader } from './TimelineHeader'
 import { Tweet } from './Tweet'
 import { Testimonial } from './Testimonial'
-import { overrideComponents } from './page'
+import { overrideComponents as c } from './page'
 import { GreenDivider } from './GreenDivider'
 
 # Hack SIV • DEF CON 2024 Report
@@ -185,7 +185,7 @@ During DEF CON, hundreds of attendees engaged with the SIV team daily. Dozens sa
   <EmailFromPublicVoteJudgeImage />
 </Testimonial>
 
-<Testimonial author="Jason Green" secondLine={<>Cybersecurity and Elections Researcher at <overrideComponents.a href="https://www.ncat.edu/research/centers/creo/index.php">CREO Lab</overrideComponents.a></>} thirdLine="North Carolina A&T University">
+<Testimonial author="Jason Green" secondLine={<>Cybersecurity and Elections Researcher at <c.a href="https://www.ncat.edu/research/centers/creo/index.php">CREO Lab</c.a></>} thirdLine="North Carolina A&T University">
 At DEF CON I had the opportunity to work with SIV's election solution. Upon subjecting the system to extensive testing and making an effort to break into it, the evident conclusion was that the SIV protocol has been built from the ground up for security.
 
 There are evident layers of security, and a well-thought-out system design that makes it highly resilient—even in the onslaught of DEF CON. In the election security space positive change is scarce, those willing to adopt change are scarcer still.
@@ -208,3 +208,5 @@ This is what HACK SIV is all about — why we have made the SIV source code publ
 </div>
 
 <GreenDivider />
+
+<c.h2 customClass="!border-none">Hack SIV Detailed Information</c.h2>

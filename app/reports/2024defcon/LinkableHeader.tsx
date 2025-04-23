@@ -28,9 +28,15 @@ const headerTypes = {
       {...{ children }}
     />
   ),
-  h2: ({ children }: { children: ReactNode }) => (
+  h2: ({
+    children,
+    customClass = '',
+  }: {
+    children: ReactNode
+    customClass?: string
+  }) => (
     <h2
-      className={`text-[1.8rem] border-b border-[#1a5fb4]/20 pb-1.5 !mt-12 ${sharedStyle}`}
+      className={`text-[1.8rem] border-b border-[#1a5fb4]/20 pb-1.5 !mt-12 ${sharedStyle} ${customClass}`}
       id={headerToId(children)}
       {...{ children }}
     />
@@ -47,13 +53,14 @@ const headerTypes = {
 export const LinkableHeader = (size: keyof typeof headerTypes) =>
   function HeaderTag({
     children,
+    ...props
   }: DetailedHTMLProps<
     HTMLAttributes<HTMLHeadingElement>,
     HTMLHeadingElement
   >) {
     const El = headerTypes[size]
     return (
-      <El>
+      <El {...props}>
         <a
           href={'#' + headerToId(children)}
           className="px-2 absolute -left-8 group-hover:opacity-70 opacity-0 h-full"
