@@ -37,7 +37,7 @@ export const SecurityProperty = ({
 
       {/* Details when open */}
       <div className="p-8">
-        <ol className="mt-4 list-decimal ml-6">
+        <ol className="mt-4 list-decimal ml-6 grid sm:grid-cols-2 gap-x-20 gap-y-4 font-light">
           {items.map((item) => (
             <li key={item}>{item}</li>
           ))}
