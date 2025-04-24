@@ -17,7 +17,7 @@ export const Details = ({
           ({readTime} min read)
         </span>
       </summary>
-      <div className="pl-3">{children}</div>
+      <div className="pl-3 pb-6">{children}</div>
 
       {/* Custom css for nested details */}
       <style jsx global>{`
