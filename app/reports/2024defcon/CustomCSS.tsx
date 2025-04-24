@@ -37,7 +37,6 @@ export const CustomCSS = () => {
       }
 
       details summary {
-        user-select: none;
         cursor: pointer;
       }
     `}</style>
