@@ -30,7 +30,7 @@ export const SecurityProperty = ({
           <h3 className="text-xl font-medium mb-4">{title}</h3>
           <p className="text-medium text-gray-400">{description}</p>
         </div>
-        <button className="text-medium text-gray-400 border border-black hover:bg-black/10 transition-all rounded-lg px-4 py-2 mt-8 sm:mt-2">
+        <button className="text-medium text-gray-500/90 border border-slate-600/30 hover:bg-slate-800/10 active:bg-slate-800/20 transition-all rounded-lg px-4 py-2 mt-8 sm:mt-2">
           {open ? 'Hide Details' : 'Show Details'}
         </button>
       </summary>
