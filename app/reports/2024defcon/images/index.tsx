@@ -170,15 +170,17 @@ export const RLAOptions = () => (
 )
 
 export const SIVVoterInterfaceImage = () => (
-  <a
-    href="https://hack.siv.org/images-for-decon-2024/screenshot-of-siv-voter-interface.png"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Image
-      src={SIVVoterInterface}
-      alt="Screenshot of the SIV Voter Interface"
-      className="mx-auto mt-8 sm:w-[240px]"
-    />
-  </a>
+  <div className="flex justify-center mt-8">
+    <a
+      href="https://hack.siv.org/images-for-decon-2024/screenshot-of-siv-voter-interface.png"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Image
+        src={SIVVoterInterface}
+        alt="Screenshot of the SIV Voter Interface"
+        className="sm:w-[240px]"
+      />
+    </a>
+  </div>
 )
