@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'HACK SIV: Reports',
+  title: 'Hack SIV • DEF CON 2024 Report',
   description: 'Summary of findings from HACK SIV @ DEF CON 2024.',
 }
 
