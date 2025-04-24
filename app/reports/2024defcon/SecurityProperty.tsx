@@ -15,12 +15,12 @@ export const SecurityProperty = ({
 
   return (
     <details
-      className="bg-slate-100/50 rounded-lg p-8 SecurityProperty mb-8"
+      className="bg-slate-100/50 rounded-lg SecurityProperty mb-8"
       open={open}
     >
       {/* Summary when closed */}
       <summary
-        className="list-none flex justify-between items-start sm:flex-row flex-col"
+        className="list-none flex justify-between items-start sm:flex-row flex-col cursor-pointer p-8"
         onClick={() => setOpen(!open)}
       >
         <div className="flex-1 flex items-start flex-col justify-start text-left">
@@ -33,11 +33,13 @@ export const SecurityProperty = ({
       </summary>
 
       {/* Details when open */}
-      <ol className="mt-4 list-decimal ml-6">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ol>
+      <div className="p-8">
+        <ol className="mt-4 list-decimal ml-6">
+          {items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ol>
+      </div>
 
       {/* Custom css */}
       <style jsx global>{`
