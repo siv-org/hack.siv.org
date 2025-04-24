@@ -23,6 +23,7 @@ import { Testimonial } from './Testimonial'
 import { overrideComponents as c } from './page'
 import { GreenDivider } from './GreenDivider'
 import { Details } from './Details'
+import { SecurityProperty } from './SecurityProperty'
 
 # Hack SIV • DEF CON 2024 Report
 
@@ -753,3 +754,17 @@ SIV's RLAs are also efficient in their execution. For example, in Georgia's 2020
 <c.h2 customClass="!border-none"> Conclusions & The Future of HACK SIV</c.h2>
 
 DEF CON attendees pushed us to sharpen how we explain SIV's security. Now it's distilled into clearer, testable claims — for the next HACK SIV:
+
+<SecurityProperty
+  title="Authentication"
+  description="One Person, One Vote"
+  items={[
+    'Enable each eligible voter to vote just once',
+    'Support many different authentication methods, depending on the election requirements',
+    'Work alongside in-person & postal-mail voting',
+    'Enable invalidating, remediating, & issuing new voter credentials when necessary',
+    'Ballot-Stuffing Resistance: Allow the entire voter authentication process to be audited by 3rd parties, even long after voting has taken place',
+    'Allow voters to mathematically prove that they voted, without needing to reveal how they voted',
+    'Reusable authentication for future votes: even if election administrators become anti-democratic',
+  ]}
+/>
