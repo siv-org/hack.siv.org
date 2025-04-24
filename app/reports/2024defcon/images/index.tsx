@@ -124,7 +124,7 @@ export const BallotImg = () => (
   />
 )
 
-export const BallotUIGIF = () => (
+export const BudgetBallotAnimation = () => (
   <Image
     src={BallotGIF}
     alt="GIF of Election Ballot"
