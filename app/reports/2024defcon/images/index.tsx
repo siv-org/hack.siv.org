@@ -14,7 +14,7 @@ import BallotScreenshot from './ballot.png'
 import BallotGIF from './ballot-ui-budget.gif'
 import VoteConfirmation from './VoteConfirmationEmail.png'
 import PrivacyComparisonScreenshot from './PrivacyComparison.png'
-import RLAoptionsImg from './rla-options.png'
+import RLAOptionsImg from './rla-options.png'
 import SIVVoterInterface from './SIVVoterInterface.png'
 
 export const AwardsProcessImage = ({
@@ -160,9 +160,9 @@ export const PrivacyComparison = ({
   </div>
 )
 
-export const RLAoptions = () => (
+export const RLAOptions = () => (
   <Image
-    src={RLAoptionsImg}
+    src={RLAOptionsImg}
     alt="Options for conducting Risk Limiting Audits"
     className="mx-auto"
     width={550}
