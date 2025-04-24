@@ -21,7 +21,10 @@ export const SecurityProperty = ({
       {/* Summary when closed */}
       <summary
         className="list-none flex justify-between items-start sm:flex-row flex-col cursor-pointer p-8"
-        onClick={() => setOpen(!open)}
+        onClick={(event) => {
+          event.preventDefault()
+          setOpen(!open)
+        }}
       >
         <div className="flex-1 flex items-start flex-col justify-start text-left">
           <h3 className="text-xl font-medium mb-4">{title}</h3>
