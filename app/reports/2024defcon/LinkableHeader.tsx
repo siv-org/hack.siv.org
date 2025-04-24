@@ -23,7 +23,7 @@ const sharedStyle = `font-semibold relative group mb-5`
 const headerTypes = {
   h1: ({ children }: { children: ReactNode }) => (
     <h1
-      className={`text-[32px] !font-bold !mb-0 ${sharedStyle}`}
+      className={`text-[32px] leading-[1.2] !font-bold !mb-1 ${sharedStyle}`}
       id={headerToId(children)}
       {...{ children }}
     />
