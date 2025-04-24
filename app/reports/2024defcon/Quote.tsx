@@ -5,9 +5,9 @@ export const Quote = ({
   author: string
   children: React.ReactNode
 }) => (
-  <div className="font-light text-center text-base italic text-slate-800 my-8 relative max-w-xl mx-auto px-6">
+  <div className="font-light text-center text-base italic text-slate-800 my-20 relative max-w-xl mx-auto px-6">
     {children}
-    <span className="text-sm">{author}</span>
+    <span className="text-sm">— {author}</span>
 
     <div className="absolute -top-1 text-4xl -left-2 text-slate-300">
       &ldquo;

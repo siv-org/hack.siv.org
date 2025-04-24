@@ -34,7 +34,7 @@ export const overrideComponents = {
 export default function Page() {
   return (
     <>
-      <div className="text-[1.1rem] leading-[1.8]">
+      <div className="text-[1.1rem] leading-[1.8] pb-8">
         <Content components={overrideComponents} />
       </div>
       <CustomCSS />
