@@ -15,7 +15,7 @@ export const Tweet = ({
   author_name: string
   date: string
 }) => (
-  <>
+  <div className="flex justify-center">
     <blockquote className="twitter-tweet border-2 border-gray-200 rounded-lg p-4">
       <p lang="en" dir="ltr" className="whitespace-pre-wrap">
         {placeholder}
@@ -30,5 +30,5 @@ export const Tweet = ({
     </blockquote>
 
     <Script async src="https://platform.twitter.com/widgets.js" />
-  </>
+  </div>
 )
