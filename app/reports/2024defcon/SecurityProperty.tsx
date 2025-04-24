@@ -15,7 +15,7 @@ export const SecurityProperty = ({
 
   return (
     <details
-      className="bg-slate-100/50 rounded-lg p-8 SecurityProperty"
+      className="bg-slate-100/50 rounded-lg p-8 SecurityProperty mb-8"
       open={open}
     >
       {/* Summary when closed */}
