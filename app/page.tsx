@@ -1,16 +1,6 @@
 import { Box } from './2024defcon/Box'
-import goodLuck from './images/good-luck.png'
-import defCON from './images/dc32-logo-2color-halftonegradient.webp'
-import VV from './images/votingvillage.png'
-import Image from 'next/image'
-import { Countdown } from './2024defcon/Countdown'
 import { FaGithub } from 'react-icons/fa'
-import { FiExternalLink } from 'react-icons/fi'
-import { FaSignalMessenger } from 'react-icons/fa6'
-
 import { SIVVoteUIScreenshot } from './2024defcon/SIVVoteUIScreenshot'
-
-import { RegisterWidget } from './2024defcon/RegisterWidget'
 
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
