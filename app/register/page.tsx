@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { RegisterWidget } from '../RegisterWidget'
+import { RegisterWidget } from '../2024defcon/RegisterWidget'
 import type { Metadata } from 'next/types'
 
 export const metadata: Metadata = {
