@@ -9,7 +9,7 @@ export default function Layout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div className="bg-slate-700/80 lg:py-8">
+    <div className="bg-slate-100 lg:py-8">
       <div className="p-8 max-w-4xl mx-auto space-y-5 bg-white text-black/90 rounded shadow-xl border border-gray-100">
         {children}
       </div>
