@@ -1,6 +1,7 @@
 import { Box } from './2024defcon/Box'
 import { FaGithub } from 'react-icons/fa'
 import { SIVVoteUIScreenshot } from './2024defcon/SIVVoteUIScreenshot'
+import { SignUpForUpdates } from './SignUpForUpdates'
 
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
@@ -161,6 +162,8 @@ export default function Home() {
         mission is to enable accessible & verifiable digital infrastructure for
         civil society.
       </Box>
+
+      <SignUpForUpdates />
     </main>
   )
 }
