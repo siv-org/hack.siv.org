@@ -9,10 +9,10 @@ const links = [
 
 export const Menu = () => {
   return (
-    <nav className="p-6 text-white">
+    <nav className="p-6 text-white bg-[#114852] shadow-md shadow-green-900">
       <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4">
-        <li className="w-full text-center tracking-wide text-xl">
-          <Link href="/" className="block hover:text-green-800 transition">
+        <li className="w-full text-center tracking-wide text-xl font-bold">
+          <Link href="/" className="block hover:text-green-500 transition">
             HACK SIV
           </Link>
         </li>
@@ -20,7 +20,7 @@ export const Menu = () => {
           <li key={href}>
             <Link
               href={href}
-              className="block hover:text-green-500 hover:underline transition text-lg"
+              className="block hover:text-green-500 hover:underline transition text-sm sm:text-lg"
             >
               {label}
             </Link>
