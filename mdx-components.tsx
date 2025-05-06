@@ -1,5 +1,5 @@
 import type { MDXComponents } from 'mdx/types'
-import { LinkableHeader } from './app/rules/LinkableHeader'
+import { LinkableHeader } from './app/2024defcon/rules/LinkableHeader'
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {

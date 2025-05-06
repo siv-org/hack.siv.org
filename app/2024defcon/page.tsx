@@ -193,7 +193,7 @@ export default function Home() {
               <div className="font-bold">
                 <span className="opacity-60 font-light">See </span>
                 <a
-                  href="/rules#awarding-prizes"
+                  href="/2024defcon/rules#awarding-prizes"
                   target="_blank"
                   className={linkStyle}
                 >
@@ -243,7 +243,7 @@ export default function Home() {
       </Box>
       {/* Detailed Contest Rules btn */}
       <a
-        href="/rules"
+        href="/2024defcon/rules"
         target="_blank"
         className="bg-orange-300 bg-opacity-80 text-black/90 px-4 py-2 rounded hover:bg-opacity-100"
       >
@@ -290,7 +290,7 @@ export default function Home() {
             'https://docs.siv.org/technical-specifications',
           ],
           ['The SIV Codebase', 'https://github.com/siv-org/siv'],
-          ['Detailed Contest Rules', '/rules'],
+          ['Detailed Contest Rules', '/2024defcon/rules'],
           [
             'Public Questions Forum',
             'https://github.com/siv-org/siv/discussions',
