@@ -17,7 +17,7 @@ export const Menu = () => {
   const pathname = usePathname()
 
   return (
-    <nav className="p-6 text-white bg-[#114852] shadow-md shadow-green-900">
+    <nav className="p-6 text-white bg-[#114852]/30 border-b border-[#114852]/60">
       {/* Top row */}
       <div className="text-center tracking-wide text-xl w-full mb-4">
         <span className="inline-block">
