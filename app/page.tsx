@@ -132,7 +132,6 @@ export default function Home() {
             'https://docs.siv.org/technical-specifications',
           ],
           ['The SIV Codebase', 'https://github.com/siv-org/siv'],
-          ['Detailed Contest Rules', '/rules'],
           [
             'Public Questions Forum',
             'https://github.com/siv-org/siv/discussions',
