@@ -11,11 +11,11 @@ export default function Home() {
   return (
     <main className="flex min-h-screen max-w-3xl mx-auto flex-col items-center p-6 pt-10 sm:p-24 space-y-12 sm:text-lg">
       {/* Intro to SIV */}
-      <Box title="HACK SIV" color={deepTeal}>
+      <div className="text-center border border-[#114852] rounded-lg p-6">
         Internet voting system designed for{' '}
         <b>government-grade election security</b>, with mathematically provable
         privacy & vote verifiability.
-      </Box>
+      </div>
 
       <SIVVoteUIScreenshot />
 
