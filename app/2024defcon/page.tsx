@@ -11,7 +11,7 @@ import { FaSignalMessenger } from 'react-icons/fa6'
 import { SIVVoteUIScreenshot } from './SIVVoteUIScreenshot'
 
 import { RegisterWidget } from './RegisterWidget'
-
+import { ArchiveBanner } from './ArchiveBanner'
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
 const linkStyle =
@@ -20,9 +20,7 @@ const linkStyle =
 export default function Home() {
   return (
     <main className="flex min-h-screen max-w-3xl mx-auto flex-col items-center p-6 pt-10 sm:p-24 space-y-12 sm:text-lg">
-      <div className="text-center opacity-50 italic bg-purple-200 p-4 rounded-lg text-black text-base">
-        Archive of the contest that ran from August 6th to 11th 2024
-      </div>
+      <ArchiveBanner />
 
       <div className="text-center">
         <div className="flex sm:flex-row flex-col items-center space-x-5">
