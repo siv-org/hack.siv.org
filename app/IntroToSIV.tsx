@@ -1,4 +1,5 @@
-import { linkStyle } from './page'
+export const linkStyle =
+  'underline text-blue-400 text-opacity-80 font-semibold hover:text-opacity-100'
 
 export const IntroToSIV = () => {
   return (

@@ -2,11 +2,9 @@ import { Box } from './2024defcon/Box'
 import { FaGithub } from 'react-icons/fa'
 import { SIVVoteUIScreenshot } from './2024defcon/SIVVoteUIScreenshot'
 import { SignUpForUpdates } from './SignUpForUpdates'
-import { IntroToSIV } from './IntroToSIV'
+import { IntroToSIV, linkStyle } from './IntroToSIV'
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
-export const linkStyle =
-  'underline text-blue-400 text-opacity-80 font-semibold hover:text-opacity-100'
 
 export default function Home() {
   return (
