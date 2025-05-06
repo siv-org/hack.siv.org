@@ -112,8 +112,8 @@ export default function Home() {
       {/* Or email */}
       <p className="!mt-3 text-sm">
         Or email:{' '}
-        <a className={linkStyle} target="_blank" href="mailto:defcon@siv.org">
-          defcon@siv.org
+        <a className={linkStyle} target="_blank" href="mailto:hack@siv.org">
+          hack@siv.org
         </a>
       </p>
 
