@@ -10,19 +10,28 @@ const linkStyle =
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen max-w-3xl mx-auto flex-col items-center p-6 pt-10 sm:p-24 space-y-12 sm:text-lg">
+    <main className="flex min-h-screen max-w-3xl mx-auto flex-col items-center p-6 pt-10 sm:p-24 space-y-20 sm:text-lg">
       {/* Intro to SIV */}
-      <div className="text-center border border-[#114852] rounded-lg p-6">
-        Internet voting system designed for{' '}
-        <b>government-grade election security</b>, with mathematically provable
-        privacy & vote verifiability.
+      <div className="text-center border border-[#114852] rounded-lg p-6 space-y-6">
+        <p>
+          <a href="https://siv.org" target="_blank" className={linkStyle}>
+            The Secure Internet Voting Protocol (SIV)
+          </a>{' '}
+          makes voting easy and fast — while ensuring integrity, privacy, and
+          full voter verifiability.
+        </p>
+        <p>
+          SIV claims that even if the worst actors are in charge of election
+          infrastructure, anyone — especially voters, but also independent
+          observers — can verify whether the election was run fairly or not.
+        </p>
       </div>
 
       <SIVVoteUIScreenshot />
 
       {/* Background */}
       <Box title="BACKGROUND" color={deepTeal}>
-        <div className="space-y-3 px-1 text-[17px]">
+        <div className="space-y-6 px-1 text-[17px]">
           <p>
             SIV is already being used for impactful elections, having elected
             legislators and executives at the local, state, and national levels.
@@ -153,15 +162,6 @@ export default function Home() {
           </div>
         ))}
       </div>
-
-      {/* About SIV */}
-      <Box color={deepTeal} title="About SIV">
-        <a href="https://siv.org" target="_blank" className={linkStyle}>
-          SIV{"'"}s
-        </a>{' '}
-        mission is to enable accessible & verifiable digital infrastructure for
-        civil society.
-      </Box>
 
       <SignUpForUpdates />
     </main>
