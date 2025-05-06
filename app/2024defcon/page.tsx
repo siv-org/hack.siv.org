@@ -20,7 +20,10 @@ const linkStyle =
 export default function Home() {
   return (
     <main className="flex min-h-screen max-w-3xl mx-auto flex-col items-center p-6 pt-10 sm:p-24 space-y-12 sm:text-lg">
-      {/* Now Open! header */}
+      <div className="text-center opacity-50 italic bg-purple-200 p-4 rounded-lg text-black text-base">
+        Archive of the contest that ran from August 6th to 11th 2024
+      </div>
+
       <div className="text-center">
         <div className="flex sm:flex-row flex-col items-center space-x-5">
           <Image
@@ -41,16 +44,13 @@ export default function Home() {
           ...and online ;)
         </h5>
       </div>
-
       {/* Intro to SIV */}
       <Box title="HACK SIV" color={deepTeal}>
         Internet voting system designed for{' '}
         <b>government-grade election security</b>, with mathematically provable
         privacy & vote verifiability.
       </Box>
-
       <SIVVoteUIScreenshot />
-
       {/* Background */}
       <Box title="BACKGROUND" color={deepTeal}>
         <div className="space-y-3 px-1 text-[17px]">
@@ -74,7 +74,6 @@ export default function Home() {
           </p>
         </div>
       </Box>
-
       {/* YOUR CHALLENGE */}
       <Box
         title={
@@ -87,11 +86,8 @@ export default function Home() {
       >
         <span className="font-semibold">$10,000 in prizes</span>
       </Box>
-
       <Countdown />
-
       {/* <div>FIXME Get Notified Component</div> */}
-
       {/* Attack Goals */}
       <div className="space-y-1.5 mb-0">
         <h3 className="text-[18px] sm:text-xl font-bold mb-5">
@@ -109,7 +105,6 @@ export default function Home() {
           </div>
         ))}
       </div>
-
       {/* Bonus Goal */}
       <div className="!mt-4 text-center">
         <i className="opacity-50">Bonus: </i>Convince us of major score updates
@@ -122,7 +117,6 @@ export default function Home() {
           docs.siv.org/compare
         </a>
       </div>
-
       {/* Especially interested in Protocol vulnerabilities */}
       <div className="border p-4 rounded border-white/30 text-center">
         We are especially interested in attacks against{' '}
@@ -149,7 +143,6 @@ export default function Home() {
         </span>
         .
       </div>
-
       {/* Found a vuln? */}
       <Box color={deepRed} title={'Found a vulnerability?'}>
         Submit it to the public repo:{' '}
@@ -168,7 +161,6 @@ export default function Home() {
           defcon@siv.org
         </a>
       </p>
-
       {/* Committed to $10k */}
       <div className="text-xl text-center">
         <h3 className="text-center font-bold">
@@ -182,7 +174,6 @@ export default function Home() {
           The only question is <i className="font-bold">to whom</i>?
         </h3>
       </div>
-
       {/* 2-col Awards Process */}
       <Box title="HACK SIV Awards Process" color="#114852">
         <div className="flex relative text-sm">
@@ -252,7 +243,6 @@ export default function Home() {
           </div>
         </div>
       </Box>
-
       {/* Detailed Contest Rules btn */}
       <a
         href="/rules"
@@ -265,7 +255,6 @@ export default function Home() {
           <FiExternalLink className="inline relative bottom-[3px] text-[25px]" />
         </b>
       </a>
-
       {/* Next Steps */}
       <div>
         <h4 className="text-center font-bold mb-5 border-b pb-1 border-white/50">
@@ -283,11 +272,9 @@ export default function Home() {
 
         <div className="opacity-50 text-center my-6 italic">and / or</div>
       </div>
-
       <div className="!mt-0">
         <RegisterWidget />
       </div>
-
       {/* Resources */}
       <div className="border-b pb-12 border-white/20">
         <h4 className="text-center font-bold mb-5 border-b pb-1 border-white/50">
@@ -334,7 +321,6 @@ export default function Home() {
           </span>
         </div>
       </div>
-
       {/* About SIV */}
       <Box color={deepTeal} title="About SIV">
         <a href="https://siv.org" target="_blank" className={linkStyle}>
@@ -343,7 +329,6 @@ export default function Home() {
         mission is to enable accessible & verifiable digital infrastructure for
         civil society.
       </Box>
-
       {/* About Voting Village */}
       <Box color={deepTeal} title="About the Voting Village">
         The{' '}
@@ -362,7 +347,6 @@ export default function Home() {
           with this contest.
         </div>
       </Box>
-
       {/* About DEF CON */}
       <Box color={deepTeal} title="About DEF CON">
         <a href="https://defcon.org" target="_blank" className={linkStyle}>
@@ -371,9 +355,7 @@ export default function Home() {
         is the world{"'"}s largest hacking convention, attracting 30,000
         Information Security specialists to Las Vegas every year.
       </Box>
-
       <Countdown />
-
       {/* Good luck! */}
       <Image
         src={goodLuck}
