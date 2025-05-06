@@ -17,8 +17,8 @@ export default function Home() {
           <a href="https://siv.org" target="_blank" className={linkStyle}>
             The Secure Internet Voting Protocol (SIV)
           </a>{' '}
-          makes voting easy and fast — while ensuring integrity, privacy, and
-          full voter verifiability.
+          makes voting easy and fast — while ensuring integrity, privacy, &
+          end-to-end voter verifiability.
         </p>
         <p>
           SIV claims that even if the worst actors are in charge of election
