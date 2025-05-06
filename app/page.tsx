@@ -2,26 +2,16 @@ import { Box } from './2024defcon/Box'
 import { FaGithub } from 'react-icons/fa'
 import { SIVVoteUIScreenshot } from './2024defcon/SIVVoteUIScreenshot'
 import { SignUpForUpdates } from './SignUpForUpdates'
-
+import { IntroToSIV } from './IntroToSIV'
 const deepTeal = '#114852'
 const deepRed = 'rgb(92, 1, 1)'
-const linkStyle =
+export const linkStyle =
   'underline text-blue-400 text-opacity-80 font-semibold hover:text-opacity-100'
 
 export default function Home() {
   return (
     <main className="flex min-h-screen max-w-3xl mx-auto flex-col items-center p-6 pt-10 sm:p-24 space-y-20 sm:text-lg">
-      {/* Intro to SIV */}
-      <div className="text-center border border-[#114852] rounded-lg p-6 space-y-6">
-        <p>
-          <a href="https://siv.org/" target="_blank" className={linkStyle}>
-            The Secure Internet Voting Protocol (SIV)
-          </a>{' '}
-          claims that even if the worst actors are in charge of election
-          infrastructure, anyone — especially voters, but also independent
-          observers — can verify whether the election was run fairly or not.
-        </p>
-      </div>
+      <IntroToSIV />
 
       <SIVVoteUIScreenshot />
 
