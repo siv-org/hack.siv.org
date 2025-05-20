@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   title: 'Hack SIV',
   description:
     'Find vulnerabilities & get rewarded to make the Secure Internet Voting Protocol as secure as possible.',
+  openGraph: { images: undefined },
+  twitter: { card: 'summary', images: undefined },
 }
 
 export default function RootLayout({
