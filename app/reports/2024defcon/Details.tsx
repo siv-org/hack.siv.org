@@ -34,7 +34,7 @@ export const Details = ({
           margin-right: 0.25em;
           transition: transform 0.2s ease;
         }
-        .Details[open] summary::before {
+        .Details[open] > summary::before {
           content: '▶';
           transform: rotate(90deg);
         }
