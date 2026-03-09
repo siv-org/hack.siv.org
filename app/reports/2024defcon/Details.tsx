@@ -19,8 +19,26 @@ export const Details = ({
       </summary>
       <div className="pl-3 pb-6">{children}</div>
 
-      {/* Custom css for nested details */}
+      {/* Custom css for nested details + fixed-width arrow */}
       <style jsx global>{`
+        .Details summary {
+          list-style: none;
+        }
+        .Details summary::-webkit-details-marker {
+          display: none;
+        }
+        .Details summary::before {
+          content: '▶';
+          display: inline-block;
+          width: 1em;
+          margin-right: 0.25em;
+          transition: transform 0.2s ease;
+        }
+        .Details[open] summary::before {
+          content: '▶';
+          transform: rotate(90deg);
+        }
+
         .Details .Details {
           margin-left: 15px;
         }
